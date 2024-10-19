@@ -19,10 +19,6 @@ Biblioteca_proyecto
 	<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
-</member><member name="P:Biblioteca.My.Resources.Resources.azul">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
 </member><member name="P:Biblioteca.My.Resources.Resources.biblioteca_portada">
 	<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
@@ -84,10 +80,6 @@ Biblioteca_proyecto
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member><member name="P:Biblioteca.My.Resources.Resources.registrar_blancox150">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:Biblioteca.My.Resources.Resources.registrar_blancox50">
 	<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>

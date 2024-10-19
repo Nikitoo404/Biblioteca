@@ -72,11 +72,33 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Portada.vb">
+    <Compile Include="Base.Designer.vb">
+      <DependentUpon>Base.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Base.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Portada.Designer.vb">
-      <DependentUpon>Portada.vb</DependentUpon>
+    <Compile Include="ButtonRadio.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CuadroDeMensaje.vb" />
+    <Compile Include="FrmMensaje.Designer.vb">
+      <DependentUpon>FrmMensaje.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMensaje.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio.Designer.vb">
+      <DependentUpon>Inicio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -94,16 +116,62 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Portada.Designer.vb">
+      <DependentUpon>Portada.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Portada.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros.Designer.vb">
+      <DependentUpon>Registros.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Registros.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegPres.Designer.vb">
+      <DependentUpon>RegPres.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RegPres.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utilidades.vb" />
+    <Compile Include="VerPres.Designer.vb">
+      <DependentUpon>VerPres.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VerPres.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Portada.resx">
-      <DependentUpon>Portada.vb</DependentUpon>
+    <EmbeddedResource Include="Base.resx">
+      <DependentUpon>Base.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMensaje.resx">
+      <DependentUpon>FrmMensaje.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicio.resx">
+      <DependentUpon>Inicio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Portada.resx">
+      <DependentUpon>Portada.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registros.resx">
+      <DependentUpon>Registros.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegPres.resx">
+      <DependentUpon>RegPres.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerPres.resx">
+      <DependentUpon>VerPres.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
