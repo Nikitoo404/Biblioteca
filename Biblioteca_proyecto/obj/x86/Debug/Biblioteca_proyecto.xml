@@ -6,7 +6,187 @@ Biblioteca_proyecto
 </name>
 </assembly>
 <members>
-<member name="P:Biblioteca.My.Resources.Resources.ResourceManager">
+<member name="T:Biblioteca.bdbibliotecaDataSet.autorDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Biblioteca.bdbibliotecaDataSet.editorialDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Biblioteca.bdbibliotecaDataSet.estadoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Biblioteca.bdbibliotecaDataSet.estadoprestamoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Biblioteca.bdbibliotecaDataSet.generoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Biblioteca.bdbibliotecaDataSet.prestamosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Biblioteca.bdbibliotecaDataSet.recursosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Biblioteca.bdbibliotecaDataSet.tipoderecursoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Biblioteca.bdbibliotecaDataSet.usuariosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Biblioteca.bdbibliotecaDataSet.autorRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Biblioteca.bdbibliotecaDataSet.editorialRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Biblioteca.bdbibliotecaDataSet.estadoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Biblioteca.bdbibliotecaDataSet.estadoprestamoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Biblioteca.bdbibliotecaDataSet.generoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Biblioteca.bdbibliotecaDataSet.prestamosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Biblioteca.bdbibliotecaDataSet.recursosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Biblioteca.bdbibliotecaDataSet.tipoderecursoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Biblioteca.bdbibliotecaDataSet.usuariosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Biblioteca.bdbibliotecaDataSet.autorRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Biblioteca.bdbibliotecaDataSet.editorialRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Biblioteca.bdbibliotecaDataSet.estadoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Biblioteca.bdbibliotecaDataSet.estadoprestamoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Biblioteca.bdbibliotecaDataSet.generoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Biblioteca.bdbibliotecaDataSet.prestamosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Biblioteca.bdbibliotecaDataSet.recursosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Biblioteca.bdbibliotecaDataSet.tipoderecursoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Biblioteca.bdbibliotecaDataSet.usuariosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Biblioteca.bdbibliotecaDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Biblioteca.bdbibliotecaDataSetTableAdapters.autorTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Biblioteca.bdbibliotecaDataSetTableAdapters.editorialTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Biblioteca.bdbibliotecaDataSetTableAdapters.estadoTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Biblioteca.bdbibliotecaDataSetTableAdapters.estadoprestamoTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Biblioteca.bdbibliotecaDataSetTableAdapters.generoTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Biblioteca.bdbibliotecaDataSetTableAdapters.prestamosTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Biblioteca.bdbibliotecaDataSetTableAdapters.recursosTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Biblioteca.bdbibliotecaDataSetTableAdapters.tipoderecursoTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Biblioteca.bdbibliotecaDataSetTableAdapters.usuariosTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:Biblioteca.bdbibliotecaDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(Biblioteca.bdbibliotecaDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:Biblioteca.bdbibliotecaDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(Biblioteca.bdbibliotecaDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:Biblioteca.bdbibliotecaDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(Biblioteca.bdbibliotecaDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:Biblioteca.bdbibliotecaDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:Biblioteca.bdbibliotecaDataSetTableAdapters.TableAdapterManager.UpdateAll(Biblioteca.bdbibliotecaDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:Biblioteca.bdbibliotecaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:Biblioteca.bdbibliotecaDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:Biblioteca.bdbibliotecaDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="P:Biblioteca.My.Resources.Resources.ResourceManager">
 	<summary>
   Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
 </summary>
@@ -71,7 +251,19 @@ Biblioteca_proyecto
 	<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
+</member><member name="P:Biblioteca.My.Resources.Resources.mailBluex56">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
 </member><member name="P:Biblioteca.My.Resources.Resources.Mobile_Menu_Icon">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Biblioteca.My.Resources.Resources.ojoBlue">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Biblioteca.My.Resources.Resources.ojoBlueTachado">
 	<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>

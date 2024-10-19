@@ -49,10 +49,13 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.4.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -78,10 +81,22 @@
     <Compile Include="Base.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="bdbibliotecaDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bdbibliotecaDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ButtonRadio.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CrearCuenta.Designer.vb">
+      <DependentUpon>CrearCuenta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CrearCuenta.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CuadroDeMensaje.vb" />
+    <Compile Include="CursorHand.vb" />
     <Compile Include="FrmMensaje.Designer.vb">
       <DependentUpon>FrmMensaje.vb</DependentUpon>
     </Compile>
@@ -122,6 +137,12 @@
     <Compile Include="Portada.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Recuperacion.Designer.vb">
+      <DependentUpon>Recuperacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Recuperacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Registros.Designer.vb">
       <DependentUpon>Registros.vb</DependentUpon>
     </Compile>
@@ -146,6 +167,9 @@
     <EmbeddedResource Include="Base.resx">
       <DependentUpon>Base.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CrearCuenta.resx">
+      <DependentUpon>CrearCuenta.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMensaje.resx">
       <DependentUpon>FrmMensaje.vb</DependentUpon>
     </EmbeddedResource>
@@ -164,6 +188,9 @@
     <EmbeddedResource Include="Portada.resx">
       <DependentUpon>Portada.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Recuperacion.resx">
+      <DependentUpon>Recuperacion.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Registros.resx">
       <DependentUpon>Registros.vb</DependentUpon>
     </EmbeddedResource>
@@ -175,6 +202,18 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
+    <None Include="bdbibliotecaDataSet.xsc">
+      <DependentUpon>bdbibliotecaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="bdbibliotecaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bdbibliotecaDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bdbibliotecaDataSet.xss">
+      <DependentUpon>bdbibliotecaDataSet.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -244,6 +283,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\usuario-azul-osc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mailBluex40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mailBluex56.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mailBluex70.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mailBluex100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image %2835%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ojoBlueTachado.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

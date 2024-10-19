@@ -27,22 +27,24 @@ Partial Class FrmLogin
         Me.LblBienvenida = New System.Windows.Forms.Label()
         Me.BtnMin = New System.Windows.Forms.Button()
         Me.BtnCerrar = New System.Windows.Forms.Button()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.TxtUser = New System.Windows.Forms.TextBox()
         Me.PnlUser = New System.Windows.Forms.Panel()
-        Me.PcbCandados = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PnlPass = New System.Windows.Forms.Panel()
         Me.TxtPass = New System.Windows.Forms.TextBox()
+        Me.PcbCandados = New System.Windows.Forms.PictureBox()
         Me.LblOlvid = New System.Windows.Forms.Label()
         Me.BtnLogin = New System.Windows.Forms.Button()
         Me.ChkPass = New System.Windows.Forms.CheckBox()
         Me.LblDerechos = New System.Windows.Forms.Label()
         Me.PnlBarraBaja = New System.Windows.Forms.Panel()
+        Me.LblCrear = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.PnlBarra.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PnlUser.SuspendLayout()
-        CType(Me.PcbCandados, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PnlPass.SuspendLayout()
+        CType(Me.PcbCandados, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PnlBarraBaja.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -61,13 +63,13 @@ Partial Class FrmLogin
         'LblBienvenida
         '
         Me.LblBienvenida.AutoSize = True
-        Me.LblBienvenida.Font = New System.Drawing.Font("Montserrat", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblBienvenida.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblBienvenida.ForeColor = System.Drawing.Color.Black
-        Me.LblBienvenida.Location = New System.Drawing.Point(12, 5)
+        Me.LblBienvenida.Location = New System.Drawing.Point(12, 9)
         Me.LblBienvenida.Name = "LblBienvenida"
-        Me.LblBienvenida.Size = New System.Drawing.Size(363, 26)
+        Me.LblBienvenida.Size = New System.Drawing.Size(372, 22)
         Me.LblBienvenida.TabIndex = 11
-        Me.LblBienvenida.Text = "Biblioteca Municipal ""Maria E. Walsh"""
+        Me.LblBienvenida.Text = "Biblioteca Municipal ""Maria E. Walsh"" - Acceso"
         '
         'BtnMin
         '
@@ -102,17 +104,6 @@ Partial Class FrmLogin
         Me.BtnCerrar.TabIndex = 7
         Me.BtnCerrar.UseVisualStyleBackColor = True
         '
-        'PictureBox2
-        '
-        Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Default
-        Me.PictureBox2.Image = Global.Biblioteca.My.Resources.Resources.usuario_azul_osc
-        Me.PictureBox2.Location = New System.Drawing.Point(1, 3)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(34, 37)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 22
-        Me.PictureBox2.TabStop = False
-        '
         'TxtUser
         '
         Me.TxtUser.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(90, Byte), Integer))
@@ -130,29 +121,26 @@ Partial Class FrmLogin
         Me.PnlUser.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(90, Byte), Integer))
         Me.PnlUser.Controls.Add(Me.PictureBox2)
         Me.PnlUser.Controls.Add(Me.TxtUser)
-        Me.PnlUser.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.PnlUser.Location = New System.Drawing.Point(23, 64)
         Me.PnlUser.Name = "PnlUser"
         Me.PnlUser.Size = New System.Drawing.Size(408, 42)
         Me.PnlUser.TabIndex = 26
         '
-        'PcbCandados
+        'PictureBox2
         '
-        Me.PcbCandados.Cursor = System.Windows.Forms.Cursors.Default
-        Me.PcbCandados.Image = CType(resources.GetObject("PcbCandados.Image"), System.Drawing.Image)
-        Me.PcbCandados.Location = New System.Drawing.Point(0, 1)
-        Me.PcbCandados.Name = "PcbCandados"
-        Me.PcbCandados.Size = New System.Drawing.Size(36, 40)
-        Me.PcbCandados.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PcbCandados.TabIndex = 19
-        Me.PcbCandados.TabStop = False
+        Me.PictureBox2.Image = Global.Biblioteca.My.Resources.Resources.usuario_azul_osc
+        Me.PictureBox2.Location = New System.Drawing.Point(1, 3)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(34, 37)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 22
+        Me.PictureBox2.TabStop = False
         '
         'PnlPass
         '
         Me.PnlPass.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(90, Byte), Integer))
         Me.PnlPass.Controls.Add(Me.TxtPass)
         Me.PnlPass.Controls.Add(Me.PcbCandados)
-        Me.PnlPass.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.PnlPass.Location = New System.Drawing.Point(23, 136)
         Me.PnlPass.Name = "PnlPass"
         Me.PnlPass.Size = New System.Drawing.Size(408, 42)
@@ -170,14 +158,23 @@ Partial Class FrmLogin
         Me.TxtPass.TabIndex = 2
         Me.TxtPass.Text = "Contraseña"
         '
+        'PcbCandados
+        '
+        Me.PcbCandados.Image = CType(resources.GetObject("PcbCandados.Image"), System.Drawing.Image)
+        Me.PcbCandados.Location = New System.Drawing.Point(0, 1)
+        Me.PcbCandados.Name = "PcbCandados"
+        Me.PcbCandados.Size = New System.Drawing.Size(36, 40)
+        Me.PcbCandados.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PcbCandados.TabIndex = 19
+        Me.PcbCandados.TabStop = False
+        '
         'LblOlvid
         '
         Me.LblOlvid.AutoSize = True
         Me.LblOlvid.BackColor = System.Drawing.Color.Transparent
-        Me.LblOlvid.Cursor = System.Windows.Forms.Cursors.Hand
         Me.LblOlvid.Font = New System.Drawing.Font("Montserrat", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblOlvid.ForeColor = System.Drawing.Color.DarkGray
-        Me.LblOlvid.Location = New System.Drawing.Point(191, 270)
+        Me.LblOlvid.Location = New System.Drawing.Point(101, 270)
         Me.LblOlvid.Name = "LblOlvid"
         Me.LblOlvid.Size = New System.Drawing.Size(172, 18)
         Me.LblOlvid.TabIndex = 24
@@ -185,13 +182,13 @@ Partial Class FrmLogin
         '
         'BtnLogin
         '
-        Me.BtnLogin.BackColor = System.Drawing.Color.Transparent
-        Me.BtnLogin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(182, Byte), Integer))
-        Me.BtnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.BtnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(70, Byte), Integer), CType(CType(118, Byte), Integer), CType(CType(126, Byte), Integer))
+        Me.BtnLogin.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.BtnLogin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.BtnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(70, Byte), Integer), CType(CType(118, Byte), Integer), CType(CType(126, Byte), Integer))
+        Me.BtnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.BtnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnLogin.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnLogin.ForeColor = System.Drawing.Color.LightGray
+        Me.BtnLogin.ForeColor = System.Drawing.Color.Silver
         Me.BtnLogin.Location = New System.Drawing.Point(76, 222)
         Me.BtnLogin.Name = "BtnLogin"
         Me.BtnLogin.Size = New System.Drawing.Size(408, 40)
@@ -235,12 +232,38 @@ Partial Class FrmLogin
         Me.PnlBarraBaja.Size = New System.Drawing.Size(575, 40)
         Me.PnlBarraBaja.TabIndex = 25
         '
+        'LblCrear
+        '
+        Me.LblCrear.AutoSize = True
+        Me.LblCrear.BackColor = System.Drawing.Color.Transparent
+        Me.LblCrear.Font = New System.Drawing.Font("Montserrat", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblCrear.ForeColor = System.Drawing.Color.DarkGray
+        Me.LblCrear.Location = New System.Drawing.Point(297, 270)
+        Me.LblCrear.Name = "LblCrear"
+        Me.LblCrear.Size = New System.Drawing.Size(92, 18)
+        Me.LblCrear.TabIndex = 28
+        Me.LblCrear.Text = "Crear cuenta"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Montserrat", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.DarkGray
+        Me.Label2.Location = New System.Drawing.Point(279, 270)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(12, 18)
+        Me.Label2.TabIndex = 29
+        Me.Label2.Text = "|"
+        '
         'FrmLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(575, 349)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.LblCrear)
         Me.Controls.Add(Me.PnlUser)
         Me.Controls.Add(Me.PnlPass)
         Me.Controls.Add(Me.LblOlvid)
@@ -254,12 +277,12 @@ Partial Class FrmLogin
         Me.Text = "Form1"
         Me.PnlBarra.ResumeLayout(False)
         Me.PnlBarra.PerformLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PnlUser.ResumeLayout(False)
         Me.PnlUser.PerformLayout()
-        CType(Me.PcbCandados, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PnlPass.ResumeLayout(False)
         Me.PnlPass.PerformLayout()
+        CType(Me.PcbCandados, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PnlBarraBaja.ResumeLayout(False)
         Me.PnlBarraBaja.PerformLayout()
         Me.ResumeLayout(False)
@@ -281,5 +304,7 @@ Partial Class FrmLogin
     Friend WithEvents ChkPass As System.Windows.Forms.CheckBox
     Friend WithEvents LblDerechos As System.Windows.Forms.Label
     Friend WithEvents PnlBarraBaja As System.Windows.Forms.Panel
+    Friend WithEvents LblCrear As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
 
 End Class

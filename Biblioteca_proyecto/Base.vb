@@ -1,17 +1,9 @@
 ﻿Imports System.Runtime.InteropServices
 Public Class FrmBase
-    <DllImport("user32.dll", CharSet:=CharSet.Auto)>
-    Public Shared Function LoadCursor(ByVal hInstance As IntPtr, ByVal lpCursorName As Integer) As IntPtr
-    End Function
-    Public Const OCR_HAND As Integer = 32649
-    Dim ptrHand As IntPtr
-    Dim hCursor As Cursor
     Private Sub FrmBase_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ptrHand = LoadCursor(IntPtr.Zero, OCR_HAND)
-        hCursor = New Cursor(ptrHand)
-        BtnVerPres.Cursor = hCursor
-        BtnRegPres.Cursor = hCursor
-        BtnRegistros.Cursor = hCursor
+        BtnVerPres.Cursor = CursorHand.GetCustomCursor
+        BtnRegPres.Cursor = CursorHand.GetCustomCursor
+        BtnRegistros.Cursor = CursorHand.GetCustomCursor
 
         Dim fechaHoy As Date = Date.Now.ToShortDateString
         Dim titulo As String = "Noticias            -               " & fechaHoy

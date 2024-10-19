@@ -14,3 +14,6 @@ C:\Users\impre\Escritorio\Trabajo\Biblioteca_proyecto\Biblioteca_proyecto\obj\x8
 C:\Users\impre\Escritorio\Trabajo\Biblioteca_proyecto\Biblioteca_proyecto\obj\x86\Debug\Biblioteca.FrmRegPres.resources
 C:\Users\impre\Escritorio\Trabajo\Biblioteca_proyecto\Biblioteca_proyecto\obj\x86\Debug\Biblioteca.FrmVerPres.resources
 C:\Users\impre\Escritorio\Trabajo\Biblioteca_proyecto\Biblioteca_proyecto\obj\x86\Debug\Biblioteca.FrmMensaje.resources
+C:\Users\impre\Escritorio\Trabajo\Biblioteca_proyecto\Biblioteca_proyecto\bin\Debug\Biblioteca_proyecto.exe.config
+C:\Users\impre\Escritorio\Trabajo\Biblioteca_proyecto\Biblioteca_proyecto\obj\x86\Debug\Biblioteca.FrmRecuperacion.resources
+C:\Users\impre\Escritorio\Trabajo\Biblioteca_proyecto\Biblioteca_proyecto\obj\x86\Debug\Biblioteca.FrmCrearCuenta.resources

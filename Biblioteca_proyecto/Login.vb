@@ -7,15 +7,6 @@ Public Class FrmLogin
     <DllImport("user32.DLL", EntryPoint:="SendMessage")>
     Private Shared Sub SendMessage(ByVal hWnd As System.IntPtr, ByVal wMsg As Integer, ByVal wParam As Integer, ByVal lParam As Integer)
     End Sub
-    <DllImport("user32.dll", CharSet:=CharSet.Auto)>
-    Public Shared Function LoadCursorFromFile(lpFileName As String) As IntPtr
-    End Function
-
-    <DllImport("user32.dll", CharSet:=CharSet.Auto)>
-    Public Shared Function GetSystemCursor(hCursor As IntPtr, id As Integer) As Boolean
-    End Function
-
-    Public Const OCR_HAND As Integer = 32649
 
     Private Sub LblOlvid_MouseDown(sender As Object, e As MouseEventArgs) Handles LblOlvid.MouseDown
         LblOlvid.ForeColor = Color.White
@@ -121,12 +112,55 @@ Public Class FrmLogin
     End Sub
 
     Private Sub FrmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim hCursor As IntPtr = LoadCursorFromFile("C:\Windows\Cursors\aero_link.cur")
-        If hCursor = IntPtr.Zero Then
-            hCursor = LoadCursorFromFile(CStr(OCR_HAND))
-        End If
-        Dim handCursor As New Cursor(hCursor)
-        LblOlvid.Cursor = handCursor
+        LblOlvid.Cursor = CursorHand.GetCustomCursor
+        LblCrear.Cursor = CursorHand.GetCustomCursor
         FrmInicio.Close()
+        FrmRecuperacion.Close()
+    End Sub
+
+    Private Sub BtnLogin_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles BtnLogin.MouseDown
+        BtnLogin.FlatAppearance.BorderColor = Color.FromArgb(30, 67, 90)
+        BtnLogin.BackColor = Color.FromArgb(70, 118, 126)
+    End Sub
+
+    Private Sub BtnLogin_MouseEnter(sender As Object, e As System.EventArgs) Handles BtnLogin.MouseEnter
+        BtnLogin.FlatAppearance.BorderColor = Color.LightGray
+        BtnLogin.BackColor = Color.FromArgb(20, 57, 80)
+        BtnLogin.ForeColor = Color.LightGray
+    End Sub
+
+    Private Sub BtnLogin_MouseLeave(sender As Object, e As System.EventArgs) Handles BtnLogin.MouseLeave
+        BtnLogin.FlatAppearance.BorderColor = Color.FromArgb(30, 67, 90)
+        BtnLogin.BackColor = Color.FromArgb(20, 57, 80)
+        BtnLogin.ForeColor = Color.Silver
+    End Sub
+
+    Private Sub BtnLogin_MouseUp(sender As Object, e As System.Windows.Forms.MouseEventArgs) Handles BtnLogin.MouseUp
+        BtnLogin.FlatAppearance.BorderColor = Color.LightGray
+        BtnLogin.BackColor = Color.FromArgb(20, 57, 80)
+    End Sub
+
+    Private Sub LblOlvid_Click(sender As System.Object, e As System.EventArgs) Handles LblOlvid.Click
+        FrmRecuperacion.Show()
+    End Sub
+
+    Private Sub LblCrear_Click(sender As System.Object, e As System.EventArgs) Handles LblCrear.Click
+        FrmCrearCuenta.Show()
+    End Sub
+
+    Private Sub LblCrear_MouseDown(sender As Object, e As System.Windows.Forms.MouseEventArgs) Handles LblCrear.MouseDown
+        LblCrear.ForeColor = Color.White
+    End Sub
+
+    Private Sub LblCrear_MouseEnter(sender As Object, e As System.EventArgs) Handles LblCrear.MouseEnter
+        LblCrear.ForeColor = Color.LightGray
+    End Sub
+
+    Private Sub LblCrear_MouseLeave(sender As Object, e As System.EventArgs) Handles LblCrear.MouseLeave
+        LblCrear.ForeColor = Color.DarkGray
+    End Sub
+
+    Private Sub LblCrear_MouseUp(sender As Object, e As System.Windows.Forms.MouseEventArgs) Handles LblCrear.MouseUp
+        LblCrear.ForeColor = Color.LightGray
     End Sub
 End Class

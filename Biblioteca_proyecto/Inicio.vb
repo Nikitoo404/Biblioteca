@@ -6,12 +6,7 @@ Public Class FrmInicio
     <DllImport("user32.DLL", EntryPoint:="SendMessage")>
     Private Shared Sub SendMessage(ByVal hWnd As System.IntPtr, ByVal wMsg As Integer, ByVal wParam As Integer, ByVal lParam As Integer)
     End Sub
-    <DllImport("user32.dll", CharSet:=CharSet.Auto)>
-    Public Shared Function LoadCursor(ByVal hInstance As IntPtr, ByVal lpCursorName As Integer) As IntPtr
-    End Function
-    Public Const OCR_HAND As Integer = 32649
-    Dim ptrHand As IntPtr
-    Dim hCursor As Cursor
+
     Public Sub AbrirFormEnPanel(Of FormHijo As {Form, New})()
         If Me.PnlContenedor.Controls.Count > 0 Then
             Me.PnlContenedor.Controls.RemoveAt(0)
@@ -70,9 +65,7 @@ Public Class FrmInicio
     Private Sub FrmInicio_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.MaximumSize = SystemInformation.PrimaryMonitorMaximizedWindowSize
         FrmLogin.Close()
-        ptrHand = LoadCursor(IntPtr.Zero, OCR_HAND)
-        hCursor = New Cursor(ptrHand)
-        LblCerrarSesion.Cursor = hCursor
+        LblCerrarSesion.Cursor = CursorHand.GetCustomCursor
         AbrirFormEnPanel(Of FrmBase)()
     End Sub
 
