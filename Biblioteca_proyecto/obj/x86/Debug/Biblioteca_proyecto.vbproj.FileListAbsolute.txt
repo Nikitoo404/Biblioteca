@@ -1,0 +1,9 @@
+C:\Users\impre\Escritorio\Trabajo\Biblioteca_proyecto\Biblioteca_proyecto\bin\Debug\Biblioteca_proyecto.exe
+C:\Users\impre\Escritorio\Trabajo\Biblioteca_proyecto\Biblioteca_proyecto\bin\Debug\Biblioteca_proyecto.pdb
+C:\Users\impre\Escritorio\Trabajo\Biblioteca_proyecto\Biblioteca_proyecto\bin\Debug\Biblioteca_proyecto.xml
+C:\Users\impre\Escritorio\Trabajo\Biblioteca_proyecto\Biblioteca_proyecto\obj\x86\Debug\Biblioteca.Form1.resources
+C:\Users\impre\Escritorio\Trabajo\Biblioteca_proyecto\Biblioteca_proyecto\obj\x86\Debug\Biblioteca.Resources.resources
+C:\Users\impre\Escritorio\Trabajo\Biblioteca_proyecto\Biblioteca_proyecto\obj\x86\Debug\Biblioteca_proyecto.vbproj.GenerateResource.Cache
+C:\Users\impre\Escritorio\Trabajo\Biblioteca_proyecto\Biblioteca_proyecto\obj\x86\Debug\Biblioteca_proyecto.exe
+C:\Users\impre\Escritorio\Trabajo\Biblioteca_proyecto\Biblioteca_proyecto\obj\x86\Debug\Biblioteca_proyecto.xml
+C:\Users\impre\Escritorio\Trabajo\Biblioteca_proyecto\Biblioteca_proyecto\obj\x86\Debug\Biblioteca_proyecto.pdb
