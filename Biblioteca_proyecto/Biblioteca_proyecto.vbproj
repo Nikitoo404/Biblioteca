@@ -89,6 +89,12 @@
     <Compile Include="ButtonRadio.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ComboPerso.Designer.vb">
+      <DependentUpon>ComboPerso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComboPerso.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="CrearCuenta.Designer.vb">
       <DependentUpon>CrearCuenta.vb</DependentUpon>
     </Compile>
@@ -301,6 +307,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ojoBlueTachado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Incorrecto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tilde.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IncorrectoRojo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

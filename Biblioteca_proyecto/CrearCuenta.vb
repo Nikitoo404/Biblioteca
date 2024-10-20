@@ -1,5 +1,8 @@
 ﻿Imports System.Runtime.InteropServices
+Imports System.Text.RegularExpressions
 Public Class FrmCrearCuenta
+
+
     <DllImport("user32.DLL", EntryPoint:="ReleaseCapture")>
     Private Shared Sub ReleaseCapture()
     End Sub
@@ -26,5 +29,127 @@ Public Class FrmCrearCuenta
 
     Private Sub FrmCrearCuenta_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         FrmLogin.Close()
+    End Sub
+
+    Private Sub TxtUser_MouseHover(sender As Object, e As System.EventArgs) Handles TxtUser.MouseHover
+
+    End Sub
+
+    Private Sub TxtUser_MouseLeave(sender As Object, e As System.EventArgs) Handles TxtUser.MouseLeave
+
+    End Sub
+
+    Private Sub TxtUser_GotFocus(sender As Object, e As System.EventArgs) Handles TxtUser.GotFocus
+        If TxtUser.Text = "Usuario" Then
+            TxtUser.Clear()
+            If TxtUser.Focused = False Then
+                TxtUser.Focus()
+            End If
+        End If
+    End Sub
+
+    Private Sub TxtUser_LostFocus(sender As Object, e As System.EventArgs) Handles TxtUser.LostFocus
+        If Len(Trim(TxtUser.Text)) = 0 Then
+            TxtUser.Text = "Usuario"
+        End If
+    End Sub
+
+    ' Función para verificar el formato del correo
+    Private Function EsCorreoValido(correo As String) As Boolean
+        Dim correoRegex As String = "^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$"
+        Return Regex.IsMatch(correo, correoRegex)
+    End Function
+
+    Private Sub TxtCorreo_GotFocus(sender As Object, e As System.EventArgs) Handles TxtCorreo.GotFocus
+        If TxtCorreo.Text = "Correo electrónico" Then
+            TxtCorreo.Clear()
+            If TxtCorreo.Focused = False Then
+                TxtCorreo.Focus()
+            End If
+        End If
+    End Sub
+
+    Private Sub TxtCorreo_Leave(sender As Object, e As System.EventArgs) Handles TxtCorreo.Leave
+        If Not EsCorreoValido(TxtCorreo.Text) Then
+            MessageBox.Show("Por favor, ingrese un correo electrónico válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            TxtCorreo.Focus()
+        End If
+    End Sub
+
+    Private Sub TxtCorreo_LostFocus(sender As Object, e As System.EventArgs) Handles TxtCorreo.LostFocus
+        If Len(Trim(TxtCorreo.Text)) = 0 Then
+            TxtCorreo.Text = "Correo electrónico"
+        End If
+    End Sub
+
+    Private Sub TxtPass_GotFocus(sender As Object, e As System.EventArgs) Handles TxtPass.GotFocus
+        If TxtPass.Text = "Contraseña" Then
+            TxtPass.Text = ""
+            If TxtPass.Focused = False Then
+                TxtPass.Focus()
+            End If
+        End If
+    End Sub
+
+    Private Sub TxtPass_LostFocus(sender As Object, e As System.EventArgs) Handles TxtPass.LostFocus
+        If Len(Trim(TxtPass.Text)) = 0 Then
+            If TxtPass.UseSystemPasswordChar = True Then
+                TxtPass.UseSystemPasswordChar = False
+                PcbPass.Image = My.Resources.ojoBlueTachado
+            End If
+            TxtPass.Text = "Contraseña"
+        End If
+    End Sub
+
+    Private Sub PcbPass_Click(sender As System.Object, e As System.EventArgs) Handles PcbPass.Click
+        If PcbPass.Tag = "OjoTachado" Then
+            If TxtPass.Text = "Contraseña" Then
+                PcbPass.Image = My.Resources.ojoBlue
+                PcbPass.Tag = "Ojo"
+                Exit Sub
+            Else
+                TxtPass.UseSystemPasswordChar = False
+                PcbPass.Image = My.Resources.ojoBlue
+                PcbPass.Tag = "Ojo"
+            End If
+        Else
+            If PcbPass.Tag = "Ojo" Then
+                If TxtPass.Text = "Contraseña" Then
+                    PcbPass.Image = My.Resources.ojoBlueTachado
+                    PcbPass.Tag = "OjoTachado"
+                    Exit Sub
+                Else
+                    TxtPass.UseSystemPasswordChar = True
+                    PcbPass.Image = My.Resources.ojoBlueTachado
+                    PcbPass.Tag = "OjoTachado"
+                End If
+            End If
+        End If
+    End Sub
+
+    Private Sub TxtPass_TextChanged(sender As Object, e As System.EventArgs) Handles TxtPass.TextChanged
+        If Len(Trim(TxtPass.Text)) > 0 Then
+            If TxtPass.Text = "Contraseña" Then
+                PcbCandados.Image = My.Resources.candado_c_azul
+            Else
+                If PcbPass.Tag = "Ojo" Then
+                    TxtPass.UseSystemPasswordChar = False
+                    PcbCandados.Image = My.Resources.candado_a_azul
+                    Exit Sub
+                End If
+                PcbCandados.Image = My.Resources.candado_a_azul
+                TxtPass.UseSystemPasswordChar = True
+            End If
+        Else
+            PcbCandados.Image = My.Resources.candado_c_azul
+        End If
+    End Sub
+
+    Private Sub TxtConfPass_GotFocus(sender As Object, e As System.EventArgs) Handles TxtConfPass.GotFocus
+
+    End Sub
+
+    Private Sub TxtConfPass_LostFocus(sender As Object, e As System.EventArgs) Handles TxtConfPass.LostFocus
+
     End Sub
 End Class
