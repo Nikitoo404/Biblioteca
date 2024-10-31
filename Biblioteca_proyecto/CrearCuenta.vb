@@ -1,8 +1,6 @@
 ﻿Imports System.Runtime.InteropServices
 Imports System.Text.RegularExpressions
 Public Class FrmCrearCuenta
-
-
     <DllImport("user32.DLL", EntryPoint:="ReleaseCapture")>
     Private Shared Sub ReleaseCapture()
     End Sub
@@ -55,9 +53,9 @@ Public Class FrmCrearCuenta
     End Sub
 
     ' Función para verificar el formato del correo
-    Private Function EsCorreoValido(correo As String) As Boolean
-        Dim correoRegex As String = "^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$"
-        Return Regex.IsMatch(correo, correoRegex)
+    Private Function ContenidoValido(valor As String) As Boolean
+        Dim Validar As String = "^[a-zA-Z0-9._-]+$"
+        Return Regex.IsMatch(valor, Validar)
     End Function
 
     Private Sub TxtCorreo_GotFocus(sender As Object, e As System.EventArgs) Handles TxtCorreo.GotFocus
@@ -70,8 +68,8 @@ Public Class FrmCrearCuenta
     End Sub
 
     Private Sub TxtCorreo_Leave(sender As Object, e As System.EventArgs) Handles TxtCorreo.Leave
-        If Not EsCorreoValido(TxtCorreo.Text) Then
-            MessageBox.Show("Por favor, ingrese un correo electrónico válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        If Not ContenidoValido(TxtCorreo.Text) Then
+            MessageBox.Show("Por favor, ingrese un correo electrónico válido. Recuerde que solo se permiten letras, números, puntos, guiones y guiones bajos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             TxtCorreo.Focus()
         End If
     End Sub

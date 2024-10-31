@@ -22,6 +22,7 @@ Partial Class FrmCrearCuenta
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmCrearCuenta))
         Me.PnlBarraBaja = New System.Windows.Forms.Panel()
         Me.LblDerechos = New System.Windows.Forms.Label()
@@ -49,9 +50,9 @@ Partial Class FrmCrearCuenta
         Me.PcbVerUser = New System.Windows.Forms.PictureBox()
         Me.PcbVerPass = New System.Windows.Forms.PictureBox()
         Me.PcbVerConfPass = New System.Windows.Forms.PictureBox()
-        Me.ComboPerso1 = New Biblioteca.ComboPerso()
+        Me.ttpCuadros = New System.Windows.Forms.ToolTip(Me.components)
+        Me.CboTipoCorreo = New Biblioteca.ComboPerso()
         Me.BtnVolver = New Biblioteca.ButtonRadio()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.PnlBarraBaja.SuspendLayout()
         Me.PnlBarra.SuspendLayout()
         Me.PnlUser.SuspendLayout()
@@ -254,6 +255,7 @@ Partial Class FrmCrearCuenta
         Me.PnlCorreo.Name = "PnlCorreo"
         Me.PnlCorreo.Size = New System.Drawing.Size(245, 42)
         Me.PnlCorreo.TabIndex = 31
+        Me.ttpCuadros.SetToolTip(Me.PnlCorreo, "Ingrese su correo electrónico" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "*solamente los caracteres previos al @*")
         '
         'PcbCorreo
         '
@@ -276,6 +278,7 @@ Partial Class FrmCrearCuenta
         Me.TxtCorreo.Size = New System.Drawing.Size(197, 20)
         Me.TxtCorreo.TabIndex = 1
         Me.TxtCorreo.Text = "Correo electrónico"
+        Me.ttpCuadros.SetToolTip(Me.TxtCorreo, "Ingrese su correo electrónico" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "*solamente los caracteres previos al @*")
         '
         'LblCompletar
         '
@@ -371,26 +374,27 @@ Partial Class FrmCrearCuenta
         Me.PcbVerConfPass.TabStop = False
         Me.PcbVerConfPass.Visible = False
         '
-        'ComboPerso1
+        'CboTipoCorreo
         '
-        Me.ComboPerso1._BorderColor = System.Drawing.Color.Silver
-        Me.ComboPerso1._BorderSize = 1
-        Me.ComboPerso1._IconColor = System.Drawing.Color.Silver
-        Me.ComboPerso1._ListBackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.ComboPerso1._ListTextColor = System.Drawing.Color.Silver
-        Me.ComboPerso1.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.ComboPerso1.DataSource = Nothing
-        Me.ComboPerso1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown
-        Me.ComboPerso1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.ComboPerso1.ForeColor = System.Drawing.Color.Silver
-        Me.ComboPerso1.Items.AddRange(New Object() {"@gmail.com", "@outlook.com", "@hotmail.com", "@live.com", "@yahoo.com"})
-        Me.ComboPerso1.Location = New System.Drawing.Point(327, 115)
-        Me.ComboPerso1.MinimumSize = New System.Drawing.Size(150, 30)
-        Me.ComboPerso1.Name = "ComboPerso1"
-        Me.ComboPerso1.Padding = New System.Windows.Forms.Padding(1)
-        Me.ComboPerso1.Size = New System.Drawing.Size(150, 30)
-        Me.ComboPerso1.TabIndex = 42
-        Me.ComboPerso1.Texts = ""
+        Me.CboTipoCorreo._BorderColor = System.Drawing.Color.Silver
+        Me.CboTipoCorreo._BorderSize = 1
+        Me.CboTipoCorreo._IconColor = System.Drawing.Color.Silver
+        Me.CboTipoCorreo._ListBackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.CboTipoCorreo._ListTextColor = System.Drawing.Color.Silver
+        Me.CboTipoCorreo.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.CboTipoCorreo.DataSource = Nothing
+        Me.CboTipoCorreo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown
+        Me.CboTipoCorreo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.CboTipoCorreo.ForeColor = System.Drawing.Color.Silver
+        Me.CboTipoCorreo.Items.AddRange(New Object() {"@gmail.com", "@outlook.com", "@hotmail.com", "@live.com", "@yahoo.com"})
+        Me.CboTipoCorreo.Location = New System.Drawing.Point(327, 115)
+        Me.CboTipoCorreo.MinimumSize = New System.Drawing.Size(150, 30)
+        Me.CboTipoCorreo.Name = "CboTipoCorreo"
+        Me.CboTipoCorreo.Padding = New System.Windows.Forms.Padding(1)
+        Me.CboTipoCorreo.Size = New System.Drawing.Size(150, 30)
+        Me.CboTipoCorreo.TabIndex = 42
+        Me.CboTipoCorreo.Texts = ""
+        Me.ttpCuadros.SetToolTip(Me.CboTipoCorreo, "Seleccione su tipo de correo")
         '
         'BtnVolver
         '
@@ -410,27 +414,13 @@ Partial Class FrmCrearCuenta
         Me.BtnVolver.TextColor = System.Drawing.Color.White
         Me.BtnVolver.UseVisualStyleBackColor = False
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.White
-        Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label1.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label1.Location = New System.Drawing.Point(256, 84)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(284, 24)
-        Me.Label1.TabIndex = 43
-        Me.Label1.Text = "Complete los siguientes casilleros:"
-        '
         'FrmCrearCuenta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(623, 461)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.ComboPerso1)
+        Me.Controls.Add(Me.CboTipoCorreo)
         Me.Controls.Add(Me.PcbVerConfPass)
         Me.Controls.Add(Me.PcbVerPass)
         Me.Controls.Add(Me.PcbVerUser)
@@ -503,6 +493,6 @@ Partial Class FrmCrearCuenta
     Friend WithEvents PcbVerUser As System.Windows.Forms.PictureBox
     Friend WithEvents PcbVerPass As System.Windows.Forms.PictureBox
     Friend WithEvents PcbVerConfPass As System.Windows.Forms.PictureBox
-    Friend WithEvents ComboPerso1 As Biblioteca.ComboPerso
-    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents CboTipoCorreo As Biblioteca.ComboPerso
+    Friend WithEvents ttpCuadros As System.Windows.Forms.ToolTip
 End Class
