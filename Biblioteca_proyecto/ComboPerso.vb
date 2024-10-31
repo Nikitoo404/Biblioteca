@@ -89,11 +89,8 @@ Public Class ComboPerso
 
     ' Default event
     Private Sub ComboBox_SelectedIndexChanged(sender As Object, e As EventArgs)
-        'If OnSelectedIndexChanged IsNot Nothing Then
-        '    OnSelectedIndexChanged.Invoke(sender, e)
-        'End If
-        ' Refresh text
-        lblText.Text = cmbList.Text
+          lblText.Text = cmbList.Text
+        RaiseEvent OnSelectedIndexChanged(Me, e) ' Invocar evento
     End Sub
 
     ' Items actions

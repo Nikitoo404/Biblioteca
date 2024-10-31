@@ -177,6 +177,7 @@ Partial Class FrmCrearCuenta
         Me.TxtUser.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtUser.ForeColor = System.Drawing.Color.Silver
         Me.TxtUser.Location = New System.Drawing.Point(41, 11)
+        Me.TxtUser.MaxLength = 11
         Me.TxtUser.Name = "TxtUser"
         Me.TxtUser.Size = New System.Drawing.Size(360, 20)
         Me.TxtUser.TabIndex = 1
@@ -199,6 +200,7 @@ Partial Class FrmCrearCuenta
         Me.TxtPass.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtPass.ForeColor = System.Drawing.Color.Silver
         Me.TxtPass.Location = New System.Drawing.Point(41, 11)
+        Me.TxtPass.MaxLength = 36
         Me.TxtPass.Name = "TxtPass"
         Me.TxtPass.Size = New System.Drawing.Size(360, 20)
         Me.TxtPass.TabIndex = 2
@@ -231,6 +233,7 @@ Partial Class FrmCrearCuenta
         Me.TxtConfPass.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtConfPass.ForeColor = System.Drawing.Color.Silver
         Me.TxtConfPass.Location = New System.Drawing.Point(41, 11)
+        Me.TxtConfPass.MaxLength = 36
         Me.TxtConfPass.Name = "TxtConfPass"
         Me.TxtConfPass.Size = New System.Drawing.Size(360, 20)
         Me.TxtConfPass.TabIndex = 2
@@ -274,6 +277,7 @@ Partial Class FrmCrearCuenta
         Me.TxtCorreo.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtCorreo.ForeColor = System.Drawing.Color.Silver
         Me.TxtCorreo.Location = New System.Drawing.Point(41, 11)
+        Me.TxtCorreo.MaxLength = 36
         Me.TxtCorreo.Name = "TxtCorreo"
         Me.TxtCorreo.Size = New System.Drawing.Size(197, 20)
         Me.TxtCorreo.TabIndex = 1
@@ -311,7 +315,7 @@ Partial Class FrmCrearCuenta
         'PcbVerCorreo
         '
         Me.PcbVerCorreo.Image = Global.Biblioteca.My.Resources.Resources.IncorrectoRojo
-        Me.PcbVerCorreo.Location = New System.Drawing.Point(490, 115)
+        Me.PcbVerCorreo.Location = New System.Drawing.Point(490, 112)
         Me.PcbVerCorreo.Name = "PcbVerCorreo"
         Me.PcbVerCorreo.Size = New System.Drawing.Size(34, 37)
         Me.PcbVerCorreo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
