@@ -28,14 +28,10 @@ Partial Class FrmRecuperacion
         Me.BtnCerrar = New System.Windows.Forms.Button()
         Me.LblDerechos = New System.Windows.Forms.Label()
         Me.PnlBarraBaja = New System.Windows.Forms.Panel()
-        Me.TxtUser = New System.Windows.Forms.TextBox()
-        Me.PnlUser = New System.Windows.Forms.Panel()
         Me.BtnRecuperar = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.BtnVolver = New Biblioteca.ButtonRadio()
         Me.PnlBarra.SuspendLayout()
         Me.PnlBarraBaja.SuspendLayout()
-        Me.PnlUser.SuspendLayout()
         Me.SuspendLayout()
         '
         'PnlBarra
@@ -117,26 +113,6 @@ Partial Class FrmRecuperacion
         Me.PnlBarraBaja.Size = New System.Drawing.Size(575, 40)
         Me.PnlBarraBaja.TabIndex = 26
         '
-        'TxtUser
-        '
-        Me.TxtUser.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.TxtUser.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TxtUser.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtUser.ForeColor = System.Drawing.Color.Silver
-        Me.TxtUser.Location = New System.Drawing.Point(7, 10)
-        Me.TxtUser.Name = "TxtUser"
-        Me.TxtUser.Size = New System.Drawing.Size(360, 20)
-        Me.TxtUser.TabIndex = 1
-        '
-        'PnlUser
-        '
-        Me.PnlUser.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.PnlUser.Controls.Add(Me.TxtUser)
-        Me.PnlUser.Location = New System.Drawing.Point(100, 142)
-        Me.PnlUser.Name = "PnlUser"
-        Me.PnlUser.Size = New System.Drawing.Size(374, 42)
-        Me.PnlUser.TabIndex = 27
-        '
         'BtnRecuperar
         '
         Me.BtnRecuperar.BackColor = System.Drawing.Color.Transparent
@@ -146,23 +122,12 @@ Partial Class FrmRecuperacion
         Me.BtnRecuperar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnRecuperar.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnRecuperar.ForeColor = System.Drawing.Color.Silver
-        Me.BtnRecuperar.Location = New System.Drawing.Point(213, 207)
+        Me.BtnRecuperar.Location = New System.Drawing.Point(101, 187)
         Me.BtnRecuperar.Name = "BtnRecuperar"
-        Me.BtnRecuperar.Size = New System.Drawing.Size(148, 40)
+        Me.BtnRecuperar.Size = New System.Drawing.Size(383, 40)
         Me.BtnRecuperar.TabIndex = 28
-        Me.BtnRecuperar.Text = "RECUPERAR"
+        Me.BtnRecuperar.Text = "SOLICITAR CÓDIGO DE RECUPERACIÓN"
         Me.BtnRecuperar.UseVisualStyleBackColor = False
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Silver
-        Me.Label1.Location = New System.Drawing.Point(172, 90)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(242, 22)
-        Me.Label1.TabIndex = 29
-        Me.Label1.Text = "Ingrese su correo electrónico"
         '
         'BtnVolver
         '
@@ -189,9 +154,7 @@ Partial Class FrmRecuperacion
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(575, 349)
         Me.Controls.Add(Me.BtnVolver)
-        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.BtnRecuperar)
-        Me.Controls.Add(Me.PnlUser)
         Me.Controls.Add(Me.PnlBarraBaja)
         Me.Controls.Add(Me.PnlBarra)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -201,10 +164,7 @@ Partial Class FrmRecuperacion
         Me.PnlBarra.PerformLayout()
         Me.PnlBarraBaja.ResumeLayout(False)
         Me.PnlBarraBaja.PerformLayout()
-        Me.PnlUser.ResumeLayout(False)
-        Me.PnlUser.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents PnlBarra As System.Windows.Forms.Panel
@@ -213,9 +173,6 @@ Partial Class FrmRecuperacion
     Friend WithEvents BtnCerrar As System.Windows.Forms.Button
     Friend WithEvents LblDerechos As System.Windows.Forms.Label
     Friend WithEvents PnlBarraBaja As System.Windows.Forms.Panel
-    Friend WithEvents TxtUser As System.Windows.Forms.TextBox
-    Friend WithEvents PnlUser As System.Windows.Forms.Panel
     Friend WithEvents BtnRecuperar As System.Windows.Forms.Button
-    Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents BtnVolver As Biblioteca.ButtonRadio
 End Class

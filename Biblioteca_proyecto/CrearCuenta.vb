@@ -7,12 +7,13 @@ Public Class FrmCrearCuenta
     <DllImport("user32.DLL", EntryPoint:="SendMessage")>
     Private Shared Sub SendMessage(ByVal hWnd As System.IntPtr, ByVal wMsg As Integer, ByVal wParam As Integer, ByVal lParam As Integer)
     End Sub
+
     Private Sub BtnMin_Click(sender As System.Object, e As System.EventArgs) Handles BtnMin.Click
         Me.WindowState = FormWindowState.Minimized
     End Sub
 
     Private Sub BtnCerrar_Click(sender As System.Object, e As System.EventArgs) Handles BtnCerrar.Click
-        Dim result = CuadroDeMensaje.Show("¿Está seguro de que desea cerrar el programa?",
+        Dim result = CuadroDeMensaje.Show("¿Está seguro de que desea cerrar el programa? Perderá los datos no guardados.",
                                      "Atención - Cierre del programa",
        MessageBoxButtons.YesNo)
         If result = DialogResult.Yes Then
@@ -310,8 +311,10 @@ Public Class FrmCrearCuenta
                 Else
                     If TxtPass.Text = TxtConfPass.Text Then
                         PcbVerConfPass.Image = My.Resources.Correcto
+                        BtnCrearCuenta.Enabled = True
                     Else
                         PcbVerConfPass.Image = My.Resources.IncorrectoRojo
+                        BtnCrearCuenta.Enabled = False
                     End If
                 End If
 
@@ -337,7 +340,7 @@ Public Class FrmCrearCuenta
                                                "Confirmar contraseña - Error",
                                                MessageBoxButtons.OK,
                                                MessageBoxIcon.Error)
-                    PcbConfPass.Image = My.Resources.IncorrectoRojo
+                    PcbVerConfPass.Image = My.Resources.IncorrectoRojo
                 Else
                     If TxtPass.Text = TxtConfPass.Text Then
                         PcbVerConfPass.Image = My.Resources.Correcto
@@ -376,5 +379,38 @@ Public Class FrmCrearCuenta
             PcbVerCorreo.Image = My.Resources.IncorrectoRojo
             PcbVerCorreo.Visible = True
         End If
+    End Sub
+
+    Private Sub BtnVolver_Click(sender As System.Object, e As System.EventArgs) Handles BtnVolver.Click
+        FrmLogin.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub BtnCrearCuenta_Click(sender As System.Object, e As System.EventArgs) Handles BtnCrearCuenta.Click
+        'reunir la información y hacer el alta en la base de datos. Cuando lo haga, en el inicio de sesión debe desaparecer
+        'el crear cuenta
+        'hacer antes prueba en otro programa con esa función nada más
+    End Sub
+
+    Private Sub BtnCrearCuenta_MouseDown(sender As Object, e As System.Windows.Forms.MouseEventArgs) Handles BtnCrearCuenta.MouseDown
+        BtnCrearCuenta.FlatAppearance.BorderColor = Color.FromArgb(30, 67, 90)
+        BtnCrearCuenta.BackColor = Color.FromArgb(70, 118, 126)
+    End Sub
+
+    Private Sub BtnCrearCuenta_MouseEnter(sender As Object, e As System.EventArgs) Handles BtnCrearCuenta.MouseEnter
+        BtnCrearCuenta.FlatAppearance.BorderColor = Color.LightGray
+        BtnCrearCuenta.BackColor = Color.FromArgb(20, 57, 80)
+        BtnCrearCuenta.ForeColor = Color.LightGray
+    End Sub
+
+    Private Sub BtnCrearCuenta_MouseLeave(sender As Object, e As System.EventArgs) Handles BtnCrearCuenta.MouseLeave
+        BtnCrearCuenta.FlatAppearance.BorderColor = Color.FromArgb(30, 67, 90)
+        BtnCrearCuenta.BackColor = Color.FromArgb(20, 57, 80)
+        BtnCrearCuenta.ForeColor = Color.Silver
+    End Sub
+
+    Private Sub BtnCrearCuenta_MouseUp(sender As Object, e As System.Windows.Forms.MouseEventArgs) Handles BtnCrearCuenta.MouseUp
+        BtnCrearCuenta.FlatAppearance.BorderColor = Color.LightGray
+        BtnCrearCuenta.BackColor = Color.FromArgb(20, 57, 80)
     End Sub
 End Class

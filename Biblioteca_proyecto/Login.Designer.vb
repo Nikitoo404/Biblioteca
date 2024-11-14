@@ -179,6 +179,7 @@ Partial Class FrmLogin
         Me.LblOlvid.Size = New System.Drawing.Size(172, 18)
         Me.LblOlvid.TabIndex = 24
         Me.LblOlvid.Text = "¿Olvidaste tu contraseña?"
+        Me.LblOlvid.Visible = False
         '
         'BtnLogin
         '
@@ -255,6 +256,7 @@ Partial Class FrmLogin
         Me.Label2.Size = New System.Drawing.Size(12, 18)
         Me.Label2.TabIndex = 29
         Me.Label2.Text = "|"
+        Me.Label2.Visible = False
         '
         'FrmLogin
         '

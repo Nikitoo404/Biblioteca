@@ -43,7 +43,7 @@ Partial Class FrmCrearCuenta
         Me.PcbCorreo = New System.Windows.Forms.PictureBox()
         Me.TxtCorreo = New System.Windows.Forms.TextBox()
         Me.LblCompletar = New System.Windows.Forms.Label()
-        Me.BtnRecuperar = New System.Windows.Forms.Button()
+        Me.BtnCrearCuenta = New System.Windows.Forms.Button()
         Me.PcbVerCorreo = New System.Windows.Forms.PictureBox()
         Me.PcbConfPass = New System.Windows.Forms.PictureBox()
         Me.PcbPass = New System.Windows.Forms.PictureBox()
@@ -295,22 +295,22 @@ Partial Class FrmCrearCuenta
         Me.LblCompletar.TabIndex = 32
         Me.LblCompletar.Text = "Complete los siguientes casilleros:"
         '
-        'BtnRecuperar
+        'BtnCrearCuenta
         '
-        Me.BtnRecuperar.BackColor = System.Drawing.Color.Transparent
-        Me.BtnRecuperar.Enabled = False
-        Me.BtnRecuperar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.BtnRecuperar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(70, Byte), Integer), CType(CType(118, Byte), Integer), CType(CType(126, Byte), Integer))
-        Me.BtnRecuperar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.BtnRecuperar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnRecuperar.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnRecuperar.ForeColor = System.Drawing.Color.Silver
-        Me.BtnRecuperar.Location = New System.Drawing.Point(212, 356)
-        Me.BtnRecuperar.Name = "BtnRecuperar"
-        Me.BtnRecuperar.Size = New System.Drawing.Size(168, 40)
-        Me.BtnRecuperar.TabIndex = 33
-        Me.BtnRecuperar.Text = "CREAR CUENTA"
-        Me.BtnRecuperar.UseVisualStyleBackColor = False
+        Me.BtnCrearCuenta.BackColor = System.Drawing.Color.Transparent
+        Me.BtnCrearCuenta.Enabled = False
+        Me.BtnCrearCuenta.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.BtnCrearCuenta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(70, Byte), Integer), CType(CType(118, Byte), Integer), CType(CType(126, Byte), Integer))
+        Me.BtnCrearCuenta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.BtnCrearCuenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnCrearCuenta.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCrearCuenta.ForeColor = System.Drawing.Color.Silver
+        Me.BtnCrearCuenta.Location = New System.Drawing.Point(212, 356)
+        Me.BtnCrearCuenta.Name = "BtnCrearCuenta"
+        Me.BtnCrearCuenta.Size = New System.Drawing.Size(168, 40)
+        Me.BtnCrearCuenta.TabIndex = 33
+        Me.BtnCrearCuenta.Text = "CREAR CUENTA"
+        Me.BtnCrearCuenta.UseVisualStyleBackColor = False
         '
         'PcbVerCorreo
         '
@@ -432,7 +432,7 @@ Partial Class FrmCrearCuenta
         Me.Controls.Add(Me.PcbConfPass)
         Me.Controls.Add(Me.PcbPass)
         Me.Controls.Add(Me.BtnVolver)
-        Me.Controls.Add(Me.BtnRecuperar)
+        Me.Controls.Add(Me.BtnCrearCuenta)
         Me.Controls.Add(Me.LblCompletar)
         Me.Controls.Add(Me.PnlCorreo)
         Me.Controls.Add(Me.PnlConfPass)
@@ -489,7 +489,7 @@ Partial Class FrmCrearCuenta
     Friend WithEvents PcbCorreo As System.Windows.Forms.PictureBox
     Friend WithEvents TxtCorreo As System.Windows.Forms.TextBox
     Friend WithEvents LblCompletar As System.Windows.Forms.Label
-    Friend WithEvents BtnRecuperar As System.Windows.Forms.Button
+    Friend WithEvents BtnCrearCuenta As System.Windows.Forms.Button
     Friend WithEvents BtnVolver As Biblioteca.ButtonRadio
     Friend WithEvents PcbPass As System.Windows.Forms.PictureBox
     Friend WithEvents PcbConfPass As System.Windows.Forms.PictureBox
