@@ -53,6 +53,8 @@ Partial Class FrmCrearCuenta
         Me.ttpCuadros = New System.Windows.Forms.ToolTip(Me.components)
         Me.CboTipoCorreo = New Biblioteca.ComboPerso()
         Me.BtnVolver = New Biblioteca.ButtonRadio()
+        Me.UsuariosTableAdapter = New Biblioteca.bdbibliotecaDataSetTableAdapters.usuariosTableAdapter()
+        Me.BdbibliotecaDataSet = New Biblioteca.bdbibliotecaDataSet()
         Me.PnlBarraBaja.SuspendLayout()
         Me.PnlBarra.SuspendLayout()
         Me.PnlUser.SuspendLayout()
@@ -69,6 +71,7 @@ Partial Class FrmCrearCuenta
         CType(Me.PcbVerUser, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PcbVerPass, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PcbVerConfPass, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BdbibliotecaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PnlBarraBaja
@@ -418,6 +421,15 @@ Partial Class FrmCrearCuenta
         Me.BtnVolver.TextColor = System.Drawing.Color.White
         Me.BtnVolver.UseVisualStyleBackColor = False
         '
+        'UsuariosTableAdapter
+        '
+        Me.UsuariosTableAdapter.ClearBeforeFill = True
+        '
+        'BdbibliotecaDataSet
+        '
+        Me.BdbibliotecaDataSet.DataSetName = "bdbibliotecaDataSet"
+        Me.BdbibliotecaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'FrmCrearCuenta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -466,6 +478,7 @@ Partial Class FrmCrearCuenta
         CType(Me.PcbVerUser, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PcbVerPass, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PcbVerConfPass, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BdbibliotecaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -499,4 +512,6 @@ Partial Class FrmCrearCuenta
     Friend WithEvents PcbVerConfPass As System.Windows.Forms.PictureBox
     Friend WithEvents CboTipoCorreo As Biblioteca.ComboPerso
     Friend WithEvents ttpCuadros As System.Windows.Forms.ToolTip
+    Friend WithEvents UsuariosTableAdapter As Biblioteca.bdbibliotecaDataSetTableAdapters.usuariosTableAdapter
+    Friend WithEvents BdbibliotecaDataSet As Biblioteca.bdbibliotecaDataSet
 End Class

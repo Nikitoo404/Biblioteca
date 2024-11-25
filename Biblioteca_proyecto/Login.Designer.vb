@@ -22,6 +22,7 @@ Partial Class FrmLogin
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmLogin))
         Me.PnlBarra = New System.Windows.Forms.Panel()
         Me.LblBienvenida = New System.Windows.Forms.Label()
@@ -40,12 +41,17 @@ Partial Class FrmLogin
         Me.PnlBarraBaja = New System.Windows.Forms.Panel()
         Me.LblCrear = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.BdbibliotecaDataSet = New Biblioteca.bdbibliotecaDataSet()
+        Me.UsuariosTableAdapter = New Biblioteca.bdbibliotecaDataSetTableAdapters.usuariosTableAdapter()
+        Me.UsuariosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.PnlBarra.SuspendLayout()
         Me.PnlUser.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PnlPass.SuspendLayout()
         CType(Me.PcbCandados, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PnlBarraBaja.SuspendLayout()
+        CType(Me.BdbibliotecaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.UsuariosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PnlBarra
@@ -179,7 +185,6 @@ Partial Class FrmLogin
         Me.LblOlvid.Size = New System.Drawing.Size(172, 18)
         Me.LblOlvid.TabIndex = 24
         Me.LblOlvid.Text = "¿Olvidaste tu contraseña?"
-        Me.LblOlvid.Visible = False
         '
         'BtnLogin
         '
@@ -256,7 +261,20 @@ Partial Class FrmLogin
         Me.Label2.Size = New System.Drawing.Size(12, 18)
         Me.Label2.TabIndex = 29
         Me.Label2.Text = "|"
-        Me.Label2.Visible = False
+        '
+        'BdbibliotecaDataSet
+        '
+        Me.BdbibliotecaDataSet.DataSetName = "bdbibliotecaDataSet"
+        Me.BdbibliotecaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'UsuariosTableAdapter
+        '
+        Me.UsuariosTableAdapter.ClearBeforeFill = True
+        '
+        'UsuariosBindingSource
+        '
+        Me.UsuariosBindingSource.DataMember = "usuarios"
+        Me.UsuariosBindingSource.DataSource = Me.BdbibliotecaDataSet
         '
         'FrmLogin
         '
@@ -287,6 +305,8 @@ Partial Class FrmLogin
         CType(Me.PcbCandados, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PnlBarraBaja.ResumeLayout(False)
         Me.PnlBarraBaja.PerformLayout()
+        CType(Me.BdbibliotecaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.UsuariosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -308,5 +328,8 @@ Partial Class FrmLogin
     Friend WithEvents PnlBarraBaja As System.Windows.Forms.Panel
     Friend WithEvents LblCrear As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents BdbibliotecaDataSet As Biblioteca.bdbibliotecaDataSet
+    Friend WithEvents UsuariosTableAdapter As Biblioteca.bdbibliotecaDataSetTableAdapters.usuariosTableAdapter
+    Friend WithEvents UsuariosBindingSource As System.Windows.Forms.BindingSource
 
 End Class

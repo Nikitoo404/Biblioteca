@@ -108,7 +108,42 @@ Public Class FrmLogin
         SendMessage(Me.Handle, &H112&, &HF012&, 0)
     End Sub
     Private Sub BtnLogin_Click(sender As Object, e As EventArgs) Handles BtnLogin.Click
-        FrmInicio.Show()
+        
+        If Len(Trim(TxtUser.Text)) = 0 Or Len(Trim(TxtPass.Text)) = 0 Then
+            Dim result = CuadroDeMensaje.Show("Complete los campos vacíos.",
+                                          "Iniciar sesión - Error",
+                                          MessageBoxButtons.OK,
+                                          MessageBoxIcon.Error)
+            Exit Sub
+        End If
+
+        Dim usuario As Integer = UsuariosBindingSource.Find("NombreUsuario", TxtUser.Text)
+        Dim correo As Integer = UsuariosBindingSource.Find("correo", TxtUser.Text)
+        Dim id As Integer
+        If usuario = 0 Then
+            id = UsuariosTableAdapter.GetData(usuario).ID - 1
+        ElseIf correo = 0 Then
+            id = UsuariosTableAdapter.GetData(correo).ID - 1
+        Else
+            Dim result = CuadroDeMensaje.Show("El correo electrónico/usuario ingresado no existe o es incorrecto.",
+                               "Iniciar sesión - Error",
+                               MessageBoxButtons.OK,
+                               MessageBoxIcon.Error)
+            Exit Sub
+        End If
+
+        Dim contraBase As String = UsuariosTableAdapter.GetData(id).Contraseña
+        If TxtPass.Text = contraBase Then
+            FrmInicio.Show()
+        Else
+            Dim result = CuadroDeMensaje.Show("Contraseña incorrecta.",
+                                           "Iniciar sesión - Error",
+                                           MessageBoxButtons.OK,
+                                           MessageBoxIcon.Error)
+        End If
+
+
+
     End Sub
 
     Private Sub FrmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -116,6 +151,14 @@ Public Class FrmLogin
         LblCrear.Cursor = CursorHand.GetCustomCursor
         FrmInicio.Close()
         FrmRecuperacion.Close()
+        Me.UsuariosTableAdapter.Fill(Me.BdbibliotecaDataSet.usuarios)
+        If BdbibliotecaDataSet.usuarios.Rows.Count + 0 Then
+            LblCrear.Enabled = False
+            LblOlvid.Enabled = True
+        Else
+            LblCrear.Enabled = True
+            LblOlvid.Enabled = False
+        End If
     End Sub
 
     Private Sub BtnLogin_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles BtnLogin.MouseDown

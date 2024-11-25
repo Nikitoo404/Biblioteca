@@ -86,6 +86,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>bdbibliotecaDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="bdbibliotecaDataSet.vb">
+      <DependentUpon>bdbibliotecaDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ButtonRadio.vb">
       <SubType>Component</SubType>
     </Compile>

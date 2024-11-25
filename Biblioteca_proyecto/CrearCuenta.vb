@@ -29,6 +29,8 @@ Public Class FrmCrearCuenta
     Private Sub FrmCrearCuenta_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         FrmLogin.Close()
         CboTipoCorreo.SelectedIndex = -1
+        'TODO: esta línea de código carga datos en la tabla 'BdbibliotecaDataSet.usuarios' Puede moverla o quitarla según sea necesario.
+        Me.UsuariosTableAdapter.Fill(Me.BdbibliotecaDataSet.usuarios)
     End Sub
 
     Private Sub TxtUser_Leave(sender As Object, e As System.EventArgs) Handles TxtUser.Leave
@@ -336,10 +338,6 @@ Public Class FrmCrearCuenta
             If TxtConfPass.Text.Trim() <> "" Then
                 PcbVerConfPass.Visible = True
                 If Not ContraValida(TxtConfPass.Text) Then
-                    Dim result = CuadroDeMensaje.Show("Por favor, ingrese una contraseña válido. Recuerde que solo se permiten letras, números, puntos, guiones y guiones bajos. Además, debe tener como mínimo 8 caracteres, al menos una mayúscula, minúscula y algún número, y no se permiten espacios.",
-                                               "Confirmar contraseña - Error",
-                                               MessageBoxButtons.OK,
-                                               MessageBoxIcon.Error)
                     PcbVerConfPass.Image = My.Resources.IncorrectoRojo
                 Else
                     If TxtPass.Text = TxtConfPass.Text Then
@@ -387,9 +385,12 @@ Public Class FrmCrearCuenta
     End Sub
 
     Private Sub BtnCrearCuenta_Click(sender As System.Object, e As System.EventArgs) Handles BtnCrearCuenta.Click
-        'reunir la información y hacer el alta en la base de datos. Cuando lo haga, en el inicio de sesión debe desaparecer
-        'el crear cuenta
-        'hacer antes prueba en otro programa con esa función nada más
+        Dim correo As String = TxtCorreo.Text & CboTipoCorreo.Texts
+        Dim usuario As String = TxtUser.Text
+        Dim contrasena As String = TxtPass.Text
+        UsuariosTableAdapter.Insert(TxtUser.Text, correo, TxtPass.Text, "", DateTime.Now)
+        Me.UsuariosTableAdapter.Fill(Me.BdbibliotecaDataSet.usuarios)
+        FrmLogin.Show()
     End Sub
 
     Private Sub BtnCrearCuenta_MouseDown(sender As Object, e As System.Windows.Forms.MouseEventArgs) Handles BtnCrearCuenta.MouseDown
