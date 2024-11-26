@@ -36,3 +36,6 @@ C:\Users\impre\OneDrive\Documentos\Trabajo\Biblioteca_proyecto\Biblioteca_proyec
 C:\Users\impre\OneDrive\Documentos\Trabajo\Biblioteca_proyecto\Biblioteca_proyecto\obj\x86\Debug\Biblioteca.FrmRegPres.resources
 C:\Users\impre\OneDrive\Documentos\Trabajo\Biblioteca_proyecto\Biblioteca_proyecto\obj\x86\Debug\Biblioteca.FrmVerPres.resources
 C:\Users\impre\OneDrive\Documentos\Trabajo\Biblioteca_proyecto\Biblioteca_proyecto\obj\x86\Debug\Biblioteca_proyecto.vbproj.GenerateResource.Cache
+C:\Users\impre\OneDrive\Documentos\Trabajo\Biblioteca_proyecto\Biblioteca_proyecto\obj\x86\Debug\Biblioteca.FrmCrearRegistros.resources
+C:\Users\impre\OneDrive\Documentos\Trabajo\Biblioteca_proyecto\Biblioteca_proyecto\obj\x86\Debug\Biblioteca.FrmEditarRegistros.resources
+C:\Users\impre\OneDrive\Documentos\Trabajo\Biblioteca_proyecto\Biblioteca_proyecto\obj\x86\Debug\Biblioteca.FrmVerRegistros.resources

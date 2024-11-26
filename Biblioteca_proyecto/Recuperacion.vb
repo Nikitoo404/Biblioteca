@@ -63,13 +63,11 @@ Public Class FrmRecuperacion
             Dim codigoRecuperacion As String = "1234"  'solicitar contraseña en base de datos
 
             If EnviarCorreo(correoDestino, codigoRecuperacion) Then
-                MessageBox.Show("Correo de recuperación enviado exitosamente.")
                 Dim result = CuadroDeMensaje.Show("Correo de recuperación enviado exitosamente.",
                                                "Recuperar contraseña",
                                                MessageBoxButtons.OK,
                                                MessageBoxIcon.Information)
             Else
-                MessageBox.Show("Error al enviar el correo.")
                 Dim result = CuadroDeMensaje.Show("Error al enviar el correo. Inténtelo más tarde. Si el error vuelve a ocurrir, consulte con el desarrollador del programa.",
                                                "Recuperar contraseña",
                                                MessageBoxButtons.OK,

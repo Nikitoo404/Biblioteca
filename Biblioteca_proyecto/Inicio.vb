@@ -33,8 +33,12 @@ Public Class FrmInicio
             If e.Clicks = 2 Then
                 If Me.WindowState = FormWindowState.Normal Then
                     Me.WindowState = FormWindowState.Maximized
+                    BtnMaximizar.Visible = False
+                    BtnRestaurar.Visible = True
                 Else
                     Me.WindowState = FormWindowState.Normal
+                    BtnRestaurar.Visible = False
+                    BtnMaximizar.Visible = True
                 End If
             End If
         End If
@@ -86,6 +90,11 @@ Public Class FrmInicio
     End Sub
 
     Private Sub LblCerrarSesion_Click(sender As Object, e As EventArgs) Handles LblCerrarSesion.Click
-        FrmLogin.Show()
+        Dim result = CuadroDeMensaje.Show("¿Está seguro de que desea cerrar sesión?",
+                                      "Atención - Cierre de sesión",
+        MessageBoxButtons.YesNo)
+        If result = DialogResult.Yes Then
+            FrmLogin.Show()
+        End If
     End Sub
 End Class

@@ -65,32 +65,52 @@ Public Class FrmLogin
         If Len(Trim(TxtPass.Text)) = 0 Then
             If TxtPass.UseSystemPasswordChar = True Then
                 TxtPass.UseSystemPasswordChar = False
-                ChkPass.Checked = False
+                PcbPass.Image = My.Resources.ojoBlueTachado
             End If
             TxtPass.Text = "Contraseña"
         End If
     End Sub
 
-    Private Sub ChkPass_CheckedChanged(sender As Object, e As EventArgs) Handles ChkPass.CheckedChanged
-        If ChkPass.Checked = False Then
+    Private Sub PcbPass_Click(sender As System.Object, e As System.EventArgs) Handles PcbPass.Click
+        If PcbPass.Tag = "OjoTachado" Then
             If TxtPass.Text = "Contraseña" Then
+                PcbPass.Image = My.Resources.ojoBlue
+                PcbPass.Tag = "Ojo"
                 Exit Sub
             Else
-                TxtPass.UseSystemPasswordChar = True
+                TxtPass.UseSystemPasswordChar = False
+                PcbPass.Image = My.Resources.ojoBlue
+                PcbPass.Tag = "Ojo"
             End If
         Else
-            If ChkPass.Checked = True Then
-                TxtPass.UseSystemPasswordChar = False
+            If PcbPass.Tag = "Ojo" Then
+                If TxtPass.Text = "Contraseña" Then
+                    PcbPass.Image = My.Resources.ojoBlueTachado
+                    PcbPass.Tag = "OjoTachado"
+                    Exit Sub
+                Else
+                    TxtPass.UseSystemPasswordChar = True
+                    PcbPass.Image = My.Resources.ojoBlueTachado
+                    PcbPass.Tag = "OjoTachado"
+                End If
             End If
         End If
     End Sub
 
     Private Sub TxtPass_TextChanged(sender As Object, e As EventArgs) Handles TxtPass.TextChanged
+        If TxtPass.Text <> "Contraseña" Then
+            If TxtPass.Text.Trim() <> "" Then
+                TxtPass.Focus()
+            End If
+        Else
+            PcbCandados.Image = My.Resources.candado_c_azul
+        End If
+
         If Len(Trim(TxtPass.Text)) > 0 Then
             If TxtPass.Text = "Contraseña" Then
                 PcbCandados.Image = My.Resources.candado_c_azul
             Else
-                If ChkPass.Checked = True Then
+                If PcbPass.Tag = "Ojo" Then
                     TxtPass.UseSystemPasswordChar = False
                     PcbCandados.Image = My.Resources.candado_a_azul
                     Exit Sub

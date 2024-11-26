@@ -36,7 +36,6 @@ Partial Class FrmLogin
         Me.PcbCandados = New System.Windows.Forms.PictureBox()
         Me.LblOlvid = New System.Windows.Forms.Label()
         Me.BtnLogin = New System.Windows.Forms.Button()
-        Me.ChkPass = New System.Windows.Forms.CheckBox()
         Me.LblDerechos = New System.Windows.Forms.Label()
         Me.PnlBarraBaja = New System.Windows.Forms.Panel()
         Me.LblCrear = New System.Windows.Forms.Label()
@@ -44,6 +43,7 @@ Partial Class FrmLogin
         Me.BdbibliotecaDataSet = New Biblioteca.bdbibliotecaDataSet()
         Me.UsuariosTableAdapter = New Biblioteca.bdbibliotecaDataSetTableAdapters.usuariosTableAdapter()
         Me.UsuariosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PcbPass = New System.Windows.Forms.PictureBox()
         Me.PnlBarra.SuspendLayout()
         Me.PnlUser.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -52,6 +52,7 @@ Partial Class FrmLogin
         Me.PnlBarraBaja.SuspendLayout()
         CType(Me.BdbibliotecaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UsuariosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PcbPass, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PnlBarra
@@ -202,19 +203,6 @@ Partial Class FrmLogin
         Me.BtnLogin.Text = "ACCEDER"
         Me.BtnLogin.UseVisualStyleBackColor = False
         '
-        'ChkPass
-        '
-        Me.ChkPass.AutoSize = True
-        Me.ChkPass.BackColor = System.Drawing.Color.Transparent
-        Me.ChkPass.Font = New System.Drawing.Font("Montserrat", 8.249999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ChkPass.ForeColor = System.Drawing.Color.Silver
-        Me.ChkPass.Location = New System.Drawing.Point(469, 141)
-        Me.ChkPass.Name = "ChkPass"
-        Me.ChkPass.Size = New System.Drawing.Size(84, 34)
-        Me.ChkPass.TabIndex = 22
-        Me.ChkPass.Text = "      Ver" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "contraseña"
-        Me.ChkPass.UseVisualStyleBackColor = False
-        '
         'LblDerechos
         '
         Me.LblDerechos.Anchor = System.Windows.Forms.AnchorStyles.Right
@@ -276,19 +264,30 @@ Partial Class FrmLogin
         Me.UsuariosBindingSource.DataMember = "usuarios"
         Me.UsuariosBindingSource.DataSource = Me.BdbibliotecaDataSet
         '
+        'PcbPass
+        '
+        Me.PcbPass.Image = Global.Biblioteca.My.Resources.Resources.ojoBlueTachado
+        Me.PcbPass.Location = New System.Drawing.Point(450, 137)
+        Me.PcbPass.Name = "PcbPass"
+        Me.PcbPass.Size = New System.Drawing.Size(34, 37)
+        Me.PcbPass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PcbPass.TabIndex = 37
+        Me.PcbPass.TabStop = False
+        Me.PcbPass.Tag = "OjoTachado"
+        '
         'FrmLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(575, 349)
+        Me.Controls.Add(Me.PcbPass)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.LblCrear)
         Me.Controls.Add(Me.PnlUser)
         Me.Controls.Add(Me.PnlPass)
         Me.Controls.Add(Me.LblOlvid)
         Me.Controls.Add(Me.BtnLogin)
-        Me.Controls.Add(Me.ChkPass)
         Me.Controls.Add(Me.PnlBarraBaja)
         Me.Controls.Add(Me.PnlBarra)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -307,6 +306,7 @@ Partial Class FrmLogin
         Me.PnlBarraBaja.PerformLayout()
         CType(Me.BdbibliotecaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.UsuariosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PcbPass, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -323,7 +323,6 @@ Partial Class FrmLogin
     Friend WithEvents TxtPass As System.Windows.Forms.TextBox
     Friend WithEvents LblOlvid As System.Windows.Forms.Label
     Friend WithEvents BtnLogin As System.Windows.Forms.Button
-    Friend WithEvents ChkPass As System.Windows.Forms.CheckBox
     Friend WithEvents LblDerechos As System.Windows.Forms.Label
     Friend WithEvents PnlBarraBaja As System.Windows.Forms.Panel
     Friend WithEvents LblCrear As System.Windows.Forms.Label
@@ -331,5 +330,6 @@ Partial Class FrmLogin
     Friend WithEvents BdbibliotecaDataSet As Biblioteca.bdbibliotecaDataSet
     Friend WithEvents UsuariosTableAdapter As Biblioteca.bdbibliotecaDataSetTableAdapters.usuariosTableAdapter
     Friend WithEvents UsuariosBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents PcbPass As System.Windows.Forms.PictureBox
 
 End Class

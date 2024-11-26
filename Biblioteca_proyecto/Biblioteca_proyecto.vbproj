@@ -104,8 +104,20 @@
     <Compile Include="CrearCuenta.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="CrearRegistros.Designer.vb">
+      <DependentUpon>CrearRegistros.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CrearRegistros.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CuadroDeMensaje.vb" />
     <Compile Include="CursorHand.vb" />
+    <Compile Include="EditarRegistros.Designer.vb">
+      <DependentUpon>EditarRegistros.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EditarRegistros.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmMensaje.Designer.vb">
       <DependentUpon>FrmMensaje.vb</DependentUpon>
     </Compile>
@@ -171,6 +183,12 @@
     <Compile Include="VerPres.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="VerRegistros.Designer.vb">
+      <DependentUpon>VerRegistros.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VerRegistros.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Base.resx">
@@ -178,6 +196,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CrearCuenta.resx">
       <DependentUpon>CrearCuenta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrearRegistros.resx">
+      <DependentUpon>CrearRegistros.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarRegistros.resx">
+      <DependentUpon>EditarRegistros.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMensaje.resx">
       <DependentUpon>FrmMensaje.vb</DependentUpon>
@@ -208,6 +232,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VerPres.resx">
       <DependentUpon>VerPres.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerRegistros.resx">
+      <DependentUpon>VerRegistros.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -319,6 +346,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\IncorrectoRojo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\masx150.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\masotrox150.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\masotrox150 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ojo-blanco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ojo-blanco x75.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ojo-blancox150.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image %283%29 %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

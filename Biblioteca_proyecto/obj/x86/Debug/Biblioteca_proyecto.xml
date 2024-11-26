@@ -231,6 +231,10 @@ TableAdapterManager is used to coordinate TableAdapters in the dataset to enable
 	<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
+</member><member name="P:Biblioteca.My.Resources.Resources.editarBlancox75">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
 </member><member name="P:Biblioteca.My.Resources.Resources.Icono_cerrar_FN_negro">
 	<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
@@ -263,7 +267,15 @@ TableAdapterManager is used to coordinate TableAdapters in the dataset to enable
 	<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
+</member><member name="P:Biblioteca.My.Resources.Resources.masx75">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
 </member><member name="P:Biblioteca.My.Resources.Resources.Mobile_Menu_Icon">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Biblioteca.My.Resources.Resources.ojo_blanco_x75">
 	<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
