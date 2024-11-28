@@ -34,8 +34,8 @@ Public Class ComboPerso
         cmbList.BackColor = listBackColor
         cmbList.Font = New Font(Me.Font.Name, 10.0F)
         cmbList.ForeColor = listTextColor
+        cmbList.DropDownStyle = ComboBoxStyle.DropDownList
         AddHandler cmbList.SelectedIndexChanged, AddressOf ComboBox_SelectedIndexChanged ' Default event
-        AddHandler cmbList.TextChanged, AddressOf ComboBox_TextChanged ' Refresh text
 
         ' Button: Icon
         btnIcon.Dock = DockStyle.Right

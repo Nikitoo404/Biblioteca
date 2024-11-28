@@ -1,4 +1,6 @@
-﻿Public Class FrmCrearRegistros
+﻿Imports System.Drawing
+Imports System.Drawing.Drawing2D
+Public Class FrmCrearRegistros
     Private Sub BtnVolver_MouseDown(sender As Object, e As MouseEventArgs) Handles BtnVolver.MouseDown
         BtnVolver.BackColor = Color.PeachPuff
         BtnVolver.Image = My.Resources.blueOsc
@@ -25,5 +27,21 @@
 
     Private Sub BtnVolver_Click(sender As Object, e As EventArgs) Handles BtnVolver.Click
         Utilidades.AbrirFormEnPanel(Of FrmRegistros)()
+    End Sub
+
+    Private Sub PnlTitulo_Paint(sender As Object, e As PaintEventArgs) Handles PnlTitulo.Paint, PnlAutor.Paint
+        ' Llamar a la función para dibujar el borde punteado
+        DrawDottedBorder(sender, e)
+
+    End Sub
+
+    Private Sub DrawDottedBorder(panel As Object, e As PaintEventArgs)
+        Dim graphics As Graphics = e.Graphics
+        Dim pen As New Pen(Color.PeachPuff)
+        pen.DashStyle = DashStyle.Solid ' Establecer el estilo del trazo a punteado
+        pen.Width = 3 ' Ajustar el ancho del trazo según tus preferencias
+
+        ' Dibujar el borde punteado
+        graphics.DrawRectangle(pen, 0, 0, panel.Width - 1, panel.Height - 1)
     End Sub
 End Class
