@@ -24,18 +24,21 @@ Public Class ComboPerso
     Public Event OnSelectedIndexChanged As EventHandler ' Default event
 
     ' Constructor
+
     Public Sub New()
+        InitializeComponent()
         cmbList = New ComboBox()
         lblText = New Label()
         btnIcon = New Button()
         Me.SuspendLayout()
 
-        ' ComboBox: Dropdown list
+        ' ComboBox: Dropdown 
         cmbList.BackColor = listBackColor
         cmbList.Font = New Font(Me.Font.Name, 10.0F)
         cmbList.ForeColor = listTextColor
-        cmbList.DropDownStyle = ComboBoxStyle.DropDownList
+        cmbList.DropDownStyle = ComboBoxStyle.DropDown ' Set to DropDown by default
         AddHandler cmbList.SelectedIndexChanged, AddressOf ComboBox_SelectedIndexChanged ' Default event
+        AddHandler cmbList.TextChanged, AddressOf ComboBox_TextChanged ' Refresh text
 
         ' Button: Icon
         btnIcon.Dock = DockStyle.Right
@@ -89,10 +92,12 @@ Public Class ComboPerso
 
     ' Default event
     Private Sub ComboBox_SelectedIndexChanged(sender As Object, e As EventArgs)
-          lblText.Text = cmbList.Text
-        RaiseEvent OnSelectedIndexChanged(Me, e) ' Invocar evento
+        'If OnSelectedIndexChanged IsNot Nothing Then
+        '    OnSelectedIndexChanged.Invoke(sender, e)
+        'End If
+        ' Refresh text
+        lblText.Text = cmbList.Text
     End Sub
-
     ' Items actions
     Private Sub Icon_Click(sender As Object, e As EventArgs)
         ' Open dropdown list
@@ -107,6 +112,8 @@ Public Class ComboPerso
         cmbList.Select()
         If cmbList.DropDownStyle = ComboBoxStyle.DropDownList Then
             cmbList.DroppedDown = True ' Open dropdown list
+        Else
+            cmbList.DroppedDown = False ' Abrir dropdown
         End If
     End Sub
 
@@ -245,9 +252,7 @@ Public Class ComboPerso
             Return cmbList.DropDownStyle
         End Get
         Set(value As ComboBoxStyle)
-            If cmbList.DropDownStyle <> ComboBoxStyle.Simple Then
-                cmbList.DropDownStyle = value
-            End If
+            cmbList.DropDownStyle = value
         End Set
     End Property
 

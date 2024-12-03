@@ -29,19 +29,20 @@ Public Class FrmCrearRegistros
         Utilidades.AbrirFormEnPanel(Of FrmRegistros)()
     End Sub
 
-    Private Sub PnlTitulo_Paint(sender As Object, e As PaintEventArgs) Handles PnlTitulo.Paint, PnlAutor.Paint
-        ' Llamar a la función para dibujar el borde punteado
-        DrawDottedBorder(sender, e)
-
+    Private Sub FrmCrearRegistros_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+        'TODO: esta línea de código carga datos en la tabla 'BdbibliotecaDataSet.tipoderecurso' Puede moverla o quitarla según sea necesario.
+        Me.TipoderecursoTableAdapter.Fill(Me.BdbibliotecaDataSet.tipoderecurso)
+        'TODO: esta línea de código carga datos en la tabla 'BdbibliotecaDataSet.autor' Puede moverla o quitarla según sea necesario.
+        Me.AutorTableAdapter.Fill(Me.BdbibliotecaDataSet.autor)
     End Sub
 
-    Private Sub DrawDottedBorder(panel As Object, e As PaintEventArgs)
-        Dim graphics As Graphics = e.Graphics
-        Dim pen As New Pen(Color.PeachPuff)
-        pen.DashStyle = DashStyle.Solid ' Establecer el estilo del trazo a punteado
-        pen.Width = 3 ' Ajustar el ancho del trazo según tus preferencias
-
-        ' Dibujar el borde punteado
-        graphics.DrawRectangle(pen, 0, 0, panel.Width - 1, panel.Height - 1)
+    Private Sub PnlTituloHeader_Click(sender As System.Object, e As System.EventArgs) Handles PnlTituloHeader.Click, lblTituloLibro.Click, PcbTituloHeader.Click
+        If PnlTitulo.Size.Height = 22 Then
+            PnlTitulo.Size = New Size(PnlTitulo.Width, 77)
+            PcbTituloHeader.Image = My.Resources.flechaArriba
+        Else
+            PnlTitulo.Size = New Size(PnlTitulo.Width, 22)
+            PcbTituloHeader.Image = My.Resources.flechaAbajo
+        End If
     End Sub
 End Class

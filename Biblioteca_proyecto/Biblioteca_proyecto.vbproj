@@ -176,6 +176,12 @@
     <Compile Include="RegPres.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="TxtPerso.Designer.vb">
+      <DependentUpon>TxtPerso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TxtPerso.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Utilidades.vb" />
     <Compile Include="VerPres.Designer.vb">
       <DependentUpon>VerPres.vb</DependentUpon>
@@ -229,6 +235,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RegPres.resx">
       <DependentUpon>RegPres.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TxtPerso.resx">
+      <DependentUpon>TxtPerso.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VerPres.resx">
       <DependentUpon>VerPres.vb</DependentUpon>
@@ -367,6 +376,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\image %283%29 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flechaArriba.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
