@@ -127,8 +127,9 @@ Public Class FrmLogin
         ReleaseCapture()
         SendMessage(Me.Handle, &H112&, &HF012&, 0)
     End Sub
+
     Private Sub BtnLogin_Click(sender As Object, e As EventArgs) Handles BtnLogin.Click
-        
+
         If Len(Trim(TxtUser.Text)) = 0 Or Len(Trim(TxtPass.Text)) = 0 Then
             Dim result = CuadroDeMensaje.Show("Complete los campos vacíos.",
                                           "Iniciar sesión - Error",

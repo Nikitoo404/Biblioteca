@@ -6,14 +6,7 @@ Biblioteca_proyecto
 </name>
 </assembly>
 <members>
-<member name="M:Biblioteca.ModuloAcordeon.MoverControlesAlineados(System.Windows.Forms.Panel,System.Windows.Forms.Control,System.Int32)">
-	<summary>
- Desplaza hacia abajo los controles que están debajo y alineados en el eje X con un panel dado.
- </summary>
-	<param name="targetPanel">Panel de referencia</param>
-	<param name="parentContainer">Contenedor donde buscar los controles (por ejemplo, Me para el formulario)</param>
-	<param name="offset">Cantidad de desplazamiento en píxeles</param>
-</member><member name="T:Biblioteca.bdbibliotecaDataSet.autorDataTable">
+<member name="T:Biblioteca.bdbibliotecaDataSet.autorDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
@@ -318,6 +311,32 @@ TableAdapterManager is used to coordinate TableAdapters in the dataset to enable
 	<summary>
   Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
 </summary>
+</member><member name="M:Biblioteca.ModuloAcordeon.StartPanelAccordion(System.Windows.Forms.Panel,System.Windows.Forms.Control,System.Int32,System.Int32,System.Windows.Forms.PictureBox)">
+	<summary>
+ Inicia el desplazamiento de los controles alineados con el panel de referencia.
+ </summary>
+	<param name="targetPanel">Panel de referencia</param>
+	<param name="parentContainer">Contenedor donde buscar los controles (por ejemplo, Me para el formulario)</param>
+	<param name="collapsedHeight">Altura cuando está contraído</param>
+	<param name="expandedHeight">Altura cuando está expandido</param>
+	<param name="arrowPictureBox">PictureBox donde se cambiará la imagen de la flecha</param>
+</member><member name="M:Biblioteca.ModuloAcordeon.DeshabilitarControles(System.Windows.Forms.Control)">
+	<summary>
+ Deshabilita todos los controles en el contenedor especificado.
+ </summary>
+	<param name="parentContainer">Contenedor donde buscar los controles</param>
+</member><member name="M:Biblioteca.ModuloAcordeon.HabilitarControles(System.Windows.Forms.Control)">
+	<summary>
+ Habilita todos los controles en el contenedor especificado.
+ </summary>
+	<param name="parentContainer">Contenedor donde buscar los controles</param>
+</member><member name="M:Biblioteca.ModuloAcordeon.MoverControlesAlineados(System.Windows.Forms.Panel,System.Windows.Forms.Control,System.Int32)">
+	<summary>
+ Desplaza hacia abajo o arriba los controles que están debajo y alineados en el eje X con un panel dado.
+ </summary>
+	<param name="targetPanel">Panel de referencia</param>
+	<param name="parentContainer">Contenedor donde buscar los controles (por ejemplo, Me para el formulario)</param>
+	<param name="offset">Cantidad de desplazamiento en píxeles (positivo para abajo, negativo para arriba)</param>
 </member>
 </members>
 </doc>

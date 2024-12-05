@@ -1,28 +1,6 @@
 ﻿Imports System.Drawing
 Imports System.Drawing.Drawing2D
 Public Class FrmCrearRegistros
-    Private valor As Integer = 77
-    Private isExpanded As Boolean = True
-    Private valor2 As Integer = 96
-    Private isExpanded2 As Boolean = True
-    Private valor3 As Integer = 77
-    Private isExpanded3 As Boolean = True
-    Private valor4 As Integer = 96
-    Private isExpanded4 As Boolean = True
-    Private valor5 As Integer = 77
-    Private isExpanded5 As Boolean = True
-    Private valor6 As Integer = 77
-    Private isExpanded6 As Boolean = True
-    Private valor7 As Integer = 77
-    Private isExpanded7 As Boolean = True
-    Private valor8 As Integer = 77
-    Private isExpanded8 As Boolean = True
-    Private valor9 As Integer = 77
-    Private isExpanded9 As Boolean = True
-    Private valor10 As Integer = 77
-    Private isExpanded10 As Boolean = True
-    Private valor11 As Integer = 77
-    Private isExpanded11 As Boolean = True
     Private Sub BtnVolver_MouseDown(sender As Object, e As MouseEventArgs) Handles BtnVolver.MouseDown
         BtnVolver.BackColor = Color.PeachPuff
         BtnVolver.Image = My.Resources.blueOsc
@@ -52,6 +30,10 @@ Public Class FrmCrearRegistros
     End Sub
 
     Private Sub FrmCrearRegistros_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+        'TODO: esta línea de código carga datos en la tabla 'BdbibliotecaDataSet.editorial' Puede moverla o quitarla según sea necesario.
+        Me.EditorialTableAdapter.Fill(Me.BdbibliotecaDataSet.editorial)
+        'TODO: esta línea de código carga datos en la tabla 'BdbibliotecaDataSet.genero' Puede moverla o quitarla según sea necesario.
+        Me.GeneroTableAdapter.Fill(Me.BdbibliotecaDataSet.genero)
         'TODO: esta línea de código carga datos en la tabla 'BdbibliotecaDataSet.tipoderecurso' Puede moverla o quitarla según sea necesario.
         Me.TipoderecursoTableAdapter.Fill(Me.BdbibliotecaDataSet.tipoderecurso)
         'TODO: esta línea de código carga datos en la tabla 'BdbibliotecaDataSet.autor' Puede moverla o quitarla según sea necesario.
@@ -59,7 +41,7 @@ Public Class FrmCrearRegistros
     End Sub
 
     Private Sub PnlTituloHeader_Click(sender As System.Object, e As System.EventArgs) Handles PnlTituloHeader.Click, lblTituloLibro.Click, PcbTituloHeader.Click, PnlTituloLinea.Click
-        TmrTitulo.Start()
+        ModuloAcordeon.StartPanelAccordion(PnlTitulo, Me, 22, 78, PcbTituloHeader)
     End Sub
 
     Private Sub FrmCrearRegistros_Resize(sender As System.Object, e As System.EventArgs) Handles MyBase.Resize
@@ -114,197 +96,65 @@ Public Class FrmCrearRegistros
         End If
     End Sub
 
-    Private Sub TmrTitulo_Tick(sender As System.Object, e As System.EventArgs) Handles TmrTitulo.Tick
-        If isExpanded = True Then
-            If valor > 22 Then
-                MoverControlesAlineados(PnlTitulo, Me, -11)
-                PnlTitulo.Size = New Size(PnlTitulo.Width, PnlTitulo.Height - 11)
-                valor -= 11
-            Else
-                PnlTitulo.Size = New Size(PnlTitulo.Width, valor)
-                PcbTituloHeader.Image = My.Resources.flechaAbajo
-                isExpanded = False
-                TmrTitulo.Stop()
-            End If
-        Else
-            If valor < 77 Then
-                MoverControlesAlineados(PnlTitulo, Me, 11)
-                PnlTitulo.Size = New Size(PnlTitulo.Width, PnlTitulo.Height + 11)
-                valor += 11
-            Else
-                PnlTitulo.Size = New Size(PnlTitulo.Width, valor)
-                PcbTituloHeader.Image = My.Resources.flechaArriba
-                isExpanded = True
-                TmrTitulo.Stop()
-            End If
-        End If
-    End Sub
-
     Private Sub PnlAutorHeader_Click(sender As Object, e As System.EventArgs) Handles PnlAutorHeader.Click, lblAutor.Click, PcbAutorHeader.Click, PnlAutorLinea.Click
-        TmrAutor.Start()
+        ModuloAcordeon.StartPanelAccordion(PnlAutor, Me, 22, 96, PcbAutorHeader)
     End Sub
 
-    Private Sub TmrAutor_Tick(sender As System.Object, e As System.EventArgs) Handles TmrAutor.Tick
-        If isExpanded2 = True Then
-            If valor2 > 22 Then
-                MoverControlesAlineados(PnlAutor, Me, -11)
-                PnlAutor.Size = New Size(PnlAutor.Width, PnlAutor.Height - 11)
-                valor2 -= 11
-            Else
-                PnlAutor.Size = New Size(PnlAutor.Width, valor2)
-                PcbAutorHeader.Image = My.Resources.flechaAbajo
-                isExpanded2 = False
-                TmrAutor.Stop()
-            End If
-        Else
-            If valor2 < 96 Then
-                MoverControlesAlineados(PnlAutor, Me, 11)
-                PnlAutor.Size = New Size(PnlAutor.Width, PnlAutor.Height + 11)
-                valor2 += 11
-            Else
-                PnlAutor.Size = New Size(PnlAutor.Width, valor2)
-                PcbAutorHeader.Image = My.Resources.flechaArriba
-                isExpanded2 = True
-                TmrAutor.Stop()
-            End If
-        End If
+    Private Sub PnlGeneroHeader_Click(sender As System.Object, e As System.EventArgs) Handles PnlGeneroHeader.Click, PnlGeneLinea.Click, lblGenero.Click, PcbGeneroHeader.Click
+        ModuloAcordeon.StartPanelAccordion(PnlGenero, Me, 22, 78, PcbGeneroHeader)
     End Sub
 
-    Private Sub PnlGeneroHeader_Click(sender As System.Object, e As System.EventArgs) Handles PnlGeneroHeader.Click, PnlGeneLinea.Click, PnlGenero.Click, PcbGeneroHeader.Click
-        TmrGenero.Start()
+    Private Sub PnlEdicionHeader_Click(sender As System.Object, e As System.EventArgs) Handles PnlEdicionHeader.Click, lblEdicion.Click, PnlEdicLinea.Click, PcbEdicionHeader.Click
+        ModuloAcordeon.StartPanelAccordion(PnlEdicion, Me, 22, 96, PcbEdicionHeader)
     End Sub
 
-    Private Sub TmrGenero_Tick(sender As System.Object, e As System.EventArgs) Handles TmrGenero.Tick
-        If isExpanded3 = True Then
-            If valor3 > 22 Then
-                MoverControlesAlineados(PnlGenero, Me, -11)
-                PnlGenero.Size = New Size(PnlGenero.Width, PnlGenero.Height - 11)
-                valor3 -= 11
-            Else
-                PnlGenero.Size = New Size(PnlGenero.Width, valor3)
-                PcbGeneroHeader.Image = My.Resources.flechaAbajo
-                isExpanded3 = False
-                TmrGenero.Stop()
-            End If
-        Else
-            If valor3 < 77 Then
-                MoverControlesAlineados(PnlGenero, Me, 11)
-                PnlGenero.Size = New Size(PnlGenero.Width, PnlGenero.Height + 11)
-                valor3 += 11
-            Else
-                PnlGenero.Size = New Size(PnlGenero.Width, valor3)
-                PcbGeneroHeader.Image = My.Resources.flechaArriba
-                isExpanded3 = True
-                TmrGenero.Stop()
-            End If
-        End If
+    Private Sub PnlEstadoHeader_Click(sender As System.Object, e As System.EventArgs) Handles PnlEstadoHeader.Click, lblEstado.Click, PnlEstLinea.Click, PcbEstadoHeader.Click
+        ModuloAcordeon.StartPanelAccordion(PnlEstado, Me, 22, 78, PcbEstadoHeader)
     End Sub
 
-    Private Sub PnlEdicionHeader_Click(sender As System.Object, e As System.EventArgs) Handles PnlEdicionHeader.Click, PnlEdicion.Click, PnlEdicLinea.Click, PcbEdicionHeader.Click
-        TmrEdicion.Start()
+    Private Sub PnlISBNHeader_Click(sender As System.Object, e As System.EventArgs) Handles PnlISBNHeader.Click, PnlISHeader.Click, PcbISBNHeader.Click, lblISBN.Click
+        ModuloAcordeon.StartPanelAccordion(PnlISBN, Me, 22, 78, PcbISBNHeader)
     End Sub
 
-    Private Sub TmrEdicion_Tick(sender As System.Object, e As System.EventArgs) Handles TmrEdicion.Tick
-        If isExpanded4 = True Then
-            If valor4 > 22 Then
-                MoverControlesAlineados(PnlEdicion, Me, -11)
-                PnlEdicion.Size = New Size(PnlEdicion.Width, PnlEdicion.Height - 11)
-                valor4 -= 11
-            Else
-                PnlEdicion.Size = New Size(PnlEdicion.Width, valor4)
-                PcbEdicionHeader.Image = My.Resources.flechaAbajo
-                isExpanded4 = False
-                TmrEdicion.Stop()
-            End If
-        Else
-            If valor4 < 96 Then
-                MoverControlesAlineados(PnlEdicion, Me, 11)
-                PnlEdicion.Size = New Size(PnlEdicion.Width, PnlEdicion.Height + 11)
-                valor4 += 11
-            Else
-                PnlEdicion.Size = New Size(PnlEdicion.Width, valor4)
-                PcbEdicionHeader.Image = My.Resources.flechaArriba
-                isExpanded4 = True
-                TmrEdicion.Stop()
-            End If
-        End If
+    Private Sub PnlTipoHeader_Click(sender As System.Object, e As System.EventArgs) Handles PnlTipoHeader.Click, PnlTipoLinea.Click, PcbTipoHeader.Click, lblTipoRecurso.Click
+        ModuloAcordeon.StartPanelAccordion(PnlTipoRecurso, Me, 22, 78, PcbTipoHeader)
     End Sub
 
-    Private Sub PnlEstadoHeader_Click(sender As System.Object, e As System.EventArgs) Handles PnlEstadoHeader.Click, PnlEstado.Click, PnlEstLinea.Click, PcbEstadoHeader.Click
-        TmrEstado.Start()
+    Private Sub PnlFormatoHeader_Click(sender As System.Object, e As System.EventArgs) Handles PnlFormatoHeader.Click, PnlFormatoLinea.Click, PcbFormatoHeader.Click, lblFormato.Click
+        ModuloAcordeon.StartPanelAccordion(PnlFormato, Me, 22, 78, PcbFormatoHeader)
     End Sub
 
-    Private Sub TmrEstado_Tick(sender As System.Object, e As System.EventArgs) Handles TmrEstado.Tick
-        If isExpanded5 = True Then
-            If valor5 > 22 Then
-                MoverControlesAlineados(PnlEstado, Me, -11)
-                PnlEstado.Size = New Size(PnlEstado.Width, PnlEstado.Height - 11)
-                valor5 -= 11
-            Else
-                PnlEstado.Size = New Size(PnlEstado.Width, valor5)
-                PcbEstadoHeader.Image = My.Resources.flechaAbajo
-                isExpanded5 = False
-                TmrEstado.Stop()
-            End If
-        Else
-            If valor5 < 77 Then
-                MoverControlesAlineados(PnlEstado, Me, 11)
-                PnlEstado.Size = New Size(PnlEstado.Width, PnlEstado.Height + 11)
-                valor5 += 11
-            Else
-                PnlEstado.Size = New Size(PnlEstado.Width, valor5)
-                PcbEstadoHeader.Image = My.Resources.flechaArriba
-                isExpanded5 = True
-                TmrEstado.Stop()
-            End If
-        End If
+    Private Sub PnlFechaHeader_Click(sender As System.Object, e As System.EventArgs) Handles PnlFechaHeader.Click, PnlFechaLinea.Click, PcbFechaHeader.Click, lblFecha.Click
+        ModuloAcordeon.StartPanelAccordion(PnlFecha, Me, 22, 78, PcbFechaHeader)
     End Sub
 
-    Private Sub PnlISBNHeader_Click(sender As System.Object, e As System.EventArgs) Handles PnlISBNHeader.Click
-
+    Private Sub PnlEditorialHeader_Click(sender As System.Object, e As System.EventArgs) Handles PnlEditorialHeader.Click, PnlEditLinea.Click, PcbEditorialHeader.Click, lblEditorial.Click
+        ModuloAcordeon.StartPanelAccordion(PnlEditorial, Me, 22, 78, PcbEditorialHeader)
     End Sub
 
-    Private Sub TmrISBN_Tick(sender As System.Object, e As System.EventArgs) Handles TmrISBN.Tick
-
+    Private Sub PnlPagHeader_Click(sender As System.Object, e As System.EventArgs) Handles PnlPagHeader.Click, PnlPagLinea.Click, PcbPagHeader.Click, lblPag.Click
+        ModuloAcordeon.StartPanelAccordion(PnlPaginas, Me, 22, 78, PcbPagHeader)
     End Sub
 
-    Private Sub PnlTipoHeader_Click(sender As System.Object, e As System.EventArgs) Handles PnlTipoHeader.Click
-
+    Private Sub BtnGuardar_MouseEnter(sender As System.Object, e As System.EventArgs) Handles BtnGuardar.MouseEnter
+        BtnGuardar.BorderColor = Color.LightGray
+        BtnGuardar.BackColor = Color.FromArgb(20, 57, 80)
+        BtnGuardar.ForeColor = Color.LightGray
     End Sub
 
-    Private Sub TmrTipo_Tick(sender As System.Object, e As System.EventArgs) Handles TmrTipo.Tick
-
+    Private Sub BtnGuardar_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles BtnGuardar.MouseDown
+        BtnGuardar.BorderColor = Color.FromArgb(30, 67, 90)
+        BtnGuardar.BackColor = Color.FromArgb(70, 118, 126)
     End Sub
 
-    Private Sub PnlFormatoHeader_Click(sender As System.Object, e As System.EventArgs) Handles PnlFormatoHeader.Click
-
+    Private Sub BtnGuardar_MouseLeave(sender As System.Object, e As System.EventArgs) Handles BtnGuardar.MouseLeave
+        BtnGuardar.BorderColor = Color.FromArgb(30, 67, 90)
+        BtnGuardar.BackColor = Color.FromArgb(20, 57, 80)
+        BtnGuardar.ForeColor = Color.Silver
     End Sub
 
-    Private Sub TmrFormato_Tick(sender As System.Object, e As System.EventArgs) Handles TmrFormato.Tick
-
-    End Sub
-
-    Private Sub PnlFechaHeader_Click(sender As System.Object, e As System.EventArgs) Handles PnlFechaHeader.Click
-
-    End Sub
-
-    Private Sub TmrFecha_Tick(sender As System.Object, e As System.EventArgs) Handles TmrFecha.Tick
-
-    End Sub
-
-    Private Sub PnlEditorialHeader_Click(sender As System.Object, e As System.EventArgs) Handles PnlEditorialHeader.Click
-
-    End Sub
-
-    Private Sub TmrEditorial_Tick(sender As System.Object, e As System.EventArgs) Handles TmrEditorial.Tick
-
-    End Sub
-
-    Private Sub PnlPagHeader_Click(sender As System.Object, e As System.EventArgs) Handles PnlPagHeader.Click
-
-    End Sub
-
-    Private Sub TmrPag_Tick(sender As System.Object, e As System.EventArgs) Handles TmrPag.Tick
-
+    Private Sub BtnGuardar_MouseUp(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles BtnGuardar.MouseUp
+        BtnGuardar.BorderColor = Color.LightGray
+        BtnGuardar.BackColor = Color.FromArgb(20, 57, 80)
     End Sub
 End Class
