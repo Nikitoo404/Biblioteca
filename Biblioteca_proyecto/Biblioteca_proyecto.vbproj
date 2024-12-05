@@ -137,6 +137,9 @@
       <DependentUpon>Login.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="MiDatePicker.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ModuloAcordeon.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

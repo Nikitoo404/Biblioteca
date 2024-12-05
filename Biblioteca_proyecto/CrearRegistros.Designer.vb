@@ -55,29 +55,21 @@ Partial Class FrmCrearRegistros
         Me.PcbFormatoHeader = New System.Windows.Forms.PictureBox()
         Me.lblFormato = New System.Windows.Forms.Label()
         Me.PnlTitulo = New System.Windows.Forms.Panel()
-        Me.TxtPerso1 = New Biblioteca.TxtPerso()
         Me.PnlAutor = New System.Windows.Forms.Panel()
-        Me.TxtPerso3 = New Biblioteca.TxtPerso()
-        Me.TxtPerso2 = New Biblioteca.TxtPerso()
         Me.PnlISBN = New System.Windows.Forms.Panel()
-        Me.TxtPerso4 = New Biblioteca.TxtPerso()
         Me.PnlTipoRecurso = New System.Windows.Forms.Panel()
-        Me.CboTipoRecurso = New Biblioteca.ComboPerso()
         Me.PnlFormato = New System.Windows.Forms.Panel()
-        Me.CboFormato = New Biblioteca.ComboPerso()
         Me.PnlGenero = New System.Windows.Forms.Panel()
         Me.PnlGeneroHeader = New System.Windows.Forms.Panel()
         Me.PnlGeneLinea = New System.Windows.Forms.Panel()
         Me.PcbGeneroHeader = New System.Windows.Forms.PictureBox()
         Me.lblGenero = New System.Windows.Forms.Label()
-        Me.ComboPerso1 = New Biblioteca.ComboPerso()
         Me.GeneroBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.PnlFecha = New System.Windows.Forms.Panel()
         Me.PnlFechaHeader = New System.Windows.Forms.Panel()
         Me.PnlFechaLinea = New System.Windows.Forms.Panel()
         Me.PcbFechaHeader = New System.Windows.Forms.PictureBox()
         Me.lblFecha = New System.Windows.Forms.Label()
-        Me.TxtPerso5 = New Biblioteca.TxtPerso()
         Me.PnlAutero = New System.Windows.Forms.Panel()
         Me.PnlForcion = New System.Windows.Forms.Panel()
         Me.PnlFechal = New System.Windows.Forms.Panel()
@@ -86,7 +78,6 @@ Partial Class FrmCrearRegistros
         Me.PnlEditLinea = New System.Windows.Forms.Panel()
         Me.PcbEditorialHeader = New System.Windows.Forms.PictureBox()
         Me.lblEditorial = New System.Windows.Forms.Label()
-        Me.ComboPerso3 = New Biblioteca.ComboPerso()
         Me.EditorialBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.PnlGenecion = New System.Windows.Forms.Panel()
         Me.PnlEdias = New System.Windows.Forms.Panel()
@@ -96,28 +87,37 @@ Partial Class FrmCrearRegistros
         Me.PcbEdicionHeader = New System.Windows.Forms.PictureBox()
         Me.lblEdicion = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.TxtPerso6 = New Biblioteca.TxtPerso()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.TxtPerso7 = New Biblioteca.TxtPerso()
         Me.PnlEdiado = New System.Windows.Forms.Panel()
         Me.PnlPaginas = New System.Windows.Forms.Panel()
         Me.PnlPagHeader = New System.Windows.Forms.Panel()
         Me.PnlPagLinea = New System.Windows.Forms.Panel()
         Me.PcbPagHeader = New System.Windows.Forms.PictureBox()
         Me.lblPag = New System.Windows.Forms.Label()
-        Me.TxtPerso8 = New Biblioteca.TxtPerso()
         Me.PnlEstado = New System.Windows.Forms.Panel()
         Me.PnlEstadoHeader = New System.Windows.Forms.Panel()
         Me.PnlEstLinea = New System.Windows.Forms.Panel()
         Me.PcbEstadoHeader = New System.Windows.Forms.PictureBox()
         Me.lblEstado = New System.Windows.Forms.Label()
-        Me.ComboPerso4 = New Biblioteca.ComboPerso()
         Me.PnlEstadoFin = New System.Windows.Forms.Panel()
         Me.PnlPagFin = New System.Windows.Forms.Panel()
-        Me.BtnGuardar = New Biblioteca.ButtonRadio()
-        Me.BtnVolver = New Biblioteca.ButtonRadio()
         Me.GeneroTableAdapter = New Biblioteca.bdbibliotecaDataSetTableAdapters.generoTableAdapter()
         Me.EditorialTableAdapter = New Biblioteca.bdbibliotecaDataSetTableAdapters.editorialTableAdapter()
+        Me.ComboPerso4 = New Biblioteca.ComboPerso()
+        Me.BtnGuardar = New Biblioteca.ButtonRadio()
+        Me.TxtPerso8 = New Biblioteca.TxtPerso()
+        Me.TxtPerso6 = New Biblioteca.TxtPerso()
+        Me.TxtPerso7 = New Biblioteca.TxtPerso()
+        Me.ComboPerso3 = New Biblioteca.ComboPerso()
+        Me.ComboPerso1 = New Biblioteca.ComboPerso()
+        Me.CboFormato = New Biblioteca.ComboPerso()
+        Me.CboTipoRecurso = New Biblioteca.ComboPerso()
+        Me.TxtPerso4 = New Biblioteca.TxtPerso()
+        Me.TxtPerso3 = New Biblioteca.TxtPerso()
+        Me.TxtPerso2 = New Biblioteca.TxtPerso()
+        Me.TxtPerso1 = New Biblioteca.TxtPerso()
+        Me.BtnVolver = New Biblioteca.ButtonRadio()
+        Me.DtpFecha = New Biblioteca.MiDatePicker()
         Me.PnlTituloHeader.SuspendLayout()
         CType(Me.PcbTituloHeader, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AutorBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -272,7 +272,7 @@ Partial Class FrmCrearRegistros
         'PnlTitAutor
         '
         Me.PnlTitAutor.BackColor = System.Drawing.Color.PeachPuff
-        Me.PnlTitAutor.Location = New System.Drawing.Point(40, 178)
+        Me.PnlTitAutor.Location = New System.Drawing.Point(40, 165)
         Me.PnlTitAutor.Name = "PnlTitAutor"
         Me.PnlTitAutor.Size = New System.Drawing.Size(390, 1)
         Me.PnlTitAutor.TabIndex = 36
@@ -409,7 +409,7 @@ Partial Class FrmCrearRegistros
         'PnlISso
         '
         Me.PnlISso.BackColor = System.Drawing.Color.PeachPuff
-        Me.PnlISso.Location = New System.Drawing.Point(470, 178)
+        Me.PnlISso.Location = New System.Drawing.Point(470, 165)
         Me.PnlISso.Name = "PnlISso"
         Me.PnlISso.Size = New System.Drawing.Size(390, 1)
         Me.PnlISso.TabIndex = 44
@@ -417,7 +417,7 @@ Partial Class FrmCrearRegistros
         'PnlTipoto
         '
         Me.PnlTipoto.BackColor = System.Drawing.Color.PeachPuff
-        Me.PnlTipoto.Location = New System.Drawing.Point(470, 269)
+        Me.PnlTipoto.Location = New System.Drawing.Point(470, 256)
         Me.PnlTipoto.Name = "PnlTipoto"
         Me.PnlTipoto.Size = New System.Drawing.Size(390, 1)
         Me.PnlTipoto.TabIndex = 46
@@ -469,30 +469,10 @@ Partial Class FrmCrearRegistros
         '
         Me.PnlTitulo.Controls.Add(Me.TxtPerso1)
         Me.PnlTitulo.Controls.Add(Me.PnlTituloHeader)
-        Me.PnlTitulo.Location = New System.Drawing.Point(40, 95)
+        Me.PnlTitulo.Location = New System.Drawing.Point(40, 82)
         Me.PnlTitulo.Name = "PnlTitulo"
         Me.PnlTitulo.Size = New System.Drawing.Size(390, 78)
         Me.PnlTitulo.TabIndex = 47
-        '
-        'TxtPerso1
-        '
-        Me.TxtPerso1._BorderColor = System.Drawing.Color.PeachPuff
-        Me.TxtPerso1._BorderFocusColor = System.Drawing.Color.PeachPuff
-        Me.TxtPerso1._BorderSize = 2
-        Me.TxtPerso1._MaxLength = 200
-        Me.TxtPerso1._Multiline = False
-        Me.TxtPerso1._PasswordChar = False
-        Me.TxtPerso1._UnderlinedStyle = True
-        Me.TxtPerso1.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(85, Byte), Integer))
-        Me.TxtPerso1.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtPerso1.ForeColor = System.Drawing.Color.LightGray
-        Me.TxtPerso1.Location = New System.Drawing.Point(7, 30)
-        Me.TxtPerso1.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
-        Me.TxtPerso1.Name = "TxtPerso1"
-        Me.TxtPerso1.Padding = New System.Windows.Forms.Padding(7)
-        Me.TxtPerso1.Size = New System.Drawing.Size(378, 37)
-        Me.TxtPerso1.TabIndex = 48
-        Me.TxtPerso1.Texts = ""
         '
         'PnlAutor
         '
@@ -501,156 +481,43 @@ Partial Class FrmCrearRegistros
         Me.PnlAutor.Controls.Add(Me.TxtPerso3)
         Me.PnlAutor.Controls.Add(Me.Label4)
         Me.PnlAutor.Controls.Add(Me.TxtPerso2)
-        Me.PnlAutor.Location = New System.Drawing.Point(40, 186)
+        Me.PnlAutor.Location = New System.Drawing.Point(40, 173)
         Me.PnlAutor.Name = "PnlAutor"
         Me.PnlAutor.Size = New System.Drawing.Size(390, 96)
         Me.PnlAutor.TabIndex = 52
-        '
-        'TxtPerso3
-        '
-        Me.TxtPerso3._BorderColor = System.Drawing.Color.PeachPuff
-        Me.TxtPerso3._BorderFocusColor = System.Drawing.Color.PeachPuff
-        Me.TxtPerso3._BorderSize = 2
-        Me.TxtPerso3._MaxLength = 100
-        Me.TxtPerso3._Multiline = False
-        Me.TxtPerso3._PasswordChar = False
-        Me.TxtPerso3._UnderlinedStyle = True
-        Me.TxtPerso3.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(85, Byte), Integer))
-        Me.TxtPerso3.DataBindings.Add(New System.Windows.Forms.Binding("Tag", Me.AutorBindingSource, "Apellidos", True))
-        Me.TxtPerso3.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtPerso3.ForeColor = System.Drawing.Color.LightGray
-        Me.TxtPerso3.Location = New System.Drawing.Point(207, 50)
-        Me.TxtPerso3.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
-        Me.TxtPerso3.Name = "TxtPerso3"
-        Me.TxtPerso3.Padding = New System.Windows.Forms.Padding(7)
-        Me.TxtPerso3.Size = New System.Drawing.Size(178, 37)
-        Me.TxtPerso3.TabIndex = 50
-        Me.TxtPerso3.Texts = ""
-        '
-        'TxtPerso2
-        '
-        Me.TxtPerso2._BorderColor = System.Drawing.Color.PeachPuff
-        Me.TxtPerso2._BorderFocusColor = System.Drawing.Color.PeachPuff
-        Me.TxtPerso2._BorderSize = 2
-        Me.TxtPerso2._MaxLength = 100
-        Me.TxtPerso2._Multiline = False
-        Me.TxtPerso2._PasswordChar = False
-        Me.TxtPerso2._UnderlinedStyle = True
-        Me.TxtPerso2.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(85, Byte), Integer))
-        Me.TxtPerso2.DataBindings.Add(New System.Windows.Forms.Binding("Tag", Me.AutorBindingSource, "Nombres", True))
-        Me.TxtPerso2.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtPerso2.ForeColor = System.Drawing.Color.LightGray
-        Me.TxtPerso2.Location = New System.Drawing.Point(5, 50)
-        Me.TxtPerso2.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
-        Me.TxtPerso2.Name = "TxtPerso2"
-        Me.TxtPerso2.Padding = New System.Windows.Forms.Padding(7)
-        Me.TxtPerso2.Size = New System.Drawing.Size(178, 37)
-        Me.TxtPerso2.TabIndex = 49
-        Me.TxtPerso2.Texts = ""
         '
         'PnlISBN
         '
         Me.PnlISBN.Controls.Add(Me.PnlISBNHeader)
         Me.PnlISBN.Controls.Add(Me.TxtPerso4)
-        Me.PnlISBN.Location = New System.Drawing.Point(470, 95)
+        Me.PnlISBN.Location = New System.Drawing.Point(470, 82)
         Me.PnlISBN.Name = "PnlISBN"
         Me.PnlISBN.Size = New System.Drawing.Size(390, 78)
         Me.PnlISBN.TabIndex = 53
-        '
-        'TxtPerso4
-        '
-        Me.TxtPerso4._BorderColor = System.Drawing.Color.PeachPuff
-        Me.TxtPerso4._BorderFocusColor = System.Drawing.Color.PeachPuff
-        Me.TxtPerso4._BorderSize = 2
-        Me.TxtPerso4._MaxLength = 13
-        Me.TxtPerso4._Multiline = False
-        Me.TxtPerso4._PasswordChar = False
-        Me.TxtPerso4._UnderlinedStyle = True
-        Me.TxtPerso4.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(85, Byte), Integer))
-        Me.TxtPerso4.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtPerso4.ForeColor = System.Drawing.Color.LightGray
-        Me.TxtPerso4.Location = New System.Drawing.Point(5, 33)
-        Me.TxtPerso4.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
-        Me.TxtPerso4.Name = "TxtPerso4"
-        Me.TxtPerso4.Padding = New System.Windows.Forms.Padding(7)
-        Me.TxtPerso4.Size = New System.Drawing.Size(380, 37)
-        Me.TxtPerso4.TabIndex = 51
-        Me.TxtPerso4.Texts = ""
         '
         'PnlTipoRecurso
         '
         Me.PnlTipoRecurso.Controls.Add(Me.PnlTipoHeader)
         Me.PnlTipoRecurso.Controls.Add(Me.CboTipoRecurso)
-        Me.PnlTipoRecurso.Location = New System.Drawing.Point(470, 186)
+        Me.PnlTipoRecurso.Location = New System.Drawing.Point(470, 173)
         Me.PnlTipoRecurso.Name = "PnlTipoRecurso"
         Me.PnlTipoRecurso.Size = New System.Drawing.Size(390, 78)
         Me.PnlTipoRecurso.TabIndex = 54
-        '
-        'CboTipoRecurso
-        '
-        Me.CboTipoRecurso._BorderColor = System.Drawing.Color.PeachPuff
-        Me.CboTipoRecurso._BorderSize = 1
-        Me.CboTipoRecurso._IconColor = System.Drawing.Color.PeachPuff
-        Me.CboTipoRecurso._ListBackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.CboTipoRecurso._ListTextColor = System.Drawing.Color.Silver
-        Me.CboTipoRecurso.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.CboTipoRecurso.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.CboTipoRecurso.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.CboTipoRecurso.DataBindings.Add(New System.Windows.Forms.Binding("SelectedItem", Me.TipoderecursoBindingSource, "Nombre", True))
-        Me.CboTipoRecurso.DataSource = Nothing
-        Me.CboTipoRecurso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown
-        Me.CboTipoRecurso.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CboTipoRecurso.ForeColor = System.Drawing.Color.Silver
-        Me.CboTipoRecurso.Location = New System.Drawing.Point(3, 31)
-        Me.CboTipoRecurso.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
-        Me.CboTipoRecurso.MaxLength = 100
-        Me.CboTipoRecurso.MinimumSize = New System.Drawing.Size(188, 41)
-        Me.CboTipoRecurso.Name = "CboTipoRecurso"
-        Me.CboTipoRecurso.Padding = New System.Windows.Forms.Padding(1)
-        Me.CboTipoRecurso.Size = New System.Drawing.Size(384, 41)
-        Me.CboTipoRecurso.TabIndex = 43
-        Me.CboTipoRecurso.Texts = ""
         '
         'PnlFormato
         '
         Me.PnlFormato.Controls.Add(Me.PnlFormatoHeader)
         Me.PnlFormato.Controls.Add(Me.CboFormato)
-        Me.PnlFormato.Location = New System.Drawing.Point(470, 276)
+        Me.PnlFormato.Location = New System.Drawing.Point(470, 263)
         Me.PnlFormato.Name = "PnlFormato"
         Me.PnlFormato.Size = New System.Drawing.Size(390, 78)
         Me.PnlFormato.TabIndex = 55
-        '
-        'CboFormato
-        '
-        Me.CboFormato._BorderColor = System.Drawing.Color.PeachPuff
-        Me.CboFormato._BorderSize = 1
-        Me.CboFormato._IconColor = System.Drawing.Color.PeachPuff
-        Me.CboFormato._ListBackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.CboFormato._ListTextColor = System.Drawing.Color.Silver
-        Me.CboFormato.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.CboFormato.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.CboFormato.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.CboFormato.DataBindings.Add(New System.Windows.Forms.Binding("SelectedItem", Me.TipoderecursoBindingSource, "Nombre", True))
-        Me.CboFormato.DataSource = Nothing
-        Me.CboFormato.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.CboFormato.Font = New System.Drawing.Font("Montserrat", 12.0!)
-        Me.CboFormato.ForeColor = System.Drawing.Color.Silver
-        Me.CboFormato.Items.AddRange(New Object() {"Físico", "Digital", "Físico y Digital"})
-        Me.CboFormato.Location = New System.Drawing.Point(3, 31)
-        Me.CboFormato.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
-        Me.CboFormato.MaxLength = 100
-        Me.CboFormato.MinimumSize = New System.Drawing.Size(188, 41)
-        Me.CboFormato.Name = "CboFormato"
-        Me.CboFormato.Padding = New System.Windows.Forms.Padding(1)
-        Me.CboFormato.Size = New System.Drawing.Size(384, 41)
-        Me.CboFormato.TabIndex = 43
-        Me.CboFormato.Texts = ""
         '
         'PnlGenero
         '
         Me.PnlGenero.Controls.Add(Me.PnlGeneroHeader)
         Me.PnlGenero.Controls.Add(Me.ComboPerso1)
-        Me.PnlGenero.Location = New System.Drawing.Point(40, 295)
+        Me.PnlGenero.Location = New System.Drawing.Point(40, 282)
         Me.PnlGenero.Name = "PnlGenero"
         Me.PnlGenero.Size = New System.Drawing.Size(390, 78)
         Me.PnlGenero.TabIndex = 56
@@ -698,31 +565,6 @@ Partial Class FrmCrearRegistros
         Me.lblGenero.Text = "Género"
         Me.lblGenero.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'ComboPerso1
-        '
-        Me.ComboPerso1._BorderColor = System.Drawing.Color.PeachPuff
-        Me.ComboPerso1._BorderSize = 1
-        Me.ComboPerso1._IconColor = System.Drawing.Color.PeachPuff
-        Me.ComboPerso1._ListBackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.ComboPerso1._ListTextColor = System.Drawing.Color.Silver
-        Me.ComboPerso1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.ComboPerso1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.ComboPerso1.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.ComboPerso1.DataBindings.Add(New System.Windows.Forms.Binding("SelectedItem", Me.GeneroBindingSource, "Nombre", True))
-        Me.ComboPerso1.DataSource = Nothing
-        Me.ComboPerso1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown
-        Me.ComboPerso1.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboPerso1.ForeColor = System.Drawing.Color.Silver
-        Me.ComboPerso1.Location = New System.Drawing.Point(3, 31)
-        Me.ComboPerso1.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
-        Me.ComboPerso1.MaxLength = 100
-        Me.ComboPerso1.MinimumSize = New System.Drawing.Size(188, 41)
-        Me.ComboPerso1.Name = "ComboPerso1"
-        Me.ComboPerso1.Padding = New System.Windows.Forms.Padding(1)
-        Me.ComboPerso1.Size = New System.Drawing.Size(384, 41)
-        Me.ComboPerso1.TabIndex = 43
-        Me.ComboPerso1.Texts = ""
-        '
         'GeneroBindingSource
         '
         Me.GeneroBindingSource.DataMember = "genero"
@@ -730,9 +572,9 @@ Partial Class FrmCrearRegistros
         '
         'PnlFecha
         '
+        Me.PnlFecha.Controls.Add(Me.DtpFecha)
         Me.PnlFecha.Controls.Add(Me.PnlFechaHeader)
-        Me.PnlFecha.Controls.Add(Me.TxtPerso5)
-        Me.PnlFecha.Location = New System.Drawing.Point(470, 366)
+        Me.PnlFecha.Location = New System.Drawing.Point(470, 353)
         Me.PnlFecha.Name = "PnlFecha"
         Me.PnlFecha.Size = New System.Drawing.Size(390, 78)
         Me.PnlFecha.TabIndex = 57
@@ -780,30 +622,10 @@ Partial Class FrmCrearRegistros
         Me.lblFecha.Text = "Fecha de publicación"
         Me.lblFecha.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TxtPerso5
-        '
-        Me.TxtPerso5._BorderColor = System.Drawing.Color.PeachPuff
-        Me.TxtPerso5._BorderFocusColor = System.Drawing.Color.PeachPuff
-        Me.TxtPerso5._BorderSize = 2
-        Me.TxtPerso5._MaxLength = 13
-        Me.TxtPerso5._Multiline = False
-        Me.TxtPerso5._PasswordChar = False
-        Me.TxtPerso5._UnderlinedStyle = True
-        Me.TxtPerso5.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(85, Byte), Integer))
-        Me.TxtPerso5.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtPerso5.ForeColor = System.Drawing.Color.LightGray
-        Me.TxtPerso5.Location = New System.Drawing.Point(5, 33)
-        Me.TxtPerso5.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
-        Me.TxtPerso5.Name = "TxtPerso5"
-        Me.TxtPerso5.Padding = New System.Windows.Forms.Padding(7)
-        Me.TxtPerso5.Size = New System.Drawing.Size(380, 37)
-        Me.TxtPerso5.TabIndex = 51
-        Me.TxtPerso5.Texts = ""
-        '
         'PnlAutero
         '
         Me.PnlAutero.BackColor = System.Drawing.Color.PeachPuff
-        Me.PnlAutero.Location = New System.Drawing.Point(40, 288)
+        Me.PnlAutero.Location = New System.Drawing.Point(40, 275)
         Me.PnlAutero.Name = "PnlAutero"
         Me.PnlAutero.Size = New System.Drawing.Size(390, 1)
         Me.PnlAutero.TabIndex = 59
@@ -811,7 +633,7 @@ Partial Class FrmCrearRegistros
         'PnlForcion
         '
         Me.PnlForcion.BackColor = System.Drawing.Color.PeachPuff
-        Me.PnlForcion.Location = New System.Drawing.Point(470, 359)
+        Me.PnlForcion.Location = New System.Drawing.Point(470, 346)
         Me.PnlForcion.Name = "PnlForcion"
         Me.PnlForcion.Size = New System.Drawing.Size(390, 1)
         Me.PnlForcion.TabIndex = 61
@@ -819,7 +641,7 @@ Partial Class FrmCrearRegistros
         'PnlFechal
         '
         Me.PnlFechal.BackColor = System.Drawing.Color.PeachPuff
-        Me.PnlFechal.Location = New System.Drawing.Point(470, 449)
+        Me.PnlFechal.Location = New System.Drawing.Point(470, 436)
         Me.PnlFechal.Name = "PnlFechal"
         Me.PnlFechal.Size = New System.Drawing.Size(390, 1)
         Me.PnlFechal.TabIndex = 62
@@ -828,7 +650,7 @@ Partial Class FrmCrearRegistros
         '
         Me.PnlEditorial.Controls.Add(Me.PnlEditorialHeader)
         Me.PnlEditorial.Controls.Add(Me.ComboPerso3)
-        Me.PnlEditorial.Location = New System.Drawing.Point(470, 456)
+        Me.PnlEditorial.Location = New System.Drawing.Point(470, 443)
         Me.PnlEditorial.Name = "PnlEditorial"
         Me.PnlEditorial.Size = New System.Drawing.Size(390, 78)
         Me.PnlEditorial.TabIndex = 63
@@ -876,31 +698,6 @@ Partial Class FrmCrearRegistros
         Me.lblEditorial.Text = "Editorial"
         Me.lblEditorial.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'ComboPerso3
-        '
-        Me.ComboPerso3._BorderColor = System.Drawing.Color.PeachPuff
-        Me.ComboPerso3._BorderSize = 1
-        Me.ComboPerso3._IconColor = System.Drawing.Color.PeachPuff
-        Me.ComboPerso3._ListBackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.ComboPerso3._ListTextColor = System.Drawing.Color.Silver
-        Me.ComboPerso3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.ComboPerso3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.ComboPerso3.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.ComboPerso3.DataBindings.Add(New System.Windows.Forms.Binding("SelectedItem", Me.EditorialBindingSource, "Nombre", True))
-        Me.ComboPerso3.DataSource = Nothing
-        Me.ComboPerso3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown
-        Me.ComboPerso3.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboPerso3.ForeColor = System.Drawing.Color.Silver
-        Me.ComboPerso3.Location = New System.Drawing.Point(3, 31)
-        Me.ComboPerso3.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
-        Me.ComboPerso3.MaxLength = 100
-        Me.ComboPerso3.MinimumSize = New System.Drawing.Size(188, 41)
-        Me.ComboPerso3.Name = "ComboPerso3"
-        Me.ComboPerso3.Padding = New System.Windows.Forms.Padding(1)
-        Me.ComboPerso3.Size = New System.Drawing.Size(384, 41)
-        Me.ComboPerso3.TabIndex = 43
-        Me.ComboPerso3.Texts = ""
-        '
         'EditorialBindingSource
         '
         Me.EditorialBindingSource.DataMember = "editorial"
@@ -909,7 +706,7 @@ Partial Class FrmCrearRegistros
         'PnlGenecion
         '
         Me.PnlGenecion.BackColor = System.Drawing.Color.PeachPuff
-        Me.PnlGenecion.Location = New System.Drawing.Point(40, 378)
+        Me.PnlGenecion.Location = New System.Drawing.Point(40, 365)
         Me.PnlGenecion.Name = "PnlGenecion"
         Me.PnlGenecion.Size = New System.Drawing.Size(390, 1)
         Me.PnlGenecion.TabIndex = 64
@@ -917,7 +714,7 @@ Partial Class FrmCrearRegistros
         'PnlEdias
         '
         Me.PnlEdias.BackColor = System.Drawing.Color.PeachPuff
-        Me.PnlEdias.Location = New System.Drawing.Point(470, 539)
+        Me.PnlEdias.Location = New System.Drawing.Point(470, 526)
         Me.PnlEdias.Name = "PnlEdias"
         Me.PnlEdias.Size = New System.Drawing.Size(390, 1)
         Me.PnlEdias.TabIndex = 66
@@ -929,7 +726,7 @@ Partial Class FrmCrearRegistros
         Me.PnlEdicion.Controls.Add(Me.TxtPerso6)
         Me.PnlEdicion.Controls.Add(Me.Label13)
         Me.PnlEdicion.Controls.Add(Me.TxtPerso7)
-        Me.PnlEdicion.Location = New System.Drawing.Point(40, 385)
+        Me.PnlEdicion.Location = New System.Drawing.Point(40, 372)
         Me.PnlEdicion.Name = "PnlEdicion"
         Me.PnlEdicion.Size = New System.Drawing.Size(390, 96)
         Me.PnlEdicion.TabIndex = 67
@@ -992,26 +789,6 @@ Partial Class FrmCrearRegistros
         Me.Label12.Text = "N°"
         Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TxtPerso6
-        '
-        Me.TxtPerso6._BorderColor = System.Drawing.Color.PeachPuff
-        Me.TxtPerso6._BorderFocusColor = System.Drawing.Color.PeachPuff
-        Me.TxtPerso6._BorderSize = 2
-        Me.TxtPerso6._MaxLength = 10
-        Me.TxtPerso6._Multiline = False
-        Me.TxtPerso6._PasswordChar = False
-        Me.TxtPerso6._UnderlinedStyle = True
-        Me.TxtPerso6.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(85, Byte), Integer))
-        Me.TxtPerso6.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtPerso6.ForeColor = System.Drawing.Color.LightGray
-        Me.TxtPerso6.Location = New System.Drawing.Point(207, 50)
-        Me.TxtPerso6.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
-        Me.TxtPerso6.Name = "TxtPerso6"
-        Me.TxtPerso6.Padding = New System.Windows.Forms.Padding(7)
-        Me.TxtPerso6.Size = New System.Drawing.Size(178, 37)
-        Me.TxtPerso6.TabIndex = 50
-        Me.TxtPerso6.Texts = ""
-        '
         'Label13
         '
         Me.Label13.AutoSize = True
@@ -1027,30 +804,10 @@ Partial Class FrmCrearRegistros
         Me.Label13.Text = "Año"
         Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TxtPerso7
-        '
-        Me.TxtPerso7._BorderColor = System.Drawing.Color.PeachPuff
-        Me.TxtPerso7._BorderFocusColor = System.Drawing.Color.PeachPuff
-        Me.TxtPerso7._BorderSize = 2
-        Me.TxtPerso7._MaxLength = 11
-        Me.TxtPerso7._Multiline = False
-        Me.TxtPerso7._PasswordChar = False
-        Me.TxtPerso7._UnderlinedStyle = True
-        Me.TxtPerso7.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(85, Byte), Integer))
-        Me.TxtPerso7.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtPerso7.ForeColor = System.Drawing.Color.LightGray
-        Me.TxtPerso7.Location = New System.Drawing.Point(5, 50)
-        Me.TxtPerso7.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
-        Me.TxtPerso7.Name = "TxtPerso7"
-        Me.TxtPerso7.Padding = New System.Windows.Forms.Padding(7)
-        Me.TxtPerso7.Size = New System.Drawing.Size(178, 37)
-        Me.TxtPerso7.TabIndex = 49
-        Me.TxtPerso7.Texts = ""
-        '
         'PnlEdiado
         '
         Me.PnlEdiado.BackColor = System.Drawing.Color.PeachPuff
-        Me.PnlEdiado.Location = New System.Drawing.Point(40, 487)
+        Me.PnlEdiado.Location = New System.Drawing.Point(40, 474)
         Me.PnlEdiado.Name = "PnlEdiado"
         Me.PnlEdiado.Size = New System.Drawing.Size(390, 1)
         Me.PnlEdiado.TabIndex = 68
@@ -1059,7 +816,7 @@ Partial Class FrmCrearRegistros
         '
         Me.PnlPaginas.Controls.Add(Me.PnlPagHeader)
         Me.PnlPaginas.Controls.Add(Me.TxtPerso8)
-        Me.PnlPaginas.Location = New System.Drawing.Point(470, 546)
+        Me.PnlPaginas.Location = New System.Drawing.Point(470, 533)
         Me.PnlPaginas.Name = "PnlPaginas"
         Me.PnlPaginas.Size = New System.Drawing.Size(390, 78)
         Me.PnlPaginas.TabIndex = 69
@@ -1107,31 +864,11 @@ Partial Class FrmCrearRegistros
         Me.lblPag.Text = "N° de páginas"
         Me.lblPag.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TxtPerso8
-        '
-        Me.TxtPerso8._BorderColor = System.Drawing.Color.PeachPuff
-        Me.TxtPerso8._BorderFocusColor = System.Drawing.Color.PeachPuff
-        Me.TxtPerso8._BorderSize = 2
-        Me.TxtPerso8._MaxLength = 10
-        Me.TxtPerso8._Multiline = False
-        Me.TxtPerso8._PasswordChar = False
-        Me.TxtPerso8._UnderlinedStyle = True
-        Me.TxtPerso8.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(85, Byte), Integer))
-        Me.TxtPerso8.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtPerso8.ForeColor = System.Drawing.Color.LightGray
-        Me.TxtPerso8.Location = New System.Drawing.Point(5, 30)
-        Me.TxtPerso8.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
-        Me.TxtPerso8.Name = "TxtPerso8"
-        Me.TxtPerso8.Padding = New System.Windows.Forms.Padding(7)
-        Me.TxtPerso8.Size = New System.Drawing.Size(380, 37)
-        Me.TxtPerso8.TabIndex = 51
-        Me.TxtPerso8.Texts = ""
-        '
         'PnlEstado
         '
         Me.PnlEstado.Controls.Add(Me.PnlEstadoHeader)
         Me.PnlEstado.Controls.Add(Me.ComboPerso4)
-        Me.PnlEstado.Location = New System.Drawing.Point(40, 494)
+        Me.PnlEstado.Location = New System.Drawing.Point(40, 481)
         Me.PnlEstado.Name = "PnlEstado"
         Me.PnlEstado.Size = New System.Drawing.Size(390, 78)
         Me.PnlEstado.TabIndex = 71
@@ -1179,6 +916,30 @@ Partial Class FrmCrearRegistros
         Me.lblEstado.Text = "Estado"
         Me.lblEstado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
+        'PnlEstadoFin
+        '
+        Me.PnlEstadoFin.BackColor = System.Drawing.Color.PeachPuff
+        Me.PnlEstadoFin.Location = New System.Drawing.Point(40, 564)
+        Me.PnlEstadoFin.Name = "PnlEstadoFin"
+        Me.PnlEstadoFin.Size = New System.Drawing.Size(390, 1)
+        Me.PnlEstadoFin.TabIndex = 72
+        '
+        'PnlPagFin
+        '
+        Me.PnlPagFin.BackColor = System.Drawing.Color.PeachPuff
+        Me.PnlPagFin.Location = New System.Drawing.Point(470, 617)
+        Me.PnlPagFin.Name = "PnlPagFin"
+        Me.PnlPagFin.Size = New System.Drawing.Size(390, 1)
+        Me.PnlPagFin.TabIndex = 73
+        '
+        'GeneroTableAdapter
+        '
+        Me.GeneroTableAdapter.ClearBeforeFill = True
+        '
+        'EditorialTableAdapter
+        '
+        Me.EditorialTableAdapter.ClearBeforeFill = True
+        '
         'ComboPerso4
         '
         Me.ComboPerso4._BorderColor = System.Drawing.Color.PeachPuff
@@ -1205,22 +966,6 @@ Partial Class FrmCrearRegistros
         Me.ComboPerso4.TabIndex = 43
         Me.ComboPerso4.Texts = ""
         '
-        'PnlEstadoFin
-        '
-        Me.PnlEstadoFin.BackColor = System.Drawing.Color.PeachPuff
-        Me.PnlEstadoFin.Location = New System.Drawing.Point(40, 577)
-        Me.PnlEstadoFin.Name = "PnlEstadoFin"
-        Me.PnlEstadoFin.Size = New System.Drawing.Size(390, 1)
-        Me.PnlEstadoFin.TabIndex = 72
-        '
-        'PnlPagFin
-        '
-        Me.PnlPagFin.BackColor = System.Drawing.Color.PeachPuff
-        Me.PnlPagFin.Location = New System.Drawing.Point(470, 629)
-        Me.PnlPagFin.Name = "PnlPagFin"
-        Me.PnlPagFin.Size = New System.Drawing.Size(390, 1)
-        Me.PnlPagFin.TabIndex = 73
-        '
         'BtnGuardar
         '
         Me.BtnGuardar.Anchor = System.Windows.Forms.AnchorStyles.Top
@@ -1234,13 +979,256 @@ Partial Class FrmCrearRegistros
         Me.BtnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnGuardar.ForeColor = System.Drawing.Color.Silver
-        Me.BtnGuardar.Location = New System.Drawing.Point(720, 29)
+        Me.BtnGuardar.Location = New System.Drawing.Point(720, 16)
         Me.BtnGuardar.Name = "BtnGuardar"
         Me.BtnGuardar.Size = New System.Drawing.Size(126, 45)
         Me.BtnGuardar.TabIndex = 70
         Me.BtnGuardar.Text = "Guardar registro"
         Me.BtnGuardar.TextColor = System.Drawing.Color.Silver
         Me.BtnGuardar.UseVisualStyleBackColor = False
+        '
+        'TxtPerso8
+        '
+        Me.TxtPerso8._BorderColor = System.Drawing.Color.PeachPuff
+        Me.TxtPerso8._BorderFocusColor = System.Drawing.Color.PeachPuff
+        Me.TxtPerso8._BorderSize = 2
+        Me.TxtPerso8._MaxLength = 10
+        Me.TxtPerso8._Multiline = False
+        Me.TxtPerso8._PasswordChar = False
+        Me.TxtPerso8._UnderlinedStyle = True
+        Me.TxtPerso8.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(85, Byte), Integer))
+        Me.TxtPerso8.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtPerso8.ForeColor = System.Drawing.Color.LightGray
+        Me.TxtPerso8.Location = New System.Drawing.Point(5, 30)
+        Me.TxtPerso8.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.TxtPerso8.Name = "TxtPerso8"
+        Me.TxtPerso8.Padding = New System.Windows.Forms.Padding(7)
+        Me.TxtPerso8.Size = New System.Drawing.Size(380, 37)
+        Me.TxtPerso8.TabIndex = 51
+        Me.TxtPerso8.Texts = ""
+        '
+        'TxtPerso6
+        '
+        Me.TxtPerso6._BorderColor = System.Drawing.Color.PeachPuff
+        Me.TxtPerso6._BorderFocusColor = System.Drawing.Color.PeachPuff
+        Me.TxtPerso6._BorderSize = 2
+        Me.TxtPerso6._MaxLength = 10
+        Me.TxtPerso6._Multiline = False
+        Me.TxtPerso6._PasswordChar = False
+        Me.TxtPerso6._UnderlinedStyle = True
+        Me.TxtPerso6.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(85, Byte), Integer))
+        Me.TxtPerso6.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtPerso6.ForeColor = System.Drawing.Color.LightGray
+        Me.TxtPerso6.Location = New System.Drawing.Point(207, 50)
+        Me.TxtPerso6.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.TxtPerso6.Name = "TxtPerso6"
+        Me.TxtPerso6.Padding = New System.Windows.Forms.Padding(7)
+        Me.TxtPerso6.Size = New System.Drawing.Size(178, 37)
+        Me.TxtPerso6.TabIndex = 50
+        Me.TxtPerso6.Texts = ""
+        '
+        'TxtPerso7
+        '
+        Me.TxtPerso7._BorderColor = System.Drawing.Color.PeachPuff
+        Me.TxtPerso7._BorderFocusColor = System.Drawing.Color.PeachPuff
+        Me.TxtPerso7._BorderSize = 2
+        Me.TxtPerso7._MaxLength = 11
+        Me.TxtPerso7._Multiline = False
+        Me.TxtPerso7._PasswordChar = False
+        Me.TxtPerso7._UnderlinedStyle = True
+        Me.TxtPerso7.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(85, Byte), Integer))
+        Me.TxtPerso7.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtPerso7.ForeColor = System.Drawing.Color.LightGray
+        Me.TxtPerso7.Location = New System.Drawing.Point(5, 50)
+        Me.TxtPerso7.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.TxtPerso7.Name = "TxtPerso7"
+        Me.TxtPerso7.Padding = New System.Windows.Forms.Padding(7)
+        Me.TxtPerso7.Size = New System.Drawing.Size(178, 37)
+        Me.TxtPerso7.TabIndex = 49
+        Me.TxtPerso7.Texts = ""
+        '
+        'ComboPerso3
+        '
+        Me.ComboPerso3._BorderColor = System.Drawing.Color.PeachPuff
+        Me.ComboPerso3._BorderSize = 1
+        Me.ComboPerso3._IconColor = System.Drawing.Color.PeachPuff
+        Me.ComboPerso3._ListBackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.ComboPerso3._ListTextColor = System.Drawing.Color.Silver
+        Me.ComboPerso3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.ComboPerso3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.ComboPerso3.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.ComboPerso3.DataBindings.Add(New System.Windows.Forms.Binding("SelectedItem", Me.EditorialBindingSource, "Nombre", True))
+        Me.ComboPerso3.DataSource = Nothing
+        Me.ComboPerso3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown
+        Me.ComboPerso3.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboPerso3.ForeColor = System.Drawing.Color.Silver
+        Me.ComboPerso3.Location = New System.Drawing.Point(3, 31)
+        Me.ComboPerso3.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
+        Me.ComboPerso3.MaxLength = 100
+        Me.ComboPerso3.MinimumSize = New System.Drawing.Size(188, 41)
+        Me.ComboPerso3.Name = "ComboPerso3"
+        Me.ComboPerso3.Padding = New System.Windows.Forms.Padding(1)
+        Me.ComboPerso3.Size = New System.Drawing.Size(384, 41)
+        Me.ComboPerso3.TabIndex = 43
+        Me.ComboPerso3.Texts = ""
+        '
+        'ComboPerso1
+        '
+        Me.ComboPerso1._BorderColor = System.Drawing.Color.PeachPuff
+        Me.ComboPerso1._BorderSize = 1
+        Me.ComboPerso1._IconColor = System.Drawing.Color.PeachPuff
+        Me.ComboPerso1._ListBackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.ComboPerso1._ListTextColor = System.Drawing.Color.Silver
+        Me.ComboPerso1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.ComboPerso1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.ComboPerso1.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.ComboPerso1.DataBindings.Add(New System.Windows.Forms.Binding("SelectedItem", Me.GeneroBindingSource, "Nombre", True))
+        Me.ComboPerso1.DataSource = Nothing
+        Me.ComboPerso1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown
+        Me.ComboPerso1.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboPerso1.ForeColor = System.Drawing.Color.Silver
+        Me.ComboPerso1.Location = New System.Drawing.Point(3, 31)
+        Me.ComboPerso1.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
+        Me.ComboPerso1.MaxLength = 100
+        Me.ComboPerso1.MinimumSize = New System.Drawing.Size(188, 41)
+        Me.ComboPerso1.Name = "ComboPerso1"
+        Me.ComboPerso1.Padding = New System.Windows.Forms.Padding(1)
+        Me.ComboPerso1.Size = New System.Drawing.Size(384, 41)
+        Me.ComboPerso1.TabIndex = 43
+        Me.ComboPerso1.Texts = ""
+        '
+        'CboFormato
+        '
+        Me.CboFormato._BorderColor = System.Drawing.Color.PeachPuff
+        Me.CboFormato._BorderSize = 1
+        Me.CboFormato._IconColor = System.Drawing.Color.PeachPuff
+        Me.CboFormato._ListBackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.CboFormato._ListTextColor = System.Drawing.Color.Silver
+        Me.CboFormato.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.CboFormato.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.CboFormato.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.CboFormato.DataBindings.Add(New System.Windows.Forms.Binding("SelectedItem", Me.TipoderecursoBindingSource, "Nombre", True))
+        Me.CboFormato.DataSource = Nothing
+        Me.CboFormato.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CboFormato.Font = New System.Drawing.Font("Montserrat", 12.0!)
+        Me.CboFormato.ForeColor = System.Drawing.Color.Silver
+        Me.CboFormato.Items.AddRange(New Object() {"Físico", "Digital", "Físico y Digital"})
+        Me.CboFormato.Location = New System.Drawing.Point(3, 31)
+        Me.CboFormato.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
+        Me.CboFormato.MaxLength = 100
+        Me.CboFormato.MinimumSize = New System.Drawing.Size(188, 41)
+        Me.CboFormato.Name = "CboFormato"
+        Me.CboFormato.Padding = New System.Windows.Forms.Padding(1)
+        Me.CboFormato.Size = New System.Drawing.Size(384, 41)
+        Me.CboFormato.TabIndex = 43
+        Me.CboFormato.Texts = ""
+        '
+        'CboTipoRecurso
+        '
+        Me.CboTipoRecurso._BorderColor = System.Drawing.Color.PeachPuff
+        Me.CboTipoRecurso._BorderSize = 1
+        Me.CboTipoRecurso._IconColor = System.Drawing.Color.PeachPuff
+        Me.CboTipoRecurso._ListBackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.CboTipoRecurso._ListTextColor = System.Drawing.Color.Silver
+        Me.CboTipoRecurso.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.CboTipoRecurso.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.CboTipoRecurso.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.CboTipoRecurso.DataBindings.Add(New System.Windows.Forms.Binding("SelectedItem", Me.TipoderecursoBindingSource, "Nombre", True))
+        Me.CboTipoRecurso.DataSource = Nothing
+        Me.CboTipoRecurso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown
+        Me.CboTipoRecurso.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CboTipoRecurso.ForeColor = System.Drawing.Color.Silver
+        Me.CboTipoRecurso.Location = New System.Drawing.Point(3, 31)
+        Me.CboTipoRecurso.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
+        Me.CboTipoRecurso.MaxLength = 100
+        Me.CboTipoRecurso.MinimumSize = New System.Drawing.Size(188, 41)
+        Me.CboTipoRecurso.Name = "CboTipoRecurso"
+        Me.CboTipoRecurso.Padding = New System.Windows.Forms.Padding(1)
+        Me.CboTipoRecurso.Size = New System.Drawing.Size(384, 41)
+        Me.CboTipoRecurso.TabIndex = 43
+        Me.CboTipoRecurso.Texts = ""
+        '
+        'TxtPerso4
+        '
+        Me.TxtPerso4._BorderColor = System.Drawing.Color.PeachPuff
+        Me.TxtPerso4._BorderFocusColor = System.Drawing.Color.PeachPuff
+        Me.TxtPerso4._BorderSize = 2
+        Me.TxtPerso4._MaxLength = 13
+        Me.TxtPerso4._Multiline = False
+        Me.TxtPerso4._PasswordChar = False
+        Me.TxtPerso4._UnderlinedStyle = True
+        Me.TxtPerso4.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(85, Byte), Integer))
+        Me.TxtPerso4.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtPerso4.ForeColor = System.Drawing.Color.LightGray
+        Me.TxtPerso4.Location = New System.Drawing.Point(5, 33)
+        Me.TxtPerso4.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.TxtPerso4.Name = "TxtPerso4"
+        Me.TxtPerso4.Padding = New System.Windows.Forms.Padding(7)
+        Me.TxtPerso4.Size = New System.Drawing.Size(380, 37)
+        Me.TxtPerso4.TabIndex = 51
+        Me.TxtPerso4.Texts = ""
+        '
+        'TxtPerso3
+        '
+        Me.TxtPerso3._BorderColor = System.Drawing.Color.PeachPuff
+        Me.TxtPerso3._BorderFocusColor = System.Drawing.Color.PeachPuff
+        Me.TxtPerso3._BorderSize = 2
+        Me.TxtPerso3._MaxLength = 100
+        Me.TxtPerso3._Multiline = False
+        Me.TxtPerso3._PasswordChar = False
+        Me.TxtPerso3._UnderlinedStyle = True
+        Me.TxtPerso3.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(85, Byte), Integer))
+        Me.TxtPerso3.DataBindings.Add(New System.Windows.Forms.Binding("Tag", Me.AutorBindingSource, "Apellidos", True))
+        Me.TxtPerso3.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtPerso3.ForeColor = System.Drawing.Color.LightGray
+        Me.TxtPerso3.Location = New System.Drawing.Point(207, 50)
+        Me.TxtPerso3.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.TxtPerso3.Name = "TxtPerso3"
+        Me.TxtPerso3.Padding = New System.Windows.Forms.Padding(7)
+        Me.TxtPerso3.Size = New System.Drawing.Size(178, 37)
+        Me.TxtPerso3.TabIndex = 50
+        Me.TxtPerso3.Texts = ""
+        '
+        'TxtPerso2
+        '
+        Me.TxtPerso2._BorderColor = System.Drawing.Color.PeachPuff
+        Me.TxtPerso2._BorderFocusColor = System.Drawing.Color.PeachPuff
+        Me.TxtPerso2._BorderSize = 2
+        Me.TxtPerso2._MaxLength = 100
+        Me.TxtPerso2._Multiline = False
+        Me.TxtPerso2._PasswordChar = False
+        Me.TxtPerso2._UnderlinedStyle = True
+        Me.TxtPerso2.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(85, Byte), Integer))
+        Me.TxtPerso2.DataBindings.Add(New System.Windows.Forms.Binding("Tag", Me.AutorBindingSource, "Nombres", True))
+        Me.TxtPerso2.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtPerso2.ForeColor = System.Drawing.Color.LightGray
+        Me.TxtPerso2.Location = New System.Drawing.Point(5, 50)
+        Me.TxtPerso2.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.TxtPerso2.Name = "TxtPerso2"
+        Me.TxtPerso2.Padding = New System.Windows.Forms.Padding(7)
+        Me.TxtPerso2.Size = New System.Drawing.Size(178, 37)
+        Me.TxtPerso2.TabIndex = 49
+        Me.TxtPerso2.Texts = ""
+        '
+        'TxtPerso1
+        '
+        Me.TxtPerso1._BorderColor = System.Drawing.Color.PeachPuff
+        Me.TxtPerso1._BorderFocusColor = System.Drawing.Color.PeachPuff
+        Me.TxtPerso1._BorderSize = 2
+        Me.TxtPerso1._MaxLength = 200
+        Me.TxtPerso1._Multiline = False
+        Me.TxtPerso1._PasswordChar = False
+        Me.TxtPerso1._UnderlinedStyle = True
+        Me.TxtPerso1.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(85, Byte), Integer))
+        Me.TxtPerso1.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtPerso1.ForeColor = System.Drawing.Color.LightGray
+        Me.TxtPerso1.Location = New System.Drawing.Point(7, 30)
+        Me.TxtPerso1.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.TxtPerso1.Name = "TxtPerso1"
+        Me.TxtPerso1.Padding = New System.Windows.Forms.Padding(7)
+        Me.TxtPerso1.Size = New System.Drawing.Size(378, 37)
+        Me.TxtPerso1.TabIndex = 48
+        Me.TxtPerso1.Texts = ""
         '
         'BtnVolver
         '
@@ -1260,13 +1248,20 @@ Partial Class FrmCrearRegistros
         Me.BtnVolver.TextColor = System.Drawing.Color.White
         Me.BtnVolver.UseVisualStyleBackColor = False
         '
-        'GeneroTableAdapter
+        'DtpFecha
         '
-        Me.GeneroTableAdapter.ClearBeforeFill = True
-        '
-        'EditorialTableAdapter
-        '
-        Me.EditorialTableAdapter.ClearBeforeFill = True
+        Me.DtpFecha.BorderColor = System.Drawing.Color.PeachPuff
+        Me.DtpFecha.BorderSize = 1
+        Me.DtpFecha.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DtpFecha.Location = New System.Drawing.Point(5, 29)
+        Me.DtpFecha.MinimumSize = New System.Drawing.Size(0, 42)
+        Me.DtpFecha.Name = "DtpFecha"
+        Me.DtpFecha.Size = New System.Drawing.Size(380, 42)
+        Me.DtpFecha.SkinColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.DtpFecha.TabIndex = 39
+        Me.DtpFecha.TextColor = System.Drawing.Color.PeachPuff
+        Me.DtpFecha.Value = New Date(2024, 12, 5, 0, 0, 0, 0)
         '
         'FrmCrearRegistros
         '
@@ -1406,7 +1401,6 @@ Partial Class FrmCrearRegistros
     Friend WithEvents PnlFechaHeader As System.Windows.Forms.Panel
     Friend WithEvents PcbFechaHeader As System.Windows.Forms.PictureBox
     Friend WithEvents lblFecha As System.Windows.Forms.Label
-    Friend WithEvents TxtPerso5 As Biblioteca.TxtPerso
     Friend WithEvents PnlAutero As System.Windows.Forms.Panel
     Friend WithEvents PnlForcion As System.Windows.Forms.Panel
     Friend WithEvents PnlFechal As System.Windows.Forms.Panel
@@ -1454,4 +1448,5 @@ Partial Class FrmCrearRegistros
     Friend WithEvents GeneroTableAdapter As Biblioteca.bdbibliotecaDataSetTableAdapters.generoTableAdapter
     Friend WithEvents EditorialBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents EditorialTableAdapter As Biblioteca.bdbibliotecaDataSetTableAdapters.editorialTableAdapter
+    Friend WithEvents DtpFecha As Biblioteca.MiDatePicker
 End Class

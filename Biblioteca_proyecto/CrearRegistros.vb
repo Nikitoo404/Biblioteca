@@ -38,6 +38,7 @@ Public Class FrmCrearRegistros
         Me.TipoderecursoTableAdapter.Fill(Me.BdbibliotecaDataSet.tipoderecurso)
         'TODO: esta línea de código carga datos en la tabla 'BdbibliotecaDataSet.autor' Puede moverla o quitarla según sea necesario.
         Me.AutorTableAdapter.Fill(Me.BdbibliotecaDataSet.autor)
+        DtpFecha.MaxDate = Date.Now
     End Sub
 
     Private Sub PnlTituloHeader_Click(sender As System.Object, e As System.EventArgs) Handles PnlTituloHeader.Click, lblTituloLibro.Click, PcbTituloHeader.Click, PnlTituloLinea.Click
@@ -156,5 +157,64 @@ Public Class FrmCrearRegistros
     Private Sub BtnGuardar_MouseUp(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles BtnGuardar.MouseUp
         BtnGuardar.BorderColor = Color.LightGray
         BtnGuardar.BackColor = Color.FromArgb(20, 57, 80)
+    End Sub
+
+    Private Sub BtnGuardar_Click(sender As System.Object, e As System.EventArgs) Handles BtnGuardar.Click
+        'Lista de nombres de paneles que deseas recorrer
+        Dim panelesObjetivo As String() = {"PnlTitulo", "PnlAutor", "PnlGenero", "PnlEdicion", "PnlEstado", "PnlISBN", "PnlTipoRecurso", "PnlFormato", "PnlFecha", "PnlEditorial", "PnlPaginas"}
+
+        ' Recorrer cada panel en la lista
+        For Each panelNombre In panelesObjetivo
+            Dim panel As Control = Me.Controls.Find(panelNombre, True).FirstOrDefault()
+            If panel IsNot Nothing Then
+                ' Recorrer controles dentro del panel específico
+                For Each ctrl As Control In panel.Controls.Cast(Of Control).OrderBy(Function(c) c.TabIndex)
+
+                    ' Verificar si el control es un ComboBox
+                    If Mid(ctrl.Name, 1, 3) = "Cbo" Then
+                        If Len(Trim(ctrl.Text)) = 0 Then
+                            Dim result = CuadroDeMensaje.Show("Complete todos los espacios",
+                                          "Casilleros vacíos.",
+                                          MessageBoxButtons.OK,
+                                          MessageBoxIcon.Information)
+                            ctrl.BackColor = Color.FromArgb(95, 151, 186)
+                            ctrl.Focus()
+                            Exit Sub
+                        Else
+                            ctrl.BackColor = Color.FromArgb(20, 57, 80)
+                        End If
+
+                        ' Verificar si el control es un TextBox
+                    ElseIf Mid(ctrl.Name, 1, 3) = "Txt" Then
+                        If Len(Trim(ctrl.Text)) = 0 Then
+                            Dim result = CuadroDeMensaje.Show("Complete todos los espacios",
+                                          "Casilleros vacíos.",
+                                          MessageBoxButtons.OK,
+                                          MessageBoxIcon.Information)
+                            ctrl.BackColor = Color.FromArgb(95, 151, 186)
+                            ctrl.Focus()
+                            Exit Sub
+                        Else
+                            ctrl.BackColor = Color.FromArgb(25, 62, 85)
+                        End If
+
+                        ' Verificar si el control es un DateTimePicker
+                    ElseIf Mid(ctrl.Name, 1, 3) = "Dtp" Then
+                        If Len(Trim(ctrl.Text)) = 0 Then
+                            Dim result = CuadroDeMensaje.Show("Complete todos los espacios",
+                                          "Casilleros vacíos.",
+                                          MessageBoxButtons.OK,
+                                          MessageBoxIcon.Information)
+                            ctrl.BackColor = Color.FromArgb(95, 151, 186)
+                            ctrl.Focus()
+                            Exit Sub
+                        Else
+                            ctrl.BackColor = Color.FromArgb(20, 57, 80)
+                        End If
+                    End If
+                Next
+            End If
+        Next
+ 
     End Sub
 End Class
