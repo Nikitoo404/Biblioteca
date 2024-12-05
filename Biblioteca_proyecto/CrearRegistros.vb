@@ -1,6 +1,7 @@
 ﻿Imports System.Drawing
 Imports System.Drawing.Drawing2D
 Public Class FrmCrearRegistros
+    Private posicionesOriginales As New Dictionary(Of Control, Point)
     Private Sub BtnVolver_MouseDown(sender As Object, e As MouseEventArgs) Handles BtnVolver.MouseDown
         BtnVolver.BackColor = Color.PeachPuff
         BtnVolver.Image = My.Resources.blueOsc
@@ -39,61 +40,35 @@ Public Class FrmCrearRegistros
         'TODO: esta línea de código carga datos en la tabla 'BdbibliotecaDataSet.autor' Puede moverla o quitarla según sea necesario.
         Me.AutorTableAdapter.Fill(Me.BdbibliotecaDataSet.autor)
         DtpFecha.MaxDate = Date.Now
+        ' Guardar las posiciones originales de los paneles al cargar el formulario
+        Dim paneles As Control() = {PnlTitulo, PnlTitAutor, PnlAutor, PnlAutero, PnlGenero, PnlGenecion,
+                                     PnlEdicion, PnlEdiado, PnlEstado, PnlISBN, PnlISso, PnlTipoRecurso,
+                                     PnlTipoto, PnlFormato, PnlForcion, PnlFecha, PnlFechal, PnlEditorial,
+                                     PnlEdias, PnlPaginas, PnlEstadoFin, PnlPagFin}
+
+        For Each panel As Control In paneles
+            posicionesOriginales(panel) = panel.Location
+        Next
     End Sub
 
     Private Sub PnlTituloHeader_Click(sender As System.Object, e As System.EventArgs) Handles PnlTituloHeader.Click, lblTituloLibro.Click, PcbTituloHeader.Click, PnlTituloLinea.Click
         ModuloAcordeon.StartPanelAccordion(PnlTitulo, Me, 22, 78, PcbTituloHeader)
     End Sub
 
-    Private Sub FrmCrearRegistros_Resize(sender As System.Object, e As System.EventArgs) Handles MyBase.Resize
+    Private Sub FrmCrearRegistros_Resize(sender As Object, e As EventArgs) Handles MyBase.Resize
+        Dim desplazamientoX As Integer = 100
+
         If FrmInicio.WindowState = FormWindowState.Maximized Then
-            PnlTitulo.Location = New Point(PnlTitulo.Location.X + 100, PnlTitulo.Location.Y)
-            PnlTitAutor.Location = New Point(PnlTitAutor.Location.X + 100, PnlTitAutor.Location.Y)
-            PnlAutor.Location = New Point(PnlAutor.Location.X + 100, PnlAutor.Location.Y)
-            PnlAutero.Location = New Point(PnlAutero.Location.X + 100, PnlAutero.Location.Y)
-            PnlGenero.Location = New Point(PnlGenero.Location.X + 100, PnlGenero.Location.Y)
-            PnlGenecion.Location = New Point(PnlGenecion.Location.X + 100, PnlGenecion.Location.Y)
-            PnlEdicion.Location = New Point(PnlEdicion.Location.X + 100, PnlEdicion.Location.Y)
-            PnlEdiado.Location = New Point(PnlEdiado.Location.X + 100, PnlEdiado.Location.Y)
-            PnlEstado.Location = New Point(PnlEstado.Location.X + 100, PnlEstado.Location.Y)
-            PnlISBN.Location = New Point(PnlISBN.Location.X + 100, PnlISBN.Location.Y)
-            PnlISso.Location = New Point(PnlISso.Location.X + 100, PnlISso.Location.Y)
-            PnlTipoRecurso.Location = New Point(PnlTipoRecurso.Location.X + 100, PnlTipoRecurso.Location.Y)
-            PnlTipoto.Location = New Point(PnlTipoto.Location.X + 100, PnlTipoto.Location.Y)
-            PnlFormato.Location = New Point(PnlFormato.Location.X + 100, PnlFormato.Location.Y)
-            PnlForcion.Location = New Point(PnlForcion.Location.X + 100, PnlForcion.Location.Y)
-            PnlFecha.Location = New Point(PnlFecha.Location.X + 100, PnlFecha.Location.Y)
-            PnlFechal.Location = New Point(PnlFechal.Location.X + 100, PnlFechal.Location.Y)
-            PnlEditorial.Location = New Point(PnlEditorial.Location.X + 100, PnlEditorial.Location.Y)
-            PnlEdias.Location = New Point(PnlEdias.Location.X + 100, PnlEdias.Location.Y)
-            PnlPaginas.Location = New Point(PnlPaginas.Location.X + 100, PnlPaginas.Location.Y)
-            PnlEstadoFin.Location = New Point(PnlEstadoFin.Location.X + 100, PnlEstadoFin.Location.Y)
-            PnlPagFin.Location = New Point(PnlPagFin.Location.X + 100, PnlPagFin.Location.Y)
-        ElseIf PnlTitulo.Location.X <> 40 Then
-            PnlTitulo.Location = New Point(PnlTitulo.Location.X - 100, PnlTitulo.Location.Y)
-            PnlTitAutor.Location = New Point(PnlTitAutor.Location.X - 100, PnlTitAutor.Location.Y)
-            PnlAutor.Location = New Point(PnlAutor.Location.X - 100, PnlAutor.Location.Y)
-            PnlAutero.Location = New Point(PnlAutero.Location.X - 100, PnlAutero.Location.Y)
-            PnlGenero.Location = New Point(PnlGenero.Location.X - 100, PnlGenero.Location.Y)
-            PnlGenecion.Location = New Point(PnlGenecion.Location.X - 100, PnlGenecion.Location.Y)
-            PnlEdicion.Location = New Point(PnlEdicion.Location.X - 100, PnlEdicion.Location.Y)
-            PnlEdiado.Location = New Point(PnlEdiado.Location.X - 100, PnlEdiado.Location.Y)
-            PnlEstado.Location = New Point(PnlEstado.Location.X - 100, PnlEstado.Location.Y)
-            PnlISBN.Location = New Point(PnlISBN.Location.X - 100, PnlISBN.Location.Y)
-            PnlISso.Location = New Point(PnlISso.Location.X - 100, PnlISso.Location.Y)
-            PnlTipoRecurso.Location = New Point(PnlTipoRecurso.Location.X - 100, PnlTipoRecurso.Location.Y)
-            PnlTipoto.Location = New Point(PnlTipoto.Location.X - 100, PnlTipoto.Location.Y)
-            PnlFormato.Location = New Point(PnlFormato.Location.X - 100, PnlFormato.Location.Y)
-            PnlForcion.Location = New Point(PnlForcion.Location.X - 100, PnlForcion.Location.Y)
-            PnlFecha.Location = New Point(PnlFecha.Location.X - 100, PnlFecha.Location.Y)
-            PnlFechal.Location = New Point(PnlFechal.Location.X - 100, PnlFechal.Location.Y)
-            PnlEditorial.Location = New Point(PnlEditorial.Location.X - 100, PnlEditorial.Location.Y)
-            PnlEdias.Location = New Point(PnlEdias.Location.X - 100, PnlEdias.Location.Y)
-            PnlPaginas.Location = New Point(PnlPaginas.Location.X - 100, PnlPaginas.Location.Y)
-            PnlEstadoFin.Location = New Point(PnlEstadoFin.Location.X - 100, PnlEstadoFin.Location.Y)
-            PnlPagFin.Location = New Point(PnlPagFin.Location.X - 100, PnlPagFin.Location.Y)
+            ' Reubicar los paneles a la posición desplazada
+            For Each panel As Control In posicionesOriginales.Keys
+                Dim posicionOriginal = posicionesOriginales(panel)
+                panel.Location = New Point(posicionOriginal.X + desplazamientoX, posicionOriginal.Y)
+            Next
         Else
-            Exit Sub
+            ' Restaurar las posiciones originales si no está maximizado
+            For Each panel As Control In posicionesOriginales.Keys
+                panel.Location = posicionesOriginales(panel)
+            Next
         End If
     End Sub
 
@@ -160,57 +135,103 @@ Public Class FrmCrearRegistros
     End Sub
 
     Private Sub BtnGuardar_Click(sender As System.Object, e As System.EventArgs) Handles BtnGuardar.Click
-        'Lista de nombres de paneles que deseas recorrer
+        ' Lista de nombres de paneles que deseas recorrer
         Dim panelesObjetivo As String() = {"PnlTitulo", "PnlAutor", "PnlGenero", "PnlEdicion", "PnlEstado", "PnlISBN", "PnlTipoRecurso", "PnlFormato", "PnlFecha", "PnlEditorial", "PnlPaginas"}
 
-        ' Recorrer cada panel en la lista
-        For Each panelNombre In panelesObjetivo
-            Dim panel As Control = Me.Controls.Find(panelNombre, True).FirstOrDefault()
-            If panel IsNot Nothing Then
-                ' Recorrer controles dentro del panel específico
-                For Each ctrl As Control In panel.Controls.Cast(Of Control).OrderBy(Function(c) c.TabIndex)
-                    ' Asegurarse de actualizar el control antes de verificar
-                    ctrl.Refresh()
-
-                    ' Verificar si el control es un ComboBox
-                    If ctrl.Name.StartsWith("Cbo") Then
-                        Dim hasTextsProperty As Boolean = TypeOf ctrl Is ComboPerso ' Cambia 'MyCustomTextBox' al tipo de tu control personalizado
-                        If hasTextsProperty Then
-                            Dim customText = CType(ctrl, TxtPerso).Texts ' Accede a "Texts"
-                            If String.IsNullOrWhiteSpace(customText) Then
-                                MostrarMensajeYResaltar(ctrl)
-                                Exit Sub
+        If Len(Trim(TxtTitulo.Texts)) = 0 Then
+            MostrarMensajeYResaltar(TxtTitulo)
+        Else
+            TxtTitulo.BackColor = Color.FromArgb(25, 62, 85)
+            If Len(Trim(TxtNombre.Texts)) = 0 Then
+                MostrarMensajeYResaltar(TxtNombre)
+            Else
+                TxtNombre.BackColor = Color.FromArgb(25, 62, 85)
+                If Len(Trim(TxtApellido.Texts)) = 0 Then
+                    MostrarMensajeYResaltar(TxtApellido)
+                Else
+                    TxtApellido.BackColor = Color.FromArgb(25, 62, 85)
+                    If Len(Trim(CboGenero.Texts)) = 0 Then
+                        Dim result = CuadroDeMensaje.Show("Complete todos los espacios",
+                                         "Casilleros vacíos.",
+                                         MessageBoxButtons.OK,
+                                         MessageBoxIcon.Information)
+                        CboGenero._BorderColor = Color.FromArgb(95, 151, 186)
+                        CboGenero.Focus()
+                        Exit Sub
+                    Else
+                        CboGenero._BorderColor = Color.PeachPuff
+                        If Len(Trim(TxtNumero.Texts)) = 0 Then
+                            MostrarMensajeYResaltar(TxtNumero)
+                        Else
+                            TxtNumero.BackColor = Color.FromArgb(25, 62, 85)
+                            If Len(Trim(TxtAno.Texts)) = 0 Then
+                                MostrarMensajeYResaltar(TxtAno)
                             Else
-                                ctrl.BackColor = Color.FromArgb(25, 62, 85)
+                                TxtAno.BackColor = Color.FromArgb(25, 62, 85)
+                                If Len(Trim(CboEstado.Texts)) = 0 Then
+                                    Dim result = CuadroDeMensaje.Show("Complete todos los espacios",
+                                         "Casilleros vacíos.",
+                                         MessageBoxButtons.OK,
+                                         MessageBoxIcon.Information)
+                                    CboEstado._BorderColor = Color.FromArgb(95, 151, 186)
+                                    CboEstado.Focus()
+                                    Exit Sub
+                                Else
+                                    CboEstado._BorderColor = Color.PeachPuff
+                                    If Len(Trim(TxtISBN.Texts)) = 0 Then
+                                        MostrarMensajeYResaltar(TxtISBN)
+                                    Else
+                                        TxtISBN.BackColor = Color.FromArgb(25, 62, 85)
+                                        If Len(Trim(CboTipoRecurso.Texts)) = 0 Then
+                                            Dim result = CuadroDeMensaje.Show("Complete todos los espacios",
+                                         "Casilleros vacíos.",
+                                         MessageBoxButtons.OK,
+                                         MessageBoxIcon.Information)
+                                            CboTipoRecurso._BorderColor = Color.FromArgb(95, 151, 186)
+                                            CboTipoRecurso.Focus()
+                                            Exit Sub
+                                        Else
+                                            CboTipoRecurso._BorderColor = Color.PeachPuff
+                                            If Len(Trim(CboFormato.Texts)) = 0 Then
+                                                Dim result = CuadroDeMensaje.Show("Complete todos los espacios",
+                                         "Casilleros vacíos.",
+                                         MessageBoxButtons.OK,
+                                         MessageBoxIcon.Information)
+                                                CboFormato._BorderColor = Color.FromArgb(95, 151, 186)
+                                                CboFormato.Focus()
+                                                Exit Sub
+                                            Else
+                                                CboFormato._BorderColor = Color.PeachPuff
+                                                If Len(Trim(CboEditorial.Texts)) = 0 Then
+                                                    Dim result = CuadroDeMensaje.Show("Complete todos los espacios",
+                                         "Casilleros vacíos.",
+                                         MessageBoxButtons.OK,
+                                         MessageBoxIcon.Information)
+                                                    CboEditorial._BorderColor = Color.FromArgb(95, 151, 186)
+                                                    CboEditorial.Focus()
+                                                    Exit Sub
+                                                Else
+                                                    CboEditorial._BorderColor = Color.PeachPuff
+                                                    If Len(Trim(TxtPerso8.Texts)) = 0 Then
+                                                        MostrarMensajeYResaltar(TxtPerso8)
+                                                    Else
+                                                        TxtPerso8.BackColor = Color.FromArgb(25, 62, 85)
+                                                        MsgBox("completo")
+
+                                                    End If
+                                                End If
+                                            End If
+                                        End If
+                                    End If
+                                End If
                             End If
                         End If
-
-                        ' Verificar si el control es un TextBox
-                    ElseIf ctrl.Name.StartsWith("Txt") Then
-                        Dim hasTextsProperty As Boolean = TypeOf ctrl Is TxtPerso ' Cambia 'MyCustomTextBox' al tipo de tu control personalizado
-                        If hasTextsProperty Then
-                            Dim customText = CType(ctrl, TxtPerso).Texts ' Accede a "Texts"
-                            If String.IsNullOrWhiteSpace(customText) Then
-                                MostrarMensajeYResaltar(ctrl)
-                                Exit Sub
-                            Else
-                                ctrl.BackColor = Color.FromArgb(25, 62, 85)
-                            End If
-                        End If
-
-                        ' Verificar si el control es un DateTimePicker
-                        ElseIf ctrl.Name.StartsWith("Dtp") Then
-                            If String.IsNullOrWhiteSpace(ctrl.Text) Then
-                                MostrarMensajeYResaltar(ctrl)
-                                Exit Sub
-                            Else
-                                ctrl.BackColor = Color.FromArgb(20, 57, 80)
-                            End If
-                        End If
-                Next
+                    End If
+                End If
             End If
-        Next
+        End If
     End Sub
+
     ' Función para mostrar mensaje y resaltar el control vacío
     Sub MostrarMensajeYResaltar(ctrl As Control)
         Dim result = CuadroDeMensaje.Show("Complete todos los espacios",
@@ -220,4 +241,5 @@ Public Class FrmCrearRegistros
         ctrl.BackColor = Color.FromArgb(95, 151, 186)
         ctrl.Focus()
     End Sub
+
 End Class
