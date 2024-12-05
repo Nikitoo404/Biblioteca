@@ -109,6 +109,7 @@ Partial Class FrmCrearRegistros
         Me.TxtPerso6 = New Biblioteca.TxtPerso()
         Me.TxtPerso7 = New Biblioteca.TxtPerso()
         Me.ComboPerso3 = New Biblioteca.ComboPerso()
+        Me.DtpFecha = New Biblioteca.MiDatePicker()
         Me.ComboPerso1 = New Biblioteca.ComboPerso()
         Me.CboFormato = New Biblioteca.ComboPerso()
         Me.CboTipoRecurso = New Biblioteca.ComboPerso()
@@ -117,7 +118,6 @@ Partial Class FrmCrearRegistros
         Me.TxtPerso2 = New Biblioteca.TxtPerso()
         Me.TxtPerso1 = New Biblioteca.TxtPerso()
         Me.BtnVolver = New Biblioteca.ButtonRadio()
-        Me.DtpFecha = New Biblioteca.MiDatePicker()
         Me.PnlTituloHeader.SuspendLayout()
         CType(Me.PcbTituloHeader, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AutorBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -166,10 +166,10 @@ Partial Class FrmCrearRegistros
         Me.LblTitulo.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblTitulo.ForeColor = System.Drawing.Color.PeachPuff
         Me.LblTitulo.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.LblTitulo.Location = New System.Drawing.Point(57, 18)
+        Me.LblTitulo.Location = New System.Drawing.Point(57, 19)
         Me.LblTitulo.Name = "LblTitulo"
         Me.LblTitulo.Size = New System.Drawing.Size(126, 22)
-        Me.LblTitulo.TabIndex = 20
+        Me.LblTitulo.TabIndex = 86
         Me.LblTitulo.Text = "Crear registros"
         Me.LblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -181,7 +181,7 @@ Partial Class FrmCrearRegistros
         Me.PnlTituloHeader.Location = New System.Drawing.Point(0, 0)
         Me.PnlTituloHeader.Name = "PnlTituloHeader"
         Me.PnlTituloHeader.Size = New System.Drawing.Size(390, 22)
-        Me.PnlTituloHeader.TabIndex = 35
+        Me.PnlTituloHeader.TabIndex = 16
         '
         'PnlTituloLinea
         '
@@ -189,7 +189,7 @@ Partial Class FrmCrearRegistros
         Me.PnlTituloLinea.Location = New System.Drawing.Point(57, 12)
         Me.PnlTituloLinea.Name = "PnlTituloLinea"
         Me.PnlTituloLinea.Size = New System.Drawing.Size(307, 1)
-        Me.PnlTituloLinea.TabIndex = 75
+        Me.PnlTituloLinea.TabIndex = 28
         '
         'PcbTituloHeader
         '
@@ -212,7 +212,7 @@ Partial Class FrmCrearRegistros
         Me.lblTituloLibro.Location = New System.Drawing.Point(-4, 0)
         Me.lblTituloLibro.Name = "lblTituloLibro"
         Me.lblTituloLibro.Size = New System.Drawing.Size(54, 22)
-        Me.lblTituloLibro.TabIndex = 36
+        Me.lblTituloLibro.TabIndex = 27
         Me.lblTituloLibro.Text = "Título"
         Me.lblTituloLibro.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -227,7 +227,7 @@ Partial Class FrmCrearRegistros
         Me.Label4.Location = New System.Drawing.Point(203, 23)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(87, 22)
-        Me.Label4.TabIndex = 32
+        Me.Label4.TabIndex = 33
         Me.Label4.Text = "Apellido/s"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -242,7 +242,7 @@ Partial Class FrmCrearRegistros
         Me.Label3.Location = New System.Drawing.Point(1, 23)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(89, 22)
-        Me.Label3.TabIndex = 31
+        Me.Label3.TabIndex = 32
         Me.Label3.Text = "Nombre/s"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -272,10 +272,10 @@ Partial Class FrmCrearRegistros
         'PnlTitAutor
         '
         Me.PnlTitAutor.BackColor = System.Drawing.Color.PeachPuff
-        Me.PnlTitAutor.Location = New System.Drawing.Point(40, 165)
+        Me.PnlTitAutor.Location = New System.Drawing.Point(40, 166)
         Me.PnlTitAutor.Name = "PnlTitAutor"
         Me.PnlTitAutor.Size = New System.Drawing.Size(390, 1)
-        Me.PnlTitAutor.TabIndex = 36
+        Me.PnlTitAutor.TabIndex = 29
         '
         'PnlAutorHeader
         '
@@ -285,7 +285,7 @@ Partial Class FrmCrearRegistros
         Me.PnlAutorHeader.Location = New System.Drawing.Point(0, 0)
         Me.PnlAutorHeader.Name = "PnlAutorHeader"
         Me.PnlAutorHeader.Size = New System.Drawing.Size(390, 22)
-        Me.PnlAutorHeader.TabIndex = 37
+        Me.PnlAutorHeader.TabIndex = 17
         '
         'PnlAutorLinea
         '
@@ -293,7 +293,7 @@ Partial Class FrmCrearRegistros
         Me.PnlAutorLinea.Location = New System.Drawing.Point(55, 11)
         Me.PnlAutorLinea.Name = "PnlAutorLinea"
         Me.PnlAutorLinea.Size = New System.Drawing.Size(310, 1)
-        Me.PnlAutorLinea.TabIndex = 76
+        Me.PnlAutorLinea.TabIndex = 31
         '
         'PcbAutorHeader
         '
@@ -316,7 +316,7 @@ Partial Class FrmCrearRegistros
         Me.lblAutor.Location = New System.Drawing.Point(-4, 0)
         Me.lblAutor.Name = "lblAutor"
         Me.lblAutor.Size = New System.Drawing.Size(54, 22)
-        Me.lblAutor.TabIndex = 36
+        Me.lblAutor.TabIndex = 30
         Me.lblAutor.Text = "Autor"
         Me.lblAutor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -328,7 +328,7 @@ Partial Class FrmCrearRegistros
         Me.PnlISBNHeader.Location = New System.Drawing.Point(0, 0)
         Me.PnlISBNHeader.Name = "PnlISBNHeader"
         Me.PnlISBNHeader.Size = New System.Drawing.Size(390, 22)
-        Me.PnlISBNHeader.TabIndex = 38
+        Me.PnlISBNHeader.TabIndex = 21
         '
         'PnlISHeader
         '
@@ -336,7 +336,7 @@ Partial Class FrmCrearRegistros
         Me.PnlISHeader.Location = New System.Drawing.Point(52, 12)
         Me.PnlISHeader.Name = "PnlISHeader"
         Me.PnlISHeader.Size = New System.Drawing.Size(310, 1)
-        Me.PnlISHeader.TabIndex = 76
+        Me.PnlISHeader.TabIndex = 53
         '
         'PcbISBNHeader
         '
@@ -359,7 +359,7 @@ Partial Class FrmCrearRegistros
         Me.lblISBN.Location = New System.Drawing.Point(-4, 0)
         Me.lblISBN.Name = "lblISBN"
         Me.lblISBN.Size = New System.Drawing.Size(50, 22)
-        Me.lblISBN.TabIndex = 36
+        Me.lblISBN.TabIndex = 52
         Me.lblISBN.Text = "ISBN"
         Me.lblISBN.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -371,7 +371,7 @@ Partial Class FrmCrearRegistros
         Me.PnlTipoHeader.Location = New System.Drawing.Point(0, 0)
         Me.PnlTipoHeader.Name = "PnlTipoHeader"
         Me.PnlTipoHeader.Size = New System.Drawing.Size(390, 22)
-        Me.PnlTipoHeader.TabIndex = 39
+        Me.PnlTipoHeader.TabIndex = 22
         '
         'PnlTipoLinea
         '
@@ -379,7 +379,7 @@ Partial Class FrmCrearRegistros
         Me.PnlTipoLinea.Location = New System.Drawing.Point(135, 11)
         Me.PnlTipoLinea.Name = "PnlTipoLinea"
         Me.PnlTipoLinea.Size = New System.Drawing.Size(230, 1)
-        Me.PnlTipoLinea.TabIndex = 76
+        Me.PnlTipoLinea.TabIndex = 57
         '
         'PcbTipoHeader
         '
@@ -402,25 +402,25 @@ Partial Class FrmCrearRegistros
         Me.lblTipoRecurso.Location = New System.Drawing.Point(-4, 0)
         Me.lblTipoRecurso.Name = "lblTipoRecurso"
         Me.lblTipoRecurso.Size = New System.Drawing.Size(133, 22)
-        Me.lblTipoRecurso.TabIndex = 36
+        Me.lblTipoRecurso.TabIndex = 56
         Me.lblTipoRecurso.Text = "Tipo de recurso"
         Me.lblTipoRecurso.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'PnlISso
         '
         Me.PnlISso.BackColor = System.Drawing.Color.PeachPuff
-        Me.PnlISso.Location = New System.Drawing.Point(470, 165)
+        Me.PnlISso.Location = New System.Drawing.Point(470, 166)
         Me.PnlISso.Name = "PnlISso"
         Me.PnlISso.Size = New System.Drawing.Size(390, 1)
-        Me.PnlISso.TabIndex = 44
+        Me.PnlISso.TabIndex = 54
         '
         'PnlTipoto
         '
         Me.PnlTipoto.BackColor = System.Drawing.Color.PeachPuff
-        Me.PnlTipoto.Location = New System.Drawing.Point(470, 256)
+        Me.PnlTipoto.Location = New System.Drawing.Point(470, 257)
         Me.PnlTipoto.Name = "PnlTipoto"
         Me.PnlTipoto.Size = New System.Drawing.Size(390, 1)
-        Me.PnlTipoto.TabIndex = 46
+        Me.PnlTipoto.TabIndex = 58
         '
         'PnlFormatoHeader
         '
@@ -430,7 +430,7 @@ Partial Class FrmCrearRegistros
         Me.PnlFormatoHeader.Location = New System.Drawing.Point(0, 0)
         Me.PnlFormatoHeader.Name = "PnlFormatoHeader"
         Me.PnlFormatoHeader.Size = New System.Drawing.Size(390, 22)
-        Me.PnlFormatoHeader.TabIndex = 45
+        Me.PnlFormatoHeader.TabIndex = 23
         '
         'PnlFormatoLinea
         '
@@ -438,7 +438,7 @@ Partial Class FrmCrearRegistros
         Me.PnlFormatoLinea.Location = New System.Drawing.Point(80, 12)
         Me.PnlFormatoLinea.Name = "PnlFormatoLinea"
         Me.PnlFormatoLinea.Size = New System.Drawing.Size(285, 1)
-        Me.PnlFormatoLinea.TabIndex = 76
+        Me.PnlFormatoLinea.TabIndex = 61
         '
         'PcbFormatoHeader
         '
@@ -461,7 +461,7 @@ Partial Class FrmCrearRegistros
         Me.lblFormato.Location = New System.Drawing.Point(-4, 0)
         Me.lblFormato.Name = "lblFormato"
         Me.lblFormato.Size = New System.Drawing.Size(78, 22)
-        Me.lblFormato.TabIndex = 36
+        Me.lblFormato.TabIndex = 60
         Me.lblFormato.Text = "Formato"
         Me.lblFormato.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -469,10 +469,10 @@ Partial Class FrmCrearRegistros
         '
         Me.PnlTitulo.Controls.Add(Me.TxtPerso1)
         Me.PnlTitulo.Controls.Add(Me.PnlTituloHeader)
-        Me.PnlTitulo.Location = New System.Drawing.Point(40, 82)
+        Me.PnlTitulo.Location = New System.Drawing.Point(40, 83)
         Me.PnlTitulo.Name = "PnlTitulo"
         Me.PnlTitulo.Size = New System.Drawing.Size(390, 78)
-        Me.PnlTitulo.TabIndex = 47
+        Me.PnlTitulo.TabIndex = 34
         '
         'PnlAutor
         '
@@ -481,46 +481,46 @@ Partial Class FrmCrearRegistros
         Me.PnlAutor.Controls.Add(Me.TxtPerso3)
         Me.PnlAutor.Controls.Add(Me.Label4)
         Me.PnlAutor.Controls.Add(Me.TxtPerso2)
-        Me.PnlAutor.Location = New System.Drawing.Point(40, 173)
+        Me.PnlAutor.Location = New System.Drawing.Point(40, 174)
         Me.PnlAutor.Name = "PnlAutor"
         Me.PnlAutor.Size = New System.Drawing.Size(390, 96)
-        Me.PnlAutor.TabIndex = 52
+        Me.PnlAutor.TabIndex = 35
         '
         'PnlISBN
         '
         Me.PnlISBN.Controls.Add(Me.PnlISBNHeader)
         Me.PnlISBN.Controls.Add(Me.TxtPerso4)
-        Me.PnlISBN.Location = New System.Drawing.Point(470, 82)
+        Me.PnlISBN.Location = New System.Drawing.Point(470, 83)
         Me.PnlISBN.Name = "PnlISBN"
         Me.PnlISBN.Size = New System.Drawing.Size(390, 78)
-        Me.PnlISBN.TabIndex = 53
+        Me.PnlISBN.TabIndex = 51
         '
         'PnlTipoRecurso
         '
         Me.PnlTipoRecurso.Controls.Add(Me.PnlTipoHeader)
         Me.PnlTipoRecurso.Controls.Add(Me.CboTipoRecurso)
-        Me.PnlTipoRecurso.Location = New System.Drawing.Point(470, 173)
+        Me.PnlTipoRecurso.Location = New System.Drawing.Point(470, 174)
         Me.PnlTipoRecurso.Name = "PnlTipoRecurso"
         Me.PnlTipoRecurso.Size = New System.Drawing.Size(390, 78)
-        Me.PnlTipoRecurso.TabIndex = 54
+        Me.PnlTipoRecurso.TabIndex = 55
         '
         'PnlFormato
         '
         Me.PnlFormato.Controls.Add(Me.PnlFormatoHeader)
         Me.PnlFormato.Controls.Add(Me.CboFormato)
-        Me.PnlFormato.Location = New System.Drawing.Point(470, 263)
+        Me.PnlFormato.Location = New System.Drawing.Point(470, 264)
         Me.PnlFormato.Name = "PnlFormato"
         Me.PnlFormato.Size = New System.Drawing.Size(390, 78)
-        Me.PnlFormato.TabIndex = 55
+        Me.PnlFormato.TabIndex = 59
         '
         'PnlGenero
         '
         Me.PnlGenero.Controls.Add(Me.PnlGeneroHeader)
         Me.PnlGenero.Controls.Add(Me.ComboPerso1)
-        Me.PnlGenero.Location = New System.Drawing.Point(40, 282)
+        Me.PnlGenero.Location = New System.Drawing.Point(40, 283)
         Me.PnlGenero.Name = "PnlGenero"
         Me.PnlGenero.Size = New System.Drawing.Size(390, 78)
-        Me.PnlGenero.TabIndex = 56
+        Me.PnlGenero.TabIndex = 37
         '
         'PnlGeneroHeader
         '
@@ -530,7 +530,7 @@ Partial Class FrmCrearRegistros
         Me.PnlGeneroHeader.Location = New System.Drawing.Point(0, 0)
         Me.PnlGeneroHeader.Name = "PnlGeneroHeader"
         Me.PnlGeneroHeader.Size = New System.Drawing.Size(390, 22)
-        Me.PnlGeneroHeader.TabIndex = 39
+        Me.PnlGeneroHeader.TabIndex = 18
         '
         'PnlGeneLinea
         '
@@ -538,7 +538,7 @@ Partial Class FrmCrearRegistros
         Me.PnlGeneLinea.Location = New System.Drawing.Point(72, 12)
         Me.PnlGeneLinea.Name = "PnlGeneLinea"
         Me.PnlGeneLinea.Size = New System.Drawing.Size(290, 1)
-        Me.PnlGeneLinea.TabIndex = 76
+        Me.PnlGeneLinea.TabIndex = 39
         '
         'PcbGeneroHeader
         '
@@ -561,7 +561,7 @@ Partial Class FrmCrearRegistros
         Me.lblGenero.Location = New System.Drawing.Point(-4, 0)
         Me.lblGenero.Name = "lblGenero"
         Me.lblGenero.Size = New System.Drawing.Size(69, 22)
-        Me.lblGenero.TabIndex = 36
+        Me.lblGenero.TabIndex = 38
         Me.lblGenero.Text = "Género"
         Me.lblGenero.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -574,10 +574,10 @@ Partial Class FrmCrearRegistros
         '
         Me.PnlFecha.Controls.Add(Me.DtpFecha)
         Me.PnlFecha.Controls.Add(Me.PnlFechaHeader)
-        Me.PnlFecha.Location = New System.Drawing.Point(470, 353)
+        Me.PnlFecha.Location = New System.Drawing.Point(470, 354)
         Me.PnlFecha.Name = "PnlFecha"
         Me.PnlFecha.Size = New System.Drawing.Size(390, 78)
-        Me.PnlFecha.TabIndex = 57
+        Me.PnlFecha.TabIndex = 63
         '
         'PnlFechaHeader
         '
@@ -587,7 +587,7 @@ Partial Class FrmCrearRegistros
         Me.PnlFechaHeader.Location = New System.Drawing.Point(0, 0)
         Me.PnlFechaHeader.Name = "PnlFechaHeader"
         Me.PnlFechaHeader.Size = New System.Drawing.Size(390, 22)
-        Me.PnlFechaHeader.TabIndex = 38
+        Me.PnlFechaHeader.TabIndex = 24
         '
         'PnlFechaLinea
         '
@@ -595,7 +595,7 @@ Partial Class FrmCrearRegistros
         Me.PnlFechaLinea.Location = New System.Drawing.Point(183, 12)
         Me.PnlFechaLinea.Name = "PnlFechaLinea"
         Me.PnlFechaLinea.Size = New System.Drawing.Size(180, 1)
-        Me.PnlFechaLinea.TabIndex = 76
+        Me.PnlFechaLinea.TabIndex = 65
         '
         'PcbFechaHeader
         '
@@ -618,52 +618,52 @@ Partial Class FrmCrearRegistros
         Me.lblFecha.Location = New System.Drawing.Point(-4, 0)
         Me.lblFecha.Name = "lblFecha"
         Me.lblFecha.Size = New System.Drawing.Size(181, 22)
-        Me.lblFecha.TabIndex = 36
+        Me.lblFecha.TabIndex = 64
         Me.lblFecha.Text = "Fecha de publicación"
         Me.lblFecha.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'PnlAutero
         '
         Me.PnlAutero.BackColor = System.Drawing.Color.PeachPuff
-        Me.PnlAutero.Location = New System.Drawing.Point(40, 275)
+        Me.PnlAutero.Location = New System.Drawing.Point(40, 276)
         Me.PnlAutero.Name = "PnlAutero"
         Me.PnlAutero.Size = New System.Drawing.Size(390, 1)
-        Me.PnlAutero.TabIndex = 59
+        Me.PnlAutero.TabIndex = 36
         '
         'PnlForcion
         '
         Me.PnlForcion.BackColor = System.Drawing.Color.PeachPuff
-        Me.PnlForcion.Location = New System.Drawing.Point(470, 346)
+        Me.PnlForcion.Location = New System.Drawing.Point(470, 347)
         Me.PnlForcion.Name = "PnlForcion"
         Me.PnlForcion.Size = New System.Drawing.Size(390, 1)
-        Me.PnlForcion.TabIndex = 61
+        Me.PnlForcion.TabIndex = 62
         '
         'PnlFechal
         '
         Me.PnlFechal.BackColor = System.Drawing.Color.PeachPuff
-        Me.PnlFechal.Location = New System.Drawing.Point(470, 436)
+        Me.PnlFechal.Location = New System.Drawing.Point(470, 437)
         Me.PnlFechal.Name = "PnlFechal"
         Me.PnlFechal.Size = New System.Drawing.Size(390, 1)
-        Me.PnlFechal.TabIndex = 62
+        Me.PnlFechal.TabIndex = 66
         '
         'PnlEditorial
         '
         Me.PnlEditorial.Controls.Add(Me.PnlEditorialHeader)
         Me.PnlEditorial.Controls.Add(Me.ComboPerso3)
-        Me.PnlEditorial.Location = New System.Drawing.Point(470, 443)
+        Me.PnlEditorial.Location = New System.Drawing.Point(470, 444)
         Me.PnlEditorial.Name = "PnlEditorial"
         Me.PnlEditorial.Size = New System.Drawing.Size(390, 78)
-        Me.PnlEditorial.TabIndex = 63
+        Me.PnlEditorial.TabIndex = 67
         '
         'PnlEditorialHeader
         '
         Me.PnlEditorialHeader.Controls.Add(Me.PnlEditLinea)
         Me.PnlEditorialHeader.Controls.Add(Me.PcbEditorialHeader)
         Me.PnlEditorialHeader.Controls.Add(Me.lblEditorial)
-        Me.PnlEditorialHeader.Location = New System.Drawing.Point(0, 0)
+        Me.PnlEditorialHeader.Location = New System.Drawing.Point(0, -145)
         Me.PnlEditorialHeader.Name = "PnlEditorialHeader"
         Me.PnlEditorialHeader.Size = New System.Drawing.Size(390, 22)
-        Me.PnlEditorialHeader.TabIndex = 39
+        Me.PnlEditorialHeader.TabIndex = 25
         '
         'PnlEditLinea
         '
@@ -671,7 +671,7 @@ Partial Class FrmCrearRegistros
         Me.PnlEditLinea.Location = New System.Drawing.Point(80, 13)
         Me.PnlEditLinea.Name = "PnlEditLinea"
         Me.PnlEditLinea.Size = New System.Drawing.Size(280, 1)
-        Me.PnlEditLinea.TabIndex = 76
+        Me.PnlEditLinea.TabIndex = 69
         '
         'PcbEditorialHeader
         '
@@ -694,7 +694,7 @@ Partial Class FrmCrearRegistros
         Me.lblEditorial.Location = New System.Drawing.Point(-4, 0)
         Me.lblEditorial.Name = "lblEditorial"
         Me.lblEditorial.Size = New System.Drawing.Size(75, 22)
-        Me.lblEditorial.TabIndex = 36
+        Me.lblEditorial.TabIndex = 68
         Me.lblEditorial.Text = "Editorial"
         Me.lblEditorial.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -706,18 +706,18 @@ Partial Class FrmCrearRegistros
         'PnlGenecion
         '
         Me.PnlGenecion.BackColor = System.Drawing.Color.PeachPuff
-        Me.PnlGenecion.Location = New System.Drawing.Point(40, 365)
+        Me.PnlGenecion.Location = New System.Drawing.Point(40, 366)
         Me.PnlGenecion.Name = "PnlGenecion"
         Me.PnlGenecion.Size = New System.Drawing.Size(390, 1)
-        Me.PnlGenecion.TabIndex = 64
+        Me.PnlGenecion.TabIndex = 40
         '
         'PnlEdias
         '
         Me.PnlEdias.BackColor = System.Drawing.Color.PeachPuff
-        Me.PnlEdias.Location = New System.Drawing.Point(470, 526)
+        Me.PnlEdias.Location = New System.Drawing.Point(470, 527)
         Me.PnlEdias.Name = "PnlEdias"
         Me.PnlEdias.Size = New System.Drawing.Size(390, 1)
-        Me.PnlEdias.TabIndex = 66
+        Me.PnlEdias.TabIndex = 70
         '
         'PnlEdicion
         '
@@ -726,10 +726,10 @@ Partial Class FrmCrearRegistros
         Me.PnlEdicion.Controls.Add(Me.TxtPerso6)
         Me.PnlEdicion.Controls.Add(Me.Label13)
         Me.PnlEdicion.Controls.Add(Me.TxtPerso7)
-        Me.PnlEdicion.Location = New System.Drawing.Point(40, 372)
+        Me.PnlEdicion.Location = New System.Drawing.Point(40, 373)
         Me.PnlEdicion.Name = "PnlEdicion"
         Me.PnlEdicion.Size = New System.Drawing.Size(390, 96)
-        Me.PnlEdicion.TabIndex = 67
+        Me.PnlEdicion.TabIndex = 41
         '
         'PnlEdicionHeader
         '
@@ -739,7 +739,7 @@ Partial Class FrmCrearRegistros
         Me.PnlEdicionHeader.Location = New System.Drawing.Point(0, 0)
         Me.PnlEdicionHeader.Name = "PnlEdicionHeader"
         Me.PnlEdicionHeader.Size = New System.Drawing.Size(390, 22)
-        Me.PnlEdicionHeader.TabIndex = 37
+        Me.PnlEdicionHeader.TabIndex = 19
         '
         'PnlEdicLinea
         '
@@ -747,7 +747,7 @@ Partial Class FrmCrearRegistros
         Me.PnlEdicLinea.Location = New System.Drawing.Point(72, 11)
         Me.PnlEdicLinea.Name = "PnlEdicLinea"
         Me.PnlEdicLinea.Size = New System.Drawing.Size(290, 1)
-        Me.PnlEdicLinea.TabIndex = 76
+        Me.PnlEdicLinea.TabIndex = 43
         '
         'PcbEdicionHeader
         '
@@ -770,7 +770,7 @@ Partial Class FrmCrearRegistros
         Me.lblEdicion.Location = New System.Drawing.Point(-4, 0)
         Me.lblEdicion.Name = "lblEdicion"
         Me.lblEdicion.Size = New System.Drawing.Size(70, 22)
-        Me.lblEdicion.TabIndex = 36
+        Me.lblEdicion.TabIndex = 42
         Me.lblEdicion.Text = "Edición"
         Me.lblEdicion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -785,7 +785,7 @@ Partial Class FrmCrearRegistros
         Me.Label12.Location = New System.Drawing.Point(3, 25)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(30, 22)
-        Me.Label12.TabIndex = 31
+        Me.Label12.TabIndex = 44
         Me.Label12.Text = "N°"
         Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -800,26 +800,26 @@ Partial Class FrmCrearRegistros
         Me.Label13.Location = New System.Drawing.Point(203, 25)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(42, 22)
-        Me.Label13.TabIndex = 32
+        Me.Label13.TabIndex = 45
         Me.Label13.Text = "Año"
         Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'PnlEdiado
         '
         Me.PnlEdiado.BackColor = System.Drawing.Color.PeachPuff
-        Me.PnlEdiado.Location = New System.Drawing.Point(40, 474)
+        Me.PnlEdiado.Location = New System.Drawing.Point(40, 475)
         Me.PnlEdiado.Name = "PnlEdiado"
         Me.PnlEdiado.Size = New System.Drawing.Size(390, 1)
-        Me.PnlEdiado.TabIndex = 68
+        Me.PnlEdiado.TabIndex = 46
         '
         'PnlPaginas
         '
         Me.PnlPaginas.Controls.Add(Me.PnlPagHeader)
         Me.PnlPaginas.Controls.Add(Me.TxtPerso8)
-        Me.PnlPaginas.Location = New System.Drawing.Point(470, 533)
+        Me.PnlPaginas.Location = New System.Drawing.Point(470, 534)
         Me.PnlPaginas.Name = "PnlPaginas"
         Me.PnlPaginas.Size = New System.Drawing.Size(390, 78)
-        Me.PnlPaginas.TabIndex = 69
+        Me.PnlPaginas.TabIndex = 71
         '
         'PnlPagHeader
         '
@@ -829,7 +829,7 @@ Partial Class FrmCrearRegistros
         Me.PnlPagHeader.Location = New System.Drawing.Point(0, 0)
         Me.PnlPagHeader.Name = "PnlPagHeader"
         Me.PnlPagHeader.Size = New System.Drawing.Size(390, 22)
-        Me.PnlPagHeader.TabIndex = 38
+        Me.PnlPagHeader.TabIndex = 26
         '
         'PnlPagLinea
         '
@@ -837,7 +837,7 @@ Partial Class FrmCrearRegistros
         Me.PnlPagLinea.Location = New System.Drawing.Point(124, 12)
         Me.PnlPagLinea.Name = "PnlPagLinea"
         Me.PnlPagLinea.Size = New System.Drawing.Size(240, 1)
-        Me.PnlPagLinea.TabIndex = 76
+        Me.PnlPagLinea.TabIndex = 73
         '
         'PcbPagHeader
         '
@@ -860,7 +860,7 @@ Partial Class FrmCrearRegistros
         Me.lblPag.Location = New System.Drawing.Point(-4, 0)
         Me.lblPag.Name = "lblPag"
         Me.lblPag.Size = New System.Drawing.Size(122, 22)
-        Me.lblPag.TabIndex = 36
+        Me.lblPag.TabIndex = 72
         Me.lblPag.Text = "N° de páginas"
         Me.lblPag.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -868,10 +868,10 @@ Partial Class FrmCrearRegistros
         '
         Me.PnlEstado.Controls.Add(Me.PnlEstadoHeader)
         Me.PnlEstado.Controls.Add(Me.ComboPerso4)
-        Me.PnlEstado.Location = New System.Drawing.Point(40, 481)
+        Me.PnlEstado.Location = New System.Drawing.Point(40, 482)
         Me.PnlEstado.Name = "PnlEstado"
         Me.PnlEstado.Size = New System.Drawing.Size(390, 78)
-        Me.PnlEstado.TabIndex = 71
+        Me.PnlEstado.TabIndex = 47
         '
         'PnlEstadoHeader
         '
@@ -881,7 +881,7 @@ Partial Class FrmCrearRegistros
         Me.PnlEstadoHeader.Location = New System.Drawing.Point(0, 0)
         Me.PnlEstadoHeader.Name = "PnlEstadoHeader"
         Me.PnlEstadoHeader.Size = New System.Drawing.Size(390, 22)
-        Me.PnlEstadoHeader.TabIndex = 39
+        Me.PnlEstadoHeader.TabIndex = 20
         '
         'PnlEstLinea
         '
@@ -889,7 +889,7 @@ Partial Class FrmCrearRegistros
         Me.PnlEstLinea.Location = New System.Drawing.Point(67, 11)
         Me.PnlEstLinea.Name = "PnlEstLinea"
         Me.PnlEstLinea.Size = New System.Drawing.Size(295, 1)
-        Me.PnlEstLinea.TabIndex = 77
+        Me.PnlEstLinea.TabIndex = 49
         '
         'PcbEstadoHeader
         '
@@ -912,25 +912,25 @@ Partial Class FrmCrearRegistros
         Me.lblEstado.Location = New System.Drawing.Point(-4, 0)
         Me.lblEstado.Name = "lblEstado"
         Me.lblEstado.Size = New System.Drawing.Size(65, 22)
-        Me.lblEstado.TabIndex = 36
+        Me.lblEstado.TabIndex = 48
         Me.lblEstado.Text = "Estado"
         Me.lblEstado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'PnlEstadoFin
         '
         Me.PnlEstadoFin.BackColor = System.Drawing.Color.PeachPuff
-        Me.PnlEstadoFin.Location = New System.Drawing.Point(40, 564)
+        Me.PnlEstadoFin.Location = New System.Drawing.Point(40, 565)
         Me.PnlEstadoFin.Name = "PnlEstadoFin"
         Me.PnlEstadoFin.Size = New System.Drawing.Size(390, 1)
-        Me.PnlEstadoFin.TabIndex = 72
+        Me.PnlEstadoFin.TabIndex = 50
         '
         'PnlPagFin
         '
         Me.PnlPagFin.BackColor = System.Drawing.Color.PeachPuff
-        Me.PnlPagFin.Location = New System.Drawing.Point(470, 617)
+        Me.PnlPagFin.Location = New System.Drawing.Point(470, 618)
         Me.PnlPagFin.Name = "PnlPagFin"
         Me.PnlPagFin.Size = New System.Drawing.Size(390, 1)
-        Me.PnlPagFin.TabIndex = 73
+        Me.PnlPagFin.TabIndex = 74
         '
         'GeneroTableAdapter
         '
@@ -963,7 +963,7 @@ Partial Class FrmCrearRegistros
         Me.ComboPerso4.Name = "ComboPerso4"
         Me.ComboPerso4.Padding = New System.Windows.Forms.Padding(1)
         Me.ComboPerso4.Size = New System.Drawing.Size(384, 41)
-        Me.ComboPerso4.TabIndex = 43
+        Me.ComboPerso4.TabIndex = 7
         Me.ComboPerso4.Texts = ""
         '
         'BtnGuardar
@@ -979,10 +979,10 @@ Partial Class FrmCrearRegistros
         Me.BtnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnGuardar.ForeColor = System.Drawing.Color.Silver
-        Me.BtnGuardar.Location = New System.Drawing.Point(720, 16)
+        Me.BtnGuardar.Location = New System.Drawing.Point(743, 19)
         Me.BtnGuardar.Name = "BtnGuardar"
         Me.BtnGuardar.Size = New System.Drawing.Size(126, 45)
-        Me.BtnGuardar.TabIndex = 70
+        Me.BtnGuardar.TabIndex = 14
         Me.BtnGuardar.Text = "Guardar registro"
         Me.BtnGuardar.TextColor = System.Drawing.Color.Silver
         Me.BtnGuardar.UseVisualStyleBackColor = False
@@ -1004,7 +1004,7 @@ Partial Class FrmCrearRegistros
         Me.TxtPerso8.Name = "TxtPerso8"
         Me.TxtPerso8.Padding = New System.Windows.Forms.Padding(7)
         Me.TxtPerso8.Size = New System.Drawing.Size(380, 37)
-        Me.TxtPerso8.TabIndex = 51
+        Me.TxtPerso8.TabIndex = 13
         Me.TxtPerso8.Texts = ""
         '
         'TxtPerso6
@@ -1024,7 +1024,7 @@ Partial Class FrmCrearRegistros
         Me.TxtPerso6.Name = "TxtPerso6"
         Me.TxtPerso6.Padding = New System.Windows.Forms.Padding(7)
         Me.TxtPerso6.Size = New System.Drawing.Size(178, 37)
-        Me.TxtPerso6.TabIndex = 50
+        Me.TxtPerso6.TabIndex = 6
         Me.TxtPerso6.Texts = ""
         '
         'TxtPerso7
@@ -1044,7 +1044,7 @@ Partial Class FrmCrearRegistros
         Me.TxtPerso7.Name = "TxtPerso7"
         Me.TxtPerso7.Padding = New System.Windows.Forms.Padding(7)
         Me.TxtPerso7.Size = New System.Drawing.Size(178, 37)
-        Me.TxtPerso7.TabIndex = 49
+        Me.TxtPerso7.TabIndex = 5
         Me.TxtPerso7.Texts = ""
         '
         'ComboPerso3
@@ -1069,8 +1069,23 @@ Partial Class FrmCrearRegistros
         Me.ComboPerso3.Name = "ComboPerso3"
         Me.ComboPerso3.Padding = New System.Windows.Forms.Padding(1)
         Me.ComboPerso3.Size = New System.Drawing.Size(384, 41)
-        Me.ComboPerso3.TabIndex = 43
+        Me.ComboPerso3.TabIndex = 12
         Me.ComboPerso3.Texts = ""
+        '
+        'DtpFecha
+        '
+        Me.DtpFecha.BorderColor = System.Drawing.Color.PeachPuff
+        Me.DtpFecha.BorderSize = 1
+        Me.DtpFecha.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DtpFecha.Location = New System.Drawing.Point(5, 29)
+        Me.DtpFecha.MinimumSize = New System.Drawing.Size(4, 42)
+        Me.DtpFecha.Name = "DtpFecha"
+        Me.DtpFecha.Size = New System.Drawing.Size(380, 42)
+        Me.DtpFecha.SkinColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.DtpFecha.TabIndex = 11
+        Me.DtpFecha.TextColor = System.Drawing.Color.PeachPuff
+        Me.DtpFecha.Value = New Date(2024, 12, 5, 0, 0, 0, 0)
         '
         'ComboPerso1
         '
@@ -1094,7 +1109,7 @@ Partial Class FrmCrearRegistros
         Me.ComboPerso1.Name = "ComboPerso1"
         Me.ComboPerso1.Padding = New System.Windows.Forms.Padding(1)
         Me.ComboPerso1.Size = New System.Drawing.Size(384, 41)
-        Me.ComboPerso1.TabIndex = 43
+        Me.ComboPerso1.TabIndex = 4
         Me.ComboPerso1.Texts = ""
         '
         'CboFormato
@@ -1120,7 +1135,7 @@ Partial Class FrmCrearRegistros
         Me.CboFormato.Name = "CboFormato"
         Me.CboFormato.Padding = New System.Windows.Forms.Padding(1)
         Me.CboFormato.Size = New System.Drawing.Size(384, 41)
-        Me.CboFormato.TabIndex = 43
+        Me.CboFormato.TabIndex = 10
         Me.CboFormato.Texts = ""
         '
         'CboTipoRecurso
@@ -1145,7 +1160,7 @@ Partial Class FrmCrearRegistros
         Me.CboTipoRecurso.Name = "CboTipoRecurso"
         Me.CboTipoRecurso.Padding = New System.Windows.Forms.Padding(1)
         Me.CboTipoRecurso.Size = New System.Drawing.Size(384, 41)
-        Me.CboTipoRecurso.TabIndex = 43
+        Me.CboTipoRecurso.TabIndex = 9
         Me.CboTipoRecurso.Texts = ""
         '
         'TxtPerso4
@@ -1165,7 +1180,7 @@ Partial Class FrmCrearRegistros
         Me.TxtPerso4.Name = "TxtPerso4"
         Me.TxtPerso4.Padding = New System.Windows.Forms.Padding(7)
         Me.TxtPerso4.Size = New System.Drawing.Size(380, 37)
-        Me.TxtPerso4.TabIndex = 51
+        Me.TxtPerso4.TabIndex = 8
         Me.TxtPerso4.Texts = ""
         '
         'TxtPerso3
@@ -1186,7 +1201,7 @@ Partial Class FrmCrearRegistros
         Me.TxtPerso3.Name = "TxtPerso3"
         Me.TxtPerso3.Padding = New System.Windows.Forms.Padding(7)
         Me.TxtPerso3.Size = New System.Drawing.Size(178, 37)
-        Me.TxtPerso3.TabIndex = 50
+        Me.TxtPerso3.TabIndex = 3
         Me.TxtPerso3.Texts = ""
         '
         'TxtPerso2
@@ -1207,7 +1222,7 @@ Partial Class FrmCrearRegistros
         Me.TxtPerso2.Name = "TxtPerso2"
         Me.TxtPerso2.Padding = New System.Windows.Forms.Padding(7)
         Me.TxtPerso2.Size = New System.Drawing.Size(178, 37)
-        Me.TxtPerso2.TabIndex = 49
+        Me.TxtPerso2.TabIndex = 2
         Me.TxtPerso2.Texts = ""
         '
         'TxtPerso1
@@ -1227,7 +1242,7 @@ Partial Class FrmCrearRegistros
         Me.TxtPerso1.Name = "TxtPerso1"
         Me.TxtPerso1.Padding = New System.Windows.Forms.Padding(7)
         Me.TxtPerso1.Size = New System.Drawing.Size(378, 37)
-        Me.TxtPerso1.TabIndex = 48
+        Me.TxtPerso1.TabIndex = 1
         Me.TxtPerso1.Texts = ""
         '
         'BtnVolver
@@ -1241,27 +1256,12 @@ Partial Class FrmCrearRegistros
         Me.BtnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnVolver.ForeColor = System.Drawing.Color.White
         Me.BtnVolver.Image = Global.Biblioteca.My.Resources.Resources.blueCla
-        Me.BtnVolver.Location = New System.Drawing.Point(12, 12)
+        Me.BtnVolver.Location = New System.Drawing.Point(12, 13)
         Me.BtnVolver.Name = "BtnVolver"
         Me.BtnVolver.Size = New System.Drawing.Size(39, 39)
-        Me.BtnVolver.TabIndex = 21
+        Me.BtnVolver.TabIndex = 15
         Me.BtnVolver.TextColor = System.Drawing.Color.White
         Me.BtnVolver.UseVisualStyleBackColor = False
-        '
-        'DtpFecha
-        '
-        Me.DtpFecha.BorderColor = System.Drawing.Color.PeachPuff
-        Me.DtpFecha.BorderSize = 1
-        Me.DtpFecha.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DtpFecha.Location = New System.Drawing.Point(5, 29)
-        Me.DtpFecha.MinimumSize = New System.Drawing.Size(0, 42)
-        Me.DtpFecha.Name = "DtpFecha"
-        Me.DtpFecha.Size = New System.Drawing.Size(380, 42)
-        Me.DtpFecha.SkinColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.DtpFecha.TabIndex = 39
-        Me.DtpFecha.TextColor = System.Drawing.Color.PeachPuff
-        Me.DtpFecha.Value = New Date(2024, 12, 5, 0, 0, 0, 0)
         '
         'FrmCrearRegistros
         '

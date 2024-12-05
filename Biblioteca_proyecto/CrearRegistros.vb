@@ -169,52 +169,55 @@ Public Class FrmCrearRegistros
             If panel IsNot Nothing Then
                 ' Recorrer controles dentro del panel específico
                 For Each ctrl As Control In panel.Controls.Cast(Of Control).OrderBy(Function(c) c.TabIndex)
+                    ' Asegurarse de actualizar el control antes de verificar
+                    ctrl.Refresh()
 
                     ' Verificar si el control es un ComboBox
-                    If Mid(ctrl.Name, 1, 3) = "Cbo" Then
-                        If Len(Trim(ctrl.Text)) = 0 Then
-                            Dim result = CuadroDeMensaje.Show("Complete todos los espacios",
-                                          "Casilleros vacíos.",
-                                          MessageBoxButtons.OK,
-                                          MessageBoxIcon.Information)
-                            ctrl.BackColor = Color.FromArgb(95, 151, 186)
-                            ctrl.Focus()
-                            Exit Sub
-                        Else
-                            ctrl.BackColor = Color.FromArgb(20, 57, 80)
+                    If ctrl.Name.StartsWith("Cbo") Then
+                        Dim hasTextsProperty As Boolean = TypeOf ctrl Is ComboPerso ' Cambia 'MyCustomTextBox' al tipo de tu control personalizado
+                        If hasTextsProperty Then
+                            Dim customText = CType(ctrl, TxtPerso).Texts ' Accede a "Texts"
+                            If String.IsNullOrWhiteSpace(customText) Then
+                                MostrarMensajeYResaltar(ctrl)
+                                Exit Sub
+                            Else
+                                ctrl.BackColor = Color.FromArgb(25, 62, 85)
+                            End If
                         End If
 
                         ' Verificar si el control es un TextBox
-                    ElseIf Mid(ctrl.Name, 1, 3) = "Txt" Then
-                        If Len(Trim(ctrl.Text)) = 0 Then
-                            Dim result = CuadroDeMensaje.Show("Complete todos los espacios",
-                                          "Casilleros vacíos.",
-                                          MessageBoxButtons.OK,
-                                          MessageBoxIcon.Information)
-                            ctrl.BackColor = Color.FromArgb(95, 151, 186)
-                            ctrl.Focus()
-                            Exit Sub
-                        Else
-                            ctrl.BackColor = Color.FromArgb(25, 62, 85)
+                    ElseIf ctrl.Name.StartsWith("Txt") Then
+                        Dim hasTextsProperty As Boolean = TypeOf ctrl Is TxtPerso ' Cambia 'MyCustomTextBox' al tipo de tu control personalizado
+                        If hasTextsProperty Then
+                            Dim customText = CType(ctrl, TxtPerso).Texts ' Accede a "Texts"
+                            If String.IsNullOrWhiteSpace(customText) Then
+                                MostrarMensajeYResaltar(ctrl)
+                                Exit Sub
+                            Else
+                                ctrl.BackColor = Color.FromArgb(25, 62, 85)
+                            End If
                         End If
 
                         ' Verificar si el control es un DateTimePicker
-                    ElseIf Mid(ctrl.Name, 1, 3) = "Dtp" Then
-                        If Len(Trim(ctrl.Text)) = 0 Then
-                            Dim result = CuadroDeMensaje.Show("Complete todos los espacios",
-                                          "Casilleros vacíos.",
-                                          MessageBoxButtons.OK,
-                                          MessageBoxIcon.Information)
-                            ctrl.BackColor = Color.FromArgb(95, 151, 186)
-                            ctrl.Focus()
-                            Exit Sub
-                        Else
-                            ctrl.BackColor = Color.FromArgb(20, 57, 80)
+                        ElseIf ctrl.Name.StartsWith("Dtp") Then
+                            If String.IsNullOrWhiteSpace(ctrl.Text) Then
+                                MostrarMensajeYResaltar(ctrl)
+                                Exit Sub
+                            Else
+                                ctrl.BackColor = Color.FromArgb(20, 57, 80)
+                            End If
                         End If
-                    End If
                 Next
             End If
         Next
- 
+    End Sub
+    ' Función para mostrar mensaje y resaltar el control vacío
+    Sub MostrarMensajeYResaltar(ctrl As Control)
+        Dim result = CuadroDeMensaje.Show("Complete todos los espacios",
+                                          "Casilleros vacíos.",
+                                          MessageBoxButtons.OK,
+                                          MessageBoxIcon.Information)
+        ctrl.BackColor = Color.FromArgb(95, 151, 186)
+        ctrl.Focus()
     End Sub
 End Class
