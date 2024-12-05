@@ -25,6 +25,7 @@ Partial Class FrmCrearRegistros
         Me.components = New System.ComponentModel.Container()
         Me.LblTitulo = New System.Windows.Forms.Label()
         Me.PnlTituloHeader = New System.Windows.Forms.Panel()
+        Me.PnlTituloLinea = New System.Windows.Forms.Panel()
         Me.PcbTituloHeader = New System.Windows.Forms.PictureBox()
         Me.lblTituloLibro = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -34,51 +35,132 @@ Partial Class FrmCrearRegistros
         Me.TipoderecursoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.AutorTableAdapter = New Biblioteca.bdbibliotecaDataSetTableAdapters.autorTableAdapter()
         Me.TipoderecursoTableAdapter = New Biblioteca.bdbibliotecaDataSetTableAdapters.tipoderecursoTableAdapter()
-        Me.PnlProductos = New System.Windows.Forms.Panel()
-        Me.Panel9 = New System.Windows.Forms.Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Panel10 = New System.Windows.Forms.Panel()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.Panel11 = New System.Windows.Forms.Panel()
-        Me.Panel12 = New System.Windows.Forms.Panel()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.PnlTitAutor = New System.Windows.Forms.Panel()
+        Me.PnlAutorHeader = New System.Windows.Forms.Panel()
+        Me.PnlAutorLinea = New System.Windows.Forms.Panel()
+        Me.PcbAutorHeader = New System.Windows.Forms.PictureBox()
+        Me.lblAutor = New System.Windows.Forms.Label()
+        Me.PnlISBNHeader = New System.Windows.Forms.Panel()
+        Me.PnlISHeader = New System.Windows.Forms.Panel()
+        Me.PcbISBNHeader = New System.Windows.Forms.PictureBox()
+        Me.lblISBN = New System.Windows.Forms.Label()
+        Me.PnlTipoHeader = New System.Windows.Forms.Panel()
+        Me.PnlTipoLinea = New System.Windows.Forms.Panel()
+        Me.PcbTipoHeader = New System.Windows.Forms.PictureBox()
+        Me.lblTipoRecurso = New System.Windows.Forms.Label()
+        Me.PnlISso = New System.Windows.Forms.Panel()
+        Me.PnlTipoto = New System.Windows.Forms.Panel()
+        Me.PnlFormatoHeader = New System.Windows.Forms.Panel()
+        Me.PnlFormatoLinea = New System.Windows.Forms.Panel()
+        Me.PcbFormatoHeader = New System.Windows.Forms.PictureBox()
+        Me.lblFormato = New System.Windows.Forms.Label()
         Me.PnlTitulo = New System.Windows.Forms.Panel()
+        Me.PnlAutor = New System.Windows.Forms.Panel()
+        Me.PnlISBN = New System.Windows.Forms.Panel()
+        Me.PnlTipoRecurso = New System.Windows.Forms.Panel()
+        Me.PnlFormato = New System.Windows.Forms.Panel()
+        Me.PnlGenero = New System.Windows.Forms.Panel()
+        Me.PnlGeneroHeader = New System.Windows.Forms.Panel()
+        Me.PnlGeneLinea = New System.Windows.Forms.Panel()
+        Me.PcbGeneroHeader = New System.Windows.Forms.PictureBox()
+        Me.lblGenero = New System.Windows.Forms.Label()
+        Me.PnlFecha = New System.Windows.Forms.Panel()
+        Me.PnlFechaHeader = New System.Windows.Forms.Panel()
+        Me.PnlFechaLinea = New System.Windows.Forms.Panel()
+        Me.PcbFechaHeader = New System.Windows.Forms.PictureBox()
+        Me.lblFecha = New System.Windows.Forms.Label()
+        Me.PnlAutero = New System.Windows.Forms.Panel()
+        Me.PnlForcion = New System.Windows.Forms.Panel()
+        Me.PnlFechal = New System.Windows.Forms.Panel()
+        Me.PnlEditorial = New System.Windows.Forms.Panel()
+        Me.PnlEditorialHeader = New System.Windows.Forms.Panel()
+        Me.PnlEditLinea = New System.Windows.Forms.Panel()
+        Me.PcbEditorialHeader = New System.Windows.Forms.PictureBox()
+        Me.lblEditorial = New System.Windows.Forms.Label()
+        Me.PnlGenecion = New System.Windows.Forms.Panel()
+        Me.PnlEdias = New System.Windows.Forms.Panel()
+        Me.PnlEdicion = New System.Windows.Forms.Panel()
+        Me.PnlEdicionHeader = New System.Windows.Forms.Panel()
+        Me.PnlEdicLinea = New System.Windows.Forms.Panel()
+        Me.PcbEdicionHeader = New System.Windows.Forms.PictureBox()
+        Me.lblEdicion = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.PnlEdiado = New System.Windows.Forms.Panel()
+        Me.PnlPaginas = New System.Windows.Forms.Panel()
+        Me.PnlPagHeader = New System.Windows.Forms.Panel()
+        Me.PnlPagLinea = New System.Windows.Forms.Panel()
+        Me.PcbPagHeader = New System.Windows.Forms.PictureBox()
+        Me.lblPag = New System.Windows.Forms.Label()
+        Me.PnlEstado = New System.Windows.Forms.Panel()
+        Me.PnlEstadoHeader = New System.Windows.Forms.Panel()
+        Me.PnlEstLinea = New System.Windows.Forms.Panel()
+        Me.PcbEstadoHeader = New System.Windows.Forms.PictureBox()
+        Me.lblEstado = New System.Windows.Forms.Label()
+        Me.TmrTitulo = New System.Windows.Forms.Timer(Me.components)
+        Me.PnlEstadoFin = New System.Windows.Forms.Panel()
+        Me.PnlPagFin = New System.Windows.Forms.Panel()
+        Me.TmrAutor = New System.Windows.Forms.Timer(Me.components)
+        Me.TmrGenero = New System.Windows.Forms.Timer(Me.components)
+        Me.TmrEdicion = New System.Windows.Forms.Timer(Me.components)
+        Me.TmrEstado = New System.Windows.Forms.Timer(Me.components)
+        Me.TmrISBN = New System.Windows.Forms.Timer(Me.components)
+        Me.TmrTipo = New System.Windows.Forms.Timer(Me.components)
+        Me.TmrFormato = New System.Windows.Forms.Timer(Me.components)
+        Me.TmrFecha = New System.Windows.Forms.Timer(Me.components)
+        Me.TmrEditorial = New System.Windows.Forms.Timer(Me.components)
+        Me.TmrPag = New System.Windows.Forms.Timer(Me.components)
+        Me.ComboPerso4 = New Biblioteca.ComboPerso()
+        Me.BtnGuardar = New Biblioteca.ButtonRadio()
+        Me.TxtPerso8 = New Biblioteca.TxtPerso()
+        Me.TxtPerso6 = New Biblioteca.TxtPerso()
+        Me.TxtPerso7 = New Biblioteca.TxtPerso()
+        Me.ComboPerso3 = New Biblioteca.ComboPerso()
+        Me.TxtPerso5 = New Biblioteca.TxtPerso()
+        Me.ComboPerso1 = New Biblioteca.ComboPerso()
+        Me.CboFormato = New Biblioteca.ComboPerso()
+        Me.CboTipoRecurso = New Biblioteca.ComboPerso()
+        Me.TxtPerso4 = New Biblioteca.TxtPerso()
         Me.TxtPerso3 = New Biblioteca.TxtPerso()
         Me.TxtPerso2 = New Biblioteca.TxtPerso()
         Me.TxtPerso1 = New Biblioteca.TxtPerso()
-        Me.CboFormato = New Biblioteca.ComboPerso()
-        Me.CboTipoRecurso = New Biblioteca.ComboPerso()
         Me.BtnVolver = New Biblioteca.ButtonRadio()
-        Me.TxtPerso4 = New Biblioteca.TxtPerso()
-        Me.PnlAutor = New System.Windows.Forms.Panel()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Panel4 = New System.Windows.Forms.Panel()
         Me.PnlTituloHeader.SuspendLayout()
         CType(Me.PcbTituloHeader, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AutorBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BdbibliotecaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TipoderecursoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel9.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel10.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel3.SuspendLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel12.SuspendLayout()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PnlAutorHeader.SuspendLayout()
+        CType(Me.PcbAutorHeader, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PnlISBNHeader.SuspendLayout()
+        CType(Me.PcbISBNHeader, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PnlTipoHeader.SuspendLayout()
+        CType(Me.PcbTipoHeader, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PnlFormatoHeader.SuspendLayout()
+        CType(Me.PcbFormatoHeader, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PnlTitulo.SuspendLayout()
         Me.PnlAutor.SuspendLayout()
-        Me.Panel1.SuspendLayout()
-        Me.Panel2.SuspendLayout()
-        Me.Panel4.SuspendLayout()
+        Me.PnlISBN.SuspendLayout()
+        Me.PnlTipoRecurso.SuspendLayout()
+        Me.PnlFormato.SuspendLayout()
+        Me.PnlGenero.SuspendLayout()
+        Me.PnlGeneroHeader.SuspendLayout()
+        CType(Me.PcbGeneroHeader, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PnlFecha.SuspendLayout()
+        Me.PnlFechaHeader.SuspendLayout()
+        CType(Me.PcbFechaHeader, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PnlEditorial.SuspendLayout()
+        Me.PnlEditorialHeader.SuspendLayout()
+        CType(Me.PcbEditorialHeader, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PnlEdicion.SuspendLayout()
+        Me.PnlEdicionHeader.SuspendLayout()
+        CType(Me.PcbEdicionHeader, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PnlPaginas.SuspendLayout()
+        Me.PnlPagHeader.SuspendLayout()
+        CType(Me.PcbPagHeader, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PnlEstado.SuspendLayout()
+        Me.PnlEstadoHeader.SuspendLayout()
+        CType(Me.PcbEstadoHeader, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LblTitulo
@@ -98,6 +180,7 @@ Partial Class FrmCrearRegistros
         '
         'PnlTituloHeader
         '
+        Me.PnlTituloHeader.Controls.Add(Me.PnlTituloLinea)
         Me.PnlTituloHeader.Controls.Add(Me.PcbTituloHeader)
         Me.PnlTituloHeader.Controls.Add(Me.lblTituloLibro)
         Me.PnlTituloHeader.Location = New System.Drawing.Point(0, 0)
@@ -105,9 +188,17 @@ Partial Class FrmCrearRegistros
         Me.PnlTituloHeader.Size = New System.Drawing.Size(390, 22)
         Me.PnlTituloHeader.TabIndex = 35
         '
+        'PnlTituloLinea
+        '
+        Me.PnlTituloLinea.BackColor = System.Drawing.Color.Silver
+        Me.PnlTituloLinea.Location = New System.Drawing.Point(57, 12)
+        Me.PnlTituloLinea.Name = "PnlTituloLinea"
+        Me.PnlTituloLinea.Size = New System.Drawing.Size(307, 1)
+        Me.PnlTituloLinea.TabIndex = 75
+        '
         'PcbTituloHeader
         '
-        Me.PcbTituloHeader.Image = Global.Biblioteca.My.Resources.Resources.flechaAbajo
+        Me.PcbTituloHeader.Image = Global.Biblioteca.My.Resources.Resources.flechaArriba
         Me.PcbTituloHeader.Location = New System.Drawing.Point(371, 0)
         Me.PcbTituloHeader.Name = "PcbTituloHeader"
         Me.PcbTituloHeader.Size = New System.Drawing.Size(19, 22)
@@ -138,7 +229,7 @@ Partial Class FrmCrearRegistros
         Me.Label4.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Silver
         Me.Label4.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.Label4.Location = New System.Drawing.Point(248, 23)
+        Me.Label4.Location = New System.Drawing.Point(203, 23)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(87, 22)
         Me.Label4.TabIndex = 32
@@ -153,7 +244,7 @@ Partial Class FrmCrearRegistros
         Me.Label3.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Silver
         Me.Label3.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.Label3.Location = New System.Drawing.Point(40, 23)
+        Me.Label3.Location = New System.Drawing.Point(1, 23)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(89, 22)
         Me.Label3.TabIndex = 31
@@ -183,174 +274,948 @@ Partial Class FrmCrearRegistros
         '
         Me.TipoderecursoTableAdapter.ClearBeforeFill = True
         '
-        'PnlProductos
+        'PnlTitAutor
         '
-        Me.PnlProductos.BackColor = System.Drawing.Color.Silver
-        Me.PnlProductos.Location = New System.Drawing.Point(73, 178)
-        Me.PnlProductos.Name = "PnlProductos"
-        Me.PnlProductos.Size = New System.Drawing.Size(390, 1)
-        Me.PnlProductos.TabIndex = 36
+        Me.PnlTitAutor.BackColor = System.Drawing.Color.PeachPuff
+        Me.PnlTitAutor.Location = New System.Drawing.Point(40, 178)
+        Me.PnlTitAutor.Name = "PnlTitAutor"
+        Me.PnlTitAutor.Size = New System.Drawing.Size(390, 1)
+        Me.PnlTitAutor.TabIndex = 36
         '
-        'Panel9
+        'PnlAutorHeader
         '
-        Me.Panel9.Controls.Add(Me.PictureBox1)
-        Me.Panel9.Controls.Add(Me.Label1)
-        Me.Panel9.Location = New System.Drawing.Point(0, 0)
-        Me.Panel9.Name = "Panel9"
-        Me.Panel9.Size = New System.Drawing.Size(390, 22)
-        Me.Panel9.TabIndex = 37
+        Me.PnlAutorHeader.Controls.Add(Me.PnlAutorLinea)
+        Me.PnlAutorHeader.Controls.Add(Me.PcbAutorHeader)
+        Me.PnlAutorHeader.Controls.Add(Me.lblAutor)
+        Me.PnlAutorHeader.Location = New System.Drawing.Point(0, 0)
+        Me.PnlAutorHeader.Name = "PnlAutorHeader"
+        Me.PnlAutorHeader.Size = New System.Drawing.Size(390, 22)
+        Me.PnlAutorHeader.TabIndex = 37
         '
-        'PictureBox1
+        'PnlAutorLinea
         '
-        Me.PictureBox1.Image = Global.Biblioteca.My.Resources.Resources.flechaAbajo
-        Me.PictureBox1.Location = New System.Drawing.Point(371, 0)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(19, 22)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 35
-        Me.PictureBox1.TabStop = False
+        Me.PnlAutorLinea.BackColor = System.Drawing.Color.Silver
+        Me.PnlAutorLinea.Location = New System.Drawing.Point(55, 11)
+        Me.PnlAutorLinea.Name = "PnlAutorLinea"
+        Me.PnlAutorLinea.Size = New System.Drawing.Size(310, 1)
+        Me.PnlAutorLinea.TabIndex = 76
         '
-        'Label1
+        'PcbAutorHeader
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Cursor = System.Windows.Forms.Cursors.Default
-        Me.Label1.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Silver
-        Me.Label1.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.Label1.Location = New System.Drawing.Point(-4, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(54, 22)
-        Me.Label1.TabIndex = 36
-        Me.Label1.Text = "Autor"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.PcbAutorHeader.Image = Global.Biblioteca.My.Resources.Resources.flechaArriba
+        Me.PcbAutorHeader.Location = New System.Drawing.Point(371, 0)
+        Me.PcbAutorHeader.Name = "PcbAutorHeader"
+        Me.PcbAutorHeader.Size = New System.Drawing.Size(19, 22)
+        Me.PcbAutorHeader.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PcbAutorHeader.TabIndex = 35
+        Me.PcbAutorHeader.TabStop = False
         '
-        'Panel10
+        'lblAutor
         '
-        Me.Panel10.Controls.Add(Me.PictureBox2)
-        Me.Panel10.Controls.Add(Me.Label2)
-        Me.Panel10.Location = New System.Drawing.Point(0, 0)
-        Me.Panel10.Name = "Panel10"
-        Me.Panel10.Size = New System.Drawing.Size(390, 22)
-        Me.Panel10.TabIndex = 38
+        Me.lblAutor.AutoSize = True
+        Me.lblAutor.BackColor = System.Drawing.Color.Transparent
+        Me.lblAutor.Cursor = System.Windows.Forms.Cursors.Default
+        Me.lblAutor.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAutor.ForeColor = System.Drawing.Color.Silver
+        Me.lblAutor.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.lblAutor.Location = New System.Drawing.Point(-4, 0)
+        Me.lblAutor.Name = "lblAutor"
+        Me.lblAutor.Size = New System.Drawing.Size(54, 22)
+        Me.lblAutor.TabIndex = 36
+        Me.lblAutor.Text = "Autor"
+        Me.lblAutor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'PictureBox2
+        'PnlISBNHeader
         '
-        Me.PictureBox2.Image = Global.Biblioteca.My.Resources.Resources.flechaAbajo
-        Me.PictureBox2.Location = New System.Drawing.Point(371, 0)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(19, 22)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 35
-        Me.PictureBox2.TabStop = False
+        Me.PnlISBNHeader.Controls.Add(Me.PnlISHeader)
+        Me.PnlISBNHeader.Controls.Add(Me.PcbISBNHeader)
+        Me.PnlISBNHeader.Controls.Add(Me.lblISBN)
+        Me.PnlISBNHeader.Location = New System.Drawing.Point(0, 0)
+        Me.PnlISBNHeader.Name = "PnlISBNHeader"
+        Me.PnlISBNHeader.Size = New System.Drawing.Size(390, 22)
+        Me.PnlISBNHeader.TabIndex = 38
         '
-        'Label2
+        'PnlISHeader
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Cursor = System.Windows.Forms.Cursors.Default
-        Me.Label2.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Silver
-        Me.Label2.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.Label2.Location = New System.Drawing.Point(-4, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(50, 22)
-        Me.Label2.TabIndex = 36
-        Me.Label2.Text = "ISBN"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.PnlISHeader.BackColor = System.Drawing.Color.Silver
+        Me.PnlISHeader.Location = New System.Drawing.Point(52, 12)
+        Me.PnlISHeader.Name = "PnlISHeader"
+        Me.PnlISHeader.Size = New System.Drawing.Size(310, 1)
+        Me.PnlISHeader.TabIndex = 76
         '
-        'Panel3
+        'PcbISBNHeader
         '
-        Me.Panel3.Controls.Add(Me.PictureBox3)
-        Me.Panel3.Controls.Add(Me.Label5)
-        Me.Panel3.Location = New System.Drawing.Point(0, 0)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(390, 22)
-        Me.Panel3.TabIndex = 39
+        Me.PcbISBNHeader.Image = Global.Biblioteca.My.Resources.Resources.flechaArriba
+        Me.PcbISBNHeader.Location = New System.Drawing.Point(371, 0)
+        Me.PcbISBNHeader.Name = "PcbISBNHeader"
+        Me.PcbISBNHeader.Size = New System.Drawing.Size(19, 22)
+        Me.PcbISBNHeader.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PcbISBNHeader.TabIndex = 35
+        Me.PcbISBNHeader.TabStop = False
         '
-        'PictureBox3
+        'lblISBN
         '
-        Me.PictureBox3.Image = Global.Biblioteca.My.Resources.Resources.flechaAbajo
-        Me.PictureBox3.Location = New System.Drawing.Point(371, 0)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(19, 22)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 35
-        Me.PictureBox3.TabStop = False
+        Me.lblISBN.AutoSize = True
+        Me.lblISBN.BackColor = System.Drawing.Color.Transparent
+        Me.lblISBN.Cursor = System.Windows.Forms.Cursors.Default
+        Me.lblISBN.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblISBN.ForeColor = System.Drawing.Color.Silver
+        Me.lblISBN.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.lblISBN.Location = New System.Drawing.Point(-4, 0)
+        Me.lblISBN.Name = "lblISBN"
+        Me.lblISBN.Size = New System.Drawing.Size(50, 22)
+        Me.lblISBN.TabIndex = 36
+        Me.lblISBN.Text = "ISBN"
+        Me.lblISBN.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label5
+        'PnlTipoHeader
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.BackColor = System.Drawing.Color.Transparent
-        Me.Label5.Cursor = System.Windows.Forms.Cursors.Default
-        Me.Label5.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.Silver
-        Me.Label5.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.Label5.Location = New System.Drawing.Point(-4, 0)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(133, 22)
-        Me.Label5.TabIndex = 36
-        Me.Label5.Text = "Tipo de recurso"
-        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.PnlTipoHeader.Controls.Add(Me.PnlTipoLinea)
+        Me.PnlTipoHeader.Controls.Add(Me.PcbTipoHeader)
+        Me.PnlTipoHeader.Controls.Add(Me.lblTipoRecurso)
+        Me.PnlTipoHeader.Location = New System.Drawing.Point(0, 0)
+        Me.PnlTipoHeader.Name = "PnlTipoHeader"
+        Me.PnlTipoHeader.Size = New System.Drawing.Size(390, 22)
+        Me.PnlTipoHeader.TabIndex = 39
         '
-        'Panel5
+        'PnlTipoLinea
         '
-        Me.Panel5.BackColor = System.Drawing.Color.Silver
-        Me.Panel5.Location = New System.Drawing.Point(500, 178)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(390, 1)
-        Me.Panel5.TabIndex = 44
+        Me.PnlTipoLinea.BackColor = System.Drawing.Color.Silver
+        Me.PnlTipoLinea.Location = New System.Drawing.Point(135, 11)
+        Me.PnlTipoLinea.Name = "PnlTipoLinea"
+        Me.PnlTipoLinea.Size = New System.Drawing.Size(230, 1)
+        Me.PnlTipoLinea.TabIndex = 76
         '
-        'Panel11
+        'PcbTipoHeader
         '
-        Me.Panel11.BackColor = System.Drawing.Color.Silver
-        Me.Panel11.Location = New System.Drawing.Point(500, 269)
-        Me.Panel11.Name = "Panel11"
-        Me.Panel11.Size = New System.Drawing.Size(390, 1)
-        Me.Panel11.TabIndex = 46
+        Me.PcbTipoHeader.Image = Global.Biblioteca.My.Resources.Resources.flechaArriba
+        Me.PcbTipoHeader.Location = New System.Drawing.Point(371, 0)
+        Me.PcbTipoHeader.Name = "PcbTipoHeader"
+        Me.PcbTipoHeader.Size = New System.Drawing.Size(19, 22)
+        Me.PcbTipoHeader.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PcbTipoHeader.TabIndex = 35
+        Me.PcbTipoHeader.TabStop = False
         '
-        'Panel12
+        'lblTipoRecurso
         '
-        Me.Panel12.Controls.Add(Me.PictureBox4)
-        Me.Panel12.Controls.Add(Me.Label6)
-        Me.Panel12.Location = New System.Drawing.Point(0, 0)
-        Me.Panel12.Name = "Panel12"
-        Me.Panel12.Size = New System.Drawing.Size(390, 22)
-        Me.Panel12.TabIndex = 45
+        Me.lblTipoRecurso.AutoSize = True
+        Me.lblTipoRecurso.BackColor = System.Drawing.Color.Transparent
+        Me.lblTipoRecurso.Cursor = System.Windows.Forms.Cursors.Default
+        Me.lblTipoRecurso.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTipoRecurso.ForeColor = System.Drawing.Color.Silver
+        Me.lblTipoRecurso.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.lblTipoRecurso.Location = New System.Drawing.Point(-4, 0)
+        Me.lblTipoRecurso.Name = "lblTipoRecurso"
+        Me.lblTipoRecurso.Size = New System.Drawing.Size(133, 22)
+        Me.lblTipoRecurso.TabIndex = 36
+        Me.lblTipoRecurso.Text = "Tipo de recurso"
+        Me.lblTipoRecurso.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'PictureBox4
+        'PnlISso
         '
-        Me.PictureBox4.Image = Global.Biblioteca.My.Resources.Resources.flechaAbajo
-        Me.PictureBox4.Location = New System.Drawing.Point(371, 0)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(19, 22)
-        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox4.TabIndex = 35
-        Me.PictureBox4.TabStop = False
+        Me.PnlISso.BackColor = System.Drawing.Color.PeachPuff
+        Me.PnlISso.Location = New System.Drawing.Point(470, 178)
+        Me.PnlISso.Name = "PnlISso"
+        Me.PnlISso.Size = New System.Drawing.Size(390, 1)
+        Me.PnlISso.TabIndex = 44
         '
-        'Label6
+        'PnlTipoto
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.BackColor = System.Drawing.Color.Transparent
-        Me.Label6.Cursor = System.Windows.Forms.Cursors.Default
-        Me.Label6.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.Silver
-        Me.Label6.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.Label6.Location = New System.Drawing.Point(-4, 0)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(78, 22)
-        Me.Label6.TabIndex = 36
-        Me.Label6.Text = "Formato"
-        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.PnlTipoto.BackColor = System.Drawing.Color.PeachPuff
+        Me.PnlTipoto.Location = New System.Drawing.Point(470, 269)
+        Me.PnlTipoto.Name = "PnlTipoto"
+        Me.PnlTipoto.Size = New System.Drawing.Size(390, 1)
+        Me.PnlTipoto.TabIndex = 46
+        '
+        'PnlFormatoHeader
+        '
+        Me.PnlFormatoHeader.Controls.Add(Me.PnlFormatoLinea)
+        Me.PnlFormatoHeader.Controls.Add(Me.PcbFormatoHeader)
+        Me.PnlFormatoHeader.Controls.Add(Me.lblFormato)
+        Me.PnlFormatoHeader.Location = New System.Drawing.Point(0, 0)
+        Me.PnlFormatoHeader.Name = "PnlFormatoHeader"
+        Me.PnlFormatoHeader.Size = New System.Drawing.Size(390, 22)
+        Me.PnlFormatoHeader.TabIndex = 45
+        '
+        'PnlFormatoLinea
+        '
+        Me.PnlFormatoLinea.BackColor = System.Drawing.Color.Silver
+        Me.PnlFormatoLinea.Location = New System.Drawing.Point(80, 12)
+        Me.PnlFormatoLinea.Name = "PnlFormatoLinea"
+        Me.PnlFormatoLinea.Size = New System.Drawing.Size(285, 1)
+        Me.PnlFormatoLinea.TabIndex = 76
+        '
+        'PcbFormatoHeader
+        '
+        Me.PcbFormatoHeader.Image = Global.Biblioteca.My.Resources.Resources.flechaArriba
+        Me.PcbFormatoHeader.Location = New System.Drawing.Point(371, 0)
+        Me.PcbFormatoHeader.Name = "PcbFormatoHeader"
+        Me.PcbFormatoHeader.Size = New System.Drawing.Size(19, 22)
+        Me.PcbFormatoHeader.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PcbFormatoHeader.TabIndex = 35
+        Me.PcbFormatoHeader.TabStop = False
+        '
+        'lblFormato
+        '
+        Me.lblFormato.AutoSize = True
+        Me.lblFormato.BackColor = System.Drawing.Color.Transparent
+        Me.lblFormato.Cursor = System.Windows.Forms.Cursors.Default
+        Me.lblFormato.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFormato.ForeColor = System.Drawing.Color.Silver
+        Me.lblFormato.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.lblFormato.Location = New System.Drawing.Point(-4, 0)
+        Me.lblFormato.Name = "lblFormato"
+        Me.lblFormato.Size = New System.Drawing.Size(78, 22)
+        Me.lblFormato.TabIndex = 36
+        Me.lblFormato.Text = "Formato"
+        Me.lblFormato.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'PnlTitulo
         '
         Me.PnlTitulo.Controls.Add(Me.TxtPerso1)
         Me.PnlTitulo.Controls.Add(Me.PnlTituloHeader)
-        Me.PnlTitulo.Location = New System.Drawing.Point(70, 95)
+        Me.PnlTitulo.Location = New System.Drawing.Point(40, 95)
         Me.PnlTitulo.Name = "PnlTitulo"
         Me.PnlTitulo.Size = New System.Drawing.Size(390, 77)
         Me.PnlTitulo.TabIndex = 47
+        '
+        'PnlAutor
+        '
+        Me.PnlAutor.Controls.Add(Me.PnlAutorHeader)
+        Me.PnlAutor.Controls.Add(Me.Label3)
+        Me.PnlAutor.Controls.Add(Me.TxtPerso3)
+        Me.PnlAutor.Controls.Add(Me.Label4)
+        Me.PnlAutor.Controls.Add(Me.TxtPerso2)
+        Me.PnlAutor.Location = New System.Drawing.Point(40, 186)
+        Me.PnlAutor.Name = "PnlAutor"
+        Me.PnlAutor.Size = New System.Drawing.Size(390, 96)
+        Me.PnlAutor.TabIndex = 52
+        '
+        'PnlISBN
+        '
+        Me.PnlISBN.Controls.Add(Me.PnlISBNHeader)
+        Me.PnlISBN.Controls.Add(Me.TxtPerso4)
+        Me.PnlISBN.Location = New System.Drawing.Point(470, 95)
+        Me.PnlISBN.Name = "PnlISBN"
+        Me.PnlISBN.Size = New System.Drawing.Size(390, 77)
+        Me.PnlISBN.TabIndex = 53
+        '
+        'PnlTipoRecurso
+        '
+        Me.PnlTipoRecurso.Controls.Add(Me.PnlTipoHeader)
+        Me.PnlTipoRecurso.Controls.Add(Me.CboTipoRecurso)
+        Me.PnlTipoRecurso.Location = New System.Drawing.Point(470, 186)
+        Me.PnlTipoRecurso.Name = "PnlTipoRecurso"
+        Me.PnlTipoRecurso.Size = New System.Drawing.Size(390, 77)
+        Me.PnlTipoRecurso.TabIndex = 54
+        '
+        'PnlFormato
+        '
+        Me.PnlFormato.Controls.Add(Me.PnlFormatoHeader)
+        Me.PnlFormato.Controls.Add(Me.CboFormato)
+        Me.PnlFormato.Location = New System.Drawing.Point(470, 276)
+        Me.PnlFormato.Name = "PnlFormato"
+        Me.PnlFormato.Size = New System.Drawing.Size(390, 77)
+        Me.PnlFormato.TabIndex = 55
+        '
+        'PnlGenero
+        '
+        Me.PnlGenero.Controls.Add(Me.PnlGeneroHeader)
+        Me.PnlGenero.Controls.Add(Me.ComboPerso1)
+        Me.PnlGenero.Location = New System.Drawing.Point(40, 295)
+        Me.PnlGenero.Name = "PnlGenero"
+        Me.PnlGenero.Size = New System.Drawing.Size(390, 77)
+        Me.PnlGenero.TabIndex = 56
+        '
+        'PnlGeneroHeader
+        '
+        Me.PnlGeneroHeader.Controls.Add(Me.PnlGeneLinea)
+        Me.PnlGeneroHeader.Controls.Add(Me.PcbGeneroHeader)
+        Me.PnlGeneroHeader.Controls.Add(Me.lblGenero)
+        Me.PnlGeneroHeader.Location = New System.Drawing.Point(0, 0)
+        Me.PnlGeneroHeader.Name = "PnlGeneroHeader"
+        Me.PnlGeneroHeader.Size = New System.Drawing.Size(390, 22)
+        Me.PnlGeneroHeader.TabIndex = 39
+        '
+        'PnlGeneLinea
+        '
+        Me.PnlGeneLinea.BackColor = System.Drawing.Color.Silver
+        Me.PnlGeneLinea.Location = New System.Drawing.Point(72, 12)
+        Me.PnlGeneLinea.Name = "PnlGeneLinea"
+        Me.PnlGeneLinea.Size = New System.Drawing.Size(290, 1)
+        Me.PnlGeneLinea.TabIndex = 76
+        '
+        'PcbGeneroHeader
+        '
+        Me.PcbGeneroHeader.Image = Global.Biblioteca.My.Resources.Resources.flechaArriba
+        Me.PcbGeneroHeader.Location = New System.Drawing.Point(371, 0)
+        Me.PcbGeneroHeader.Name = "PcbGeneroHeader"
+        Me.PcbGeneroHeader.Size = New System.Drawing.Size(19, 22)
+        Me.PcbGeneroHeader.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PcbGeneroHeader.TabIndex = 35
+        Me.PcbGeneroHeader.TabStop = False
+        '
+        'lblGenero
+        '
+        Me.lblGenero.AutoSize = True
+        Me.lblGenero.BackColor = System.Drawing.Color.Transparent
+        Me.lblGenero.Cursor = System.Windows.Forms.Cursors.Default
+        Me.lblGenero.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblGenero.ForeColor = System.Drawing.Color.Silver
+        Me.lblGenero.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.lblGenero.Location = New System.Drawing.Point(-4, 0)
+        Me.lblGenero.Name = "lblGenero"
+        Me.lblGenero.Size = New System.Drawing.Size(69, 22)
+        Me.lblGenero.TabIndex = 36
+        Me.lblGenero.Text = "Género"
+        Me.lblGenero.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'PnlFecha
+        '
+        Me.PnlFecha.Controls.Add(Me.PnlFechaHeader)
+        Me.PnlFecha.Controls.Add(Me.TxtPerso5)
+        Me.PnlFecha.Location = New System.Drawing.Point(470, 366)
+        Me.PnlFecha.Name = "PnlFecha"
+        Me.PnlFecha.Size = New System.Drawing.Size(390, 77)
+        Me.PnlFecha.TabIndex = 57
+        '
+        'PnlFechaHeader
+        '
+        Me.PnlFechaHeader.Controls.Add(Me.PnlFechaLinea)
+        Me.PnlFechaHeader.Controls.Add(Me.PcbFechaHeader)
+        Me.PnlFechaHeader.Controls.Add(Me.lblFecha)
+        Me.PnlFechaHeader.Location = New System.Drawing.Point(0, 0)
+        Me.PnlFechaHeader.Name = "PnlFechaHeader"
+        Me.PnlFechaHeader.Size = New System.Drawing.Size(390, 22)
+        Me.PnlFechaHeader.TabIndex = 38
+        '
+        'PnlFechaLinea
+        '
+        Me.PnlFechaLinea.BackColor = System.Drawing.Color.Silver
+        Me.PnlFechaLinea.Location = New System.Drawing.Point(183, 12)
+        Me.PnlFechaLinea.Name = "PnlFechaLinea"
+        Me.PnlFechaLinea.Size = New System.Drawing.Size(180, 1)
+        Me.PnlFechaLinea.TabIndex = 76
+        '
+        'PcbFechaHeader
+        '
+        Me.PcbFechaHeader.Image = Global.Biblioteca.My.Resources.Resources.flechaArriba
+        Me.PcbFechaHeader.Location = New System.Drawing.Point(371, 0)
+        Me.PcbFechaHeader.Name = "PcbFechaHeader"
+        Me.PcbFechaHeader.Size = New System.Drawing.Size(19, 22)
+        Me.PcbFechaHeader.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PcbFechaHeader.TabIndex = 35
+        Me.PcbFechaHeader.TabStop = False
+        '
+        'lblFecha
+        '
+        Me.lblFecha.AutoSize = True
+        Me.lblFecha.BackColor = System.Drawing.Color.Transparent
+        Me.lblFecha.Cursor = System.Windows.Forms.Cursors.Default
+        Me.lblFecha.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFecha.ForeColor = System.Drawing.Color.Silver
+        Me.lblFecha.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.lblFecha.Location = New System.Drawing.Point(-4, 0)
+        Me.lblFecha.Name = "lblFecha"
+        Me.lblFecha.Size = New System.Drawing.Size(181, 22)
+        Me.lblFecha.TabIndex = 36
+        Me.lblFecha.Text = "Fecha de publicación"
+        Me.lblFecha.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'PnlAutero
+        '
+        Me.PnlAutero.BackColor = System.Drawing.Color.PeachPuff
+        Me.PnlAutero.Location = New System.Drawing.Point(40, 288)
+        Me.PnlAutero.Name = "PnlAutero"
+        Me.PnlAutero.Size = New System.Drawing.Size(390, 1)
+        Me.PnlAutero.TabIndex = 59
+        '
+        'PnlForcion
+        '
+        Me.PnlForcion.BackColor = System.Drawing.Color.PeachPuff
+        Me.PnlForcion.Location = New System.Drawing.Point(470, 359)
+        Me.PnlForcion.Name = "PnlForcion"
+        Me.PnlForcion.Size = New System.Drawing.Size(390, 1)
+        Me.PnlForcion.TabIndex = 61
+        '
+        'PnlFechal
+        '
+        Me.PnlFechal.BackColor = System.Drawing.Color.PeachPuff
+        Me.PnlFechal.Location = New System.Drawing.Point(470, 449)
+        Me.PnlFechal.Name = "PnlFechal"
+        Me.PnlFechal.Size = New System.Drawing.Size(390, 1)
+        Me.PnlFechal.TabIndex = 62
+        '
+        'PnlEditorial
+        '
+        Me.PnlEditorial.Controls.Add(Me.PnlEditorialHeader)
+        Me.PnlEditorial.Controls.Add(Me.ComboPerso3)
+        Me.PnlEditorial.Location = New System.Drawing.Point(470, 456)
+        Me.PnlEditorial.Name = "PnlEditorial"
+        Me.PnlEditorial.Size = New System.Drawing.Size(390, 77)
+        Me.PnlEditorial.TabIndex = 63
+        '
+        'PnlEditorialHeader
+        '
+        Me.PnlEditorialHeader.Controls.Add(Me.PnlEditLinea)
+        Me.PnlEditorialHeader.Controls.Add(Me.PcbEditorialHeader)
+        Me.PnlEditorialHeader.Controls.Add(Me.lblEditorial)
+        Me.PnlEditorialHeader.Location = New System.Drawing.Point(0, 0)
+        Me.PnlEditorialHeader.Name = "PnlEditorialHeader"
+        Me.PnlEditorialHeader.Size = New System.Drawing.Size(390, 22)
+        Me.PnlEditorialHeader.TabIndex = 39
+        '
+        'PnlEditLinea
+        '
+        Me.PnlEditLinea.BackColor = System.Drawing.Color.Silver
+        Me.PnlEditLinea.Location = New System.Drawing.Point(80, 13)
+        Me.PnlEditLinea.Name = "PnlEditLinea"
+        Me.PnlEditLinea.Size = New System.Drawing.Size(280, 1)
+        Me.PnlEditLinea.TabIndex = 76
+        '
+        'PcbEditorialHeader
+        '
+        Me.PcbEditorialHeader.Image = Global.Biblioteca.My.Resources.Resources.flechaArriba
+        Me.PcbEditorialHeader.Location = New System.Drawing.Point(371, 0)
+        Me.PcbEditorialHeader.Name = "PcbEditorialHeader"
+        Me.PcbEditorialHeader.Size = New System.Drawing.Size(19, 22)
+        Me.PcbEditorialHeader.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PcbEditorialHeader.TabIndex = 35
+        Me.PcbEditorialHeader.TabStop = False
+        '
+        'lblEditorial
+        '
+        Me.lblEditorial.AutoSize = True
+        Me.lblEditorial.BackColor = System.Drawing.Color.Transparent
+        Me.lblEditorial.Cursor = System.Windows.Forms.Cursors.Default
+        Me.lblEditorial.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblEditorial.ForeColor = System.Drawing.Color.Silver
+        Me.lblEditorial.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.lblEditorial.Location = New System.Drawing.Point(-4, 0)
+        Me.lblEditorial.Name = "lblEditorial"
+        Me.lblEditorial.Size = New System.Drawing.Size(75, 22)
+        Me.lblEditorial.TabIndex = 36
+        Me.lblEditorial.Text = "Editorial"
+        Me.lblEditorial.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'PnlGenecion
+        '
+        Me.PnlGenecion.BackColor = System.Drawing.Color.PeachPuff
+        Me.PnlGenecion.Location = New System.Drawing.Point(40, 378)
+        Me.PnlGenecion.Name = "PnlGenecion"
+        Me.PnlGenecion.Size = New System.Drawing.Size(390, 1)
+        Me.PnlGenecion.TabIndex = 64
+        '
+        'PnlEdias
+        '
+        Me.PnlEdias.BackColor = System.Drawing.Color.PeachPuff
+        Me.PnlEdias.Location = New System.Drawing.Point(470, 539)
+        Me.PnlEdias.Name = "PnlEdias"
+        Me.PnlEdias.Size = New System.Drawing.Size(390, 1)
+        Me.PnlEdias.TabIndex = 66
+        '
+        'PnlEdicion
+        '
+        Me.PnlEdicion.Controls.Add(Me.PnlEdicionHeader)
+        Me.PnlEdicion.Controls.Add(Me.Label12)
+        Me.PnlEdicion.Controls.Add(Me.TxtPerso6)
+        Me.PnlEdicion.Controls.Add(Me.Label13)
+        Me.PnlEdicion.Controls.Add(Me.TxtPerso7)
+        Me.PnlEdicion.Location = New System.Drawing.Point(40, 385)
+        Me.PnlEdicion.Name = "PnlEdicion"
+        Me.PnlEdicion.Size = New System.Drawing.Size(390, 96)
+        Me.PnlEdicion.TabIndex = 67
+        '
+        'PnlEdicionHeader
+        '
+        Me.PnlEdicionHeader.Controls.Add(Me.PnlEdicLinea)
+        Me.PnlEdicionHeader.Controls.Add(Me.PcbEdicionHeader)
+        Me.PnlEdicionHeader.Controls.Add(Me.lblEdicion)
+        Me.PnlEdicionHeader.Location = New System.Drawing.Point(0, 0)
+        Me.PnlEdicionHeader.Name = "PnlEdicionHeader"
+        Me.PnlEdicionHeader.Size = New System.Drawing.Size(390, 22)
+        Me.PnlEdicionHeader.TabIndex = 37
+        '
+        'PnlEdicLinea
+        '
+        Me.PnlEdicLinea.BackColor = System.Drawing.Color.Silver
+        Me.PnlEdicLinea.Location = New System.Drawing.Point(72, 11)
+        Me.PnlEdicLinea.Name = "PnlEdicLinea"
+        Me.PnlEdicLinea.Size = New System.Drawing.Size(290, 1)
+        Me.PnlEdicLinea.TabIndex = 76
+        '
+        'PcbEdicionHeader
+        '
+        Me.PcbEdicionHeader.Image = Global.Biblioteca.My.Resources.Resources.flechaArriba
+        Me.PcbEdicionHeader.Location = New System.Drawing.Point(371, 0)
+        Me.PcbEdicionHeader.Name = "PcbEdicionHeader"
+        Me.PcbEdicionHeader.Size = New System.Drawing.Size(19, 22)
+        Me.PcbEdicionHeader.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PcbEdicionHeader.TabIndex = 35
+        Me.PcbEdicionHeader.TabStop = False
+        '
+        'lblEdicion
+        '
+        Me.lblEdicion.AutoSize = True
+        Me.lblEdicion.BackColor = System.Drawing.Color.Transparent
+        Me.lblEdicion.Cursor = System.Windows.Forms.Cursors.Default
+        Me.lblEdicion.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblEdicion.ForeColor = System.Drawing.Color.Silver
+        Me.lblEdicion.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.lblEdicion.Location = New System.Drawing.Point(-4, 0)
+        Me.lblEdicion.Name = "lblEdicion"
+        Me.lblEdicion.Size = New System.Drawing.Size(70, 22)
+        Me.lblEdicion.TabIndex = 36
+        Me.lblEdicion.Text = "Edición"
+        Me.lblEdicion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.BackColor = System.Drawing.Color.Transparent
+        Me.Label12.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Label12.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.ForeColor = System.Drawing.Color.Silver
+        Me.Label12.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.Label12.Location = New System.Drawing.Point(3, 25)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(30, 22)
+        Me.Label12.TabIndex = 31
+        Me.Label12.Text = "N°"
+        Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.BackColor = System.Drawing.Color.Transparent
+        Me.Label13.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Label13.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.ForeColor = System.Drawing.Color.Silver
+        Me.Label13.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.Label13.Location = New System.Drawing.Point(203, 25)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(42, 22)
+        Me.Label13.TabIndex = 32
+        Me.Label13.Text = "Año"
+        Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'PnlEdiado
+        '
+        Me.PnlEdiado.BackColor = System.Drawing.Color.PeachPuff
+        Me.PnlEdiado.Location = New System.Drawing.Point(40, 487)
+        Me.PnlEdiado.Name = "PnlEdiado"
+        Me.PnlEdiado.Size = New System.Drawing.Size(390, 1)
+        Me.PnlEdiado.TabIndex = 68
+        '
+        'PnlPaginas
+        '
+        Me.PnlPaginas.Controls.Add(Me.PnlPagHeader)
+        Me.PnlPaginas.Controls.Add(Me.TxtPerso8)
+        Me.PnlPaginas.Location = New System.Drawing.Point(470, 546)
+        Me.PnlPaginas.Name = "PnlPaginas"
+        Me.PnlPaginas.Size = New System.Drawing.Size(390, 77)
+        Me.PnlPaginas.TabIndex = 69
+        '
+        'PnlPagHeader
+        '
+        Me.PnlPagHeader.Controls.Add(Me.PnlPagLinea)
+        Me.PnlPagHeader.Controls.Add(Me.PcbPagHeader)
+        Me.PnlPagHeader.Controls.Add(Me.lblPag)
+        Me.PnlPagHeader.Location = New System.Drawing.Point(0, 0)
+        Me.PnlPagHeader.Name = "PnlPagHeader"
+        Me.PnlPagHeader.Size = New System.Drawing.Size(390, 22)
+        Me.PnlPagHeader.TabIndex = 38
+        '
+        'PnlPagLinea
+        '
+        Me.PnlPagLinea.BackColor = System.Drawing.Color.Silver
+        Me.PnlPagLinea.Location = New System.Drawing.Point(124, 12)
+        Me.PnlPagLinea.Name = "PnlPagLinea"
+        Me.PnlPagLinea.Size = New System.Drawing.Size(240, 1)
+        Me.PnlPagLinea.TabIndex = 76
+        '
+        'PcbPagHeader
+        '
+        Me.PcbPagHeader.Image = Global.Biblioteca.My.Resources.Resources.flechaArriba
+        Me.PcbPagHeader.Location = New System.Drawing.Point(371, 0)
+        Me.PcbPagHeader.Name = "PcbPagHeader"
+        Me.PcbPagHeader.Size = New System.Drawing.Size(19, 22)
+        Me.PcbPagHeader.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PcbPagHeader.TabIndex = 35
+        Me.PcbPagHeader.TabStop = False
+        '
+        'lblPag
+        '
+        Me.lblPag.AutoSize = True
+        Me.lblPag.BackColor = System.Drawing.Color.Transparent
+        Me.lblPag.Cursor = System.Windows.Forms.Cursors.Default
+        Me.lblPag.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPag.ForeColor = System.Drawing.Color.Silver
+        Me.lblPag.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.lblPag.Location = New System.Drawing.Point(-4, 0)
+        Me.lblPag.Name = "lblPag"
+        Me.lblPag.Size = New System.Drawing.Size(122, 22)
+        Me.lblPag.TabIndex = 36
+        Me.lblPag.Text = "N° de páginas"
+        Me.lblPag.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'PnlEstado
+        '
+        Me.PnlEstado.Controls.Add(Me.PnlEstadoHeader)
+        Me.PnlEstado.Controls.Add(Me.ComboPerso4)
+        Me.PnlEstado.Location = New System.Drawing.Point(40, 494)
+        Me.PnlEstado.Name = "PnlEstado"
+        Me.PnlEstado.Size = New System.Drawing.Size(390, 77)
+        Me.PnlEstado.TabIndex = 71
+        '
+        'PnlEstadoHeader
+        '
+        Me.PnlEstadoHeader.Controls.Add(Me.PnlEstLinea)
+        Me.PnlEstadoHeader.Controls.Add(Me.PcbEstadoHeader)
+        Me.PnlEstadoHeader.Controls.Add(Me.lblEstado)
+        Me.PnlEstadoHeader.Location = New System.Drawing.Point(0, 0)
+        Me.PnlEstadoHeader.Name = "PnlEstadoHeader"
+        Me.PnlEstadoHeader.Size = New System.Drawing.Size(390, 22)
+        Me.PnlEstadoHeader.TabIndex = 39
+        '
+        'PnlEstLinea
+        '
+        Me.PnlEstLinea.BackColor = System.Drawing.Color.Silver
+        Me.PnlEstLinea.Location = New System.Drawing.Point(67, 11)
+        Me.PnlEstLinea.Name = "PnlEstLinea"
+        Me.PnlEstLinea.Size = New System.Drawing.Size(295, 1)
+        Me.PnlEstLinea.TabIndex = 77
+        '
+        'PcbEstadoHeader
+        '
+        Me.PcbEstadoHeader.Image = Global.Biblioteca.My.Resources.Resources.flechaArriba
+        Me.PcbEstadoHeader.Location = New System.Drawing.Point(371, 0)
+        Me.PcbEstadoHeader.Name = "PcbEstadoHeader"
+        Me.PcbEstadoHeader.Size = New System.Drawing.Size(19, 22)
+        Me.PcbEstadoHeader.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PcbEstadoHeader.TabIndex = 35
+        Me.PcbEstadoHeader.TabStop = False
+        '
+        'lblEstado
+        '
+        Me.lblEstado.AutoSize = True
+        Me.lblEstado.BackColor = System.Drawing.Color.Transparent
+        Me.lblEstado.Cursor = System.Windows.Forms.Cursors.Default
+        Me.lblEstado.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblEstado.ForeColor = System.Drawing.Color.Silver
+        Me.lblEstado.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.lblEstado.Location = New System.Drawing.Point(-4, 0)
+        Me.lblEstado.Name = "lblEstado"
+        Me.lblEstado.Size = New System.Drawing.Size(65, 22)
+        Me.lblEstado.TabIndex = 36
+        Me.lblEstado.Text = "Estado"
+        Me.lblEstado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'TmrTitulo
+        '
+        Me.TmrTitulo.Interval = 18
+        '
+        'PnlEstadoFin
+        '
+        Me.PnlEstadoFin.BackColor = System.Drawing.Color.PeachPuff
+        Me.PnlEstadoFin.Location = New System.Drawing.Point(40, 577)
+        Me.PnlEstadoFin.Name = "PnlEstadoFin"
+        Me.PnlEstadoFin.Size = New System.Drawing.Size(390, 1)
+        Me.PnlEstadoFin.TabIndex = 72
+        '
+        'PnlPagFin
+        '
+        Me.PnlPagFin.BackColor = System.Drawing.Color.PeachPuff
+        Me.PnlPagFin.Location = New System.Drawing.Point(470, 629)
+        Me.PnlPagFin.Name = "PnlPagFin"
+        Me.PnlPagFin.Size = New System.Drawing.Size(390, 1)
+        Me.PnlPagFin.TabIndex = 73
+        '
+        'TmrAutor
+        '
+        Me.TmrAutor.Interval = 18
+        '
+        'TmrGenero
+        '
+        Me.TmrGenero.Interval = 18
+        '
+        'TmrEdicion
+        '
+        Me.TmrEdicion.Interval = 18
+        '
+        'TmrEstado
+        '
+        Me.TmrEstado.Interval = 18
+        '
+        'TmrISBN
+        '
+        Me.TmrISBN.Interval = 18
+        '
+        'TmrTipo
+        '
+        Me.TmrTipo.Interval = 18
+        '
+        'TmrFormato
+        '
+        Me.TmrFormato.Interval = 18
+        '
+        'TmrFecha
+        '
+        Me.TmrFecha.Interval = 18
+        '
+        'TmrEditorial
+        '
+        Me.TmrEditorial.Interval = 18
+        '
+        'TmrPag
+        '
+        Me.TmrPag.Interval = 18
+        '
+        'ComboPerso4
+        '
+        Me.ComboPerso4._BorderColor = System.Drawing.Color.PeachPuff
+        Me.ComboPerso4._BorderSize = 1
+        Me.ComboPerso4._IconColor = System.Drawing.Color.PeachPuff
+        Me.ComboPerso4._ListBackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.ComboPerso4._ListTextColor = System.Drawing.Color.Silver
+        Me.ComboPerso4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.ComboPerso4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.ComboPerso4.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.ComboPerso4.DataBindings.Add(New System.Windows.Forms.Binding("SelectedItem", Me.TipoderecursoBindingSource, "Nombre", True))
+        Me.ComboPerso4.DataSource = Nothing
+        Me.ComboPerso4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboPerso4.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboPerso4.ForeColor = System.Drawing.Color.Silver
+        Me.ComboPerso4.Items.AddRange(New Object() {"Disponible", "Prestado", "Reservado", "Extraviado", "En reparación", "Dañado", "En proceso de adquisición", "No disponible"})
+        Me.ComboPerso4.Location = New System.Drawing.Point(3, 31)
+        Me.ComboPerso4.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
+        Me.ComboPerso4.MaxLength = 25
+        Me.ComboPerso4.MinimumSize = New System.Drawing.Size(188, 41)
+        Me.ComboPerso4.Name = "ComboPerso4"
+        Me.ComboPerso4.Padding = New System.Windows.Forms.Padding(1)
+        Me.ComboPerso4.Size = New System.Drawing.Size(384, 41)
+        Me.ComboPerso4.TabIndex = 43
+        Me.ComboPerso4.Texts = ""
+        '
+        'BtnGuardar
+        '
+        Me.BtnGuardar.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.BtnGuardar.BackColor = System.Drawing.Color.PeachPuff
+        Me.BtnGuardar.BackGroundColor = System.Drawing.Color.PeachPuff
+        Me.BtnGuardar.BorderColor = System.Drawing.Color.PaleVioletRed
+        Me.BtnGuardar.BorderRadius = 13
+        Me.BtnGuardar.BorderSize = 0
+        Me.BtnGuardar.FlatAppearance.BorderSize = 0
+        Me.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnGuardar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.BtnGuardar.Location = New System.Drawing.Point(750, 32)
+        Me.BtnGuardar.Name = "BtnGuardar"
+        Me.BtnGuardar.Size = New System.Drawing.Size(126, 45)
+        Me.BtnGuardar.TabIndex = 70
+        Me.BtnGuardar.Text = "Guardar registro"
+        Me.BtnGuardar.TextColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.BtnGuardar.UseVisualStyleBackColor = False
+        '
+        'TxtPerso8
+        '
+        Me.TxtPerso8._BorderColor = System.Drawing.Color.PeachPuff
+        Me.TxtPerso8._BorderFocusColor = System.Drawing.Color.PeachPuff
+        Me.TxtPerso8._BorderSize = 2
+        Me.TxtPerso8._MaxLength = 10
+        Me.TxtPerso8._Multiline = False
+        Me.TxtPerso8._PasswordChar = False
+        Me.TxtPerso8._UnderlinedStyle = True
+        Me.TxtPerso8.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(85, Byte), Integer))
+        Me.TxtPerso8.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtPerso8.ForeColor = System.Drawing.Color.LightGray
+        Me.TxtPerso8.Location = New System.Drawing.Point(5, 30)
+        Me.TxtPerso8.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.TxtPerso8.Name = "TxtPerso8"
+        Me.TxtPerso8.Padding = New System.Windows.Forms.Padding(7)
+        Me.TxtPerso8.Size = New System.Drawing.Size(380, 37)
+        Me.TxtPerso8.TabIndex = 51
+        Me.TxtPerso8.Texts = ""
+        '
+        'TxtPerso6
+        '
+        Me.TxtPerso6._BorderColor = System.Drawing.Color.PeachPuff
+        Me.TxtPerso6._BorderFocusColor = System.Drawing.Color.PeachPuff
+        Me.TxtPerso6._BorderSize = 2
+        Me.TxtPerso6._MaxLength = 10
+        Me.TxtPerso6._Multiline = False
+        Me.TxtPerso6._PasswordChar = False
+        Me.TxtPerso6._UnderlinedStyle = True
+        Me.TxtPerso6.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(85, Byte), Integer))
+        Me.TxtPerso6.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtPerso6.ForeColor = System.Drawing.Color.LightGray
+        Me.TxtPerso6.Location = New System.Drawing.Point(207, 50)
+        Me.TxtPerso6.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.TxtPerso6.Name = "TxtPerso6"
+        Me.TxtPerso6.Padding = New System.Windows.Forms.Padding(7)
+        Me.TxtPerso6.Size = New System.Drawing.Size(178, 37)
+        Me.TxtPerso6.TabIndex = 50
+        Me.TxtPerso6.Texts = ""
+        '
+        'TxtPerso7
+        '
+        Me.TxtPerso7._BorderColor = System.Drawing.Color.PeachPuff
+        Me.TxtPerso7._BorderFocusColor = System.Drawing.Color.PeachPuff
+        Me.TxtPerso7._BorderSize = 2
+        Me.TxtPerso7._MaxLength = 11
+        Me.TxtPerso7._Multiline = False
+        Me.TxtPerso7._PasswordChar = False
+        Me.TxtPerso7._UnderlinedStyle = True
+        Me.TxtPerso7.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(85, Byte), Integer))
+        Me.TxtPerso7.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtPerso7.ForeColor = System.Drawing.Color.LightGray
+        Me.TxtPerso7.Location = New System.Drawing.Point(5, 50)
+        Me.TxtPerso7.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.TxtPerso7.Name = "TxtPerso7"
+        Me.TxtPerso7.Padding = New System.Windows.Forms.Padding(7)
+        Me.TxtPerso7.Size = New System.Drawing.Size(178, 37)
+        Me.TxtPerso7.TabIndex = 49
+        Me.TxtPerso7.Texts = ""
+        '
+        'ComboPerso3
+        '
+        Me.ComboPerso3._BorderColor = System.Drawing.Color.PeachPuff
+        Me.ComboPerso3._BorderSize = 1
+        Me.ComboPerso3._IconColor = System.Drawing.Color.PeachPuff
+        Me.ComboPerso3._ListBackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.ComboPerso3._ListTextColor = System.Drawing.Color.Silver
+        Me.ComboPerso3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.ComboPerso3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.ComboPerso3.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.ComboPerso3.DataBindings.Add(New System.Windows.Forms.Binding("SelectedItem", Me.TipoderecursoBindingSource, "Nombre", True))
+        Me.ComboPerso3.DataSource = Nothing
+        Me.ComboPerso3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown
+        Me.ComboPerso3.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboPerso3.ForeColor = System.Drawing.Color.Silver
+        Me.ComboPerso3.Location = New System.Drawing.Point(3, 31)
+        Me.ComboPerso3.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
+        Me.ComboPerso3.MaxLength = 100
+        Me.ComboPerso3.MinimumSize = New System.Drawing.Size(188, 41)
+        Me.ComboPerso3.Name = "ComboPerso3"
+        Me.ComboPerso3.Padding = New System.Windows.Forms.Padding(1)
+        Me.ComboPerso3.Size = New System.Drawing.Size(384, 41)
+        Me.ComboPerso3.TabIndex = 43
+        Me.ComboPerso3.Texts = ""
+        '
+        'TxtPerso5
+        '
+        Me.TxtPerso5._BorderColor = System.Drawing.Color.PeachPuff
+        Me.TxtPerso5._BorderFocusColor = System.Drawing.Color.PeachPuff
+        Me.TxtPerso5._BorderSize = 2
+        Me.TxtPerso5._MaxLength = 13
+        Me.TxtPerso5._Multiline = False
+        Me.TxtPerso5._PasswordChar = False
+        Me.TxtPerso5._UnderlinedStyle = True
+        Me.TxtPerso5.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(85, Byte), Integer))
+        Me.TxtPerso5.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtPerso5.ForeColor = System.Drawing.Color.LightGray
+        Me.TxtPerso5.Location = New System.Drawing.Point(5, 33)
+        Me.TxtPerso5.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.TxtPerso5.Name = "TxtPerso5"
+        Me.TxtPerso5.Padding = New System.Windows.Forms.Padding(7)
+        Me.TxtPerso5.Size = New System.Drawing.Size(380, 37)
+        Me.TxtPerso5.TabIndex = 51
+        Me.TxtPerso5.Texts = ""
+        '
+        'ComboPerso1
+        '
+        Me.ComboPerso1._BorderColor = System.Drawing.Color.PeachPuff
+        Me.ComboPerso1._BorderSize = 1
+        Me.ComboPerso1._IconColor = System.Drawing.Color.PeachPuff
+        Me.ComboPerso1._ListBackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.ComboPerso1._ListTextColor = System.Drawing.Color.Silver
+        Me.ComboPerso1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.ComboPerso1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.ComboPerso1.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.ComboPerso1.DataBindings.Add(New System.Windows.Forms.Binding("SelectedItem", Me.TipoderecursoBindingSource, "Nombre", True))
+        Me.ComboPerso1.DataSource = Nothing
+        Me.ComboPerso1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown
+        Me.ComboPerso1.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboPerso1.ForeColor = System.Drawing.Color.Silver
+        Me.ComboPerso1.Location = New System.Drawing.Point(3, 31)
+        Me.ComboPerso1.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
+        Me.ComboPerso1.MaxLength = 100
+        Me.ComboPerso1.MinimumSize = New System.Drawing.Size(188, 41)
+        Me.ComboPerso1.Name = "ComboPerso1"
+        Me.ComboPerso1.Padding = New System.Windows.Forms.Padding(1)
+        Me.ComboPerso1.Size = New System.Drawing.Size(384, 41)
+        Me.ComboPerso1.TabIndex = 43
+        Me.ComboPerso1.Texts = ""
+        '
+        'CboFormato
+        '
+        Me.CboFormato._BorderColor = System.Drawing.Color.PeachPuff
+        Me.CboFormato._BorderSize = 1
+        Me.CboFormato._IconColor = System.Drawing.Color.PeachPuff
+        Me.CboFormato._ListBackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.CboFormato._ListTextColor = System.Drawing.Color.Silver
+        Me.CboFormato.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.CboFormato.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.CboFormato.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.CboFormato.DataBindings.Add(New System.Windows.Forms.Binding("SelectedItem", Me.TipoderecursoBindingSource, "Nombre", True))
+        Me.CboFormato.DataSource = Nothing
+        Me.CboFormato.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CboFormato.Font = New System.Drawing.Font("Montserrat", 12.0!)
+        Me.CboFormato.ForeColor = System.Drawing.Color.Silver
+        Me.CboFormato.Items.AddRange(New Object() {"Físico", "Digital", "Físico y Digital"})
+        Me.CboFormato.Location = New System.Drawing.Point(3, 31)
+        Me.CboFormato.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
+        Me.CboFormato.MaxLength = 100
+        Me.CboFormato.MinimumSize = New System.Drawing.Size(188, 41)
+        Me.CboFormato.Name = "CboFormato"
+        Me.CboFormato.Padding = New System.Windows.Forms.Padding(1)
+        Me.CboFormato.Size = New System.Drawing.Size(384, 41)
+        Me.CboFormato.TabIndex = 43
+        Me.CboFormato.Texts = ""
+        '
+        'CboTipoRecurso
+        '
+        Me.CboTipoRecurso._BorderColor = System.Drawing.Color.PeachPuff
+        Me.CboTipoRecurso._BorderSize = 1
+        Me.CboTipoRecurso._IconColor = System.Drawing.Color.PeachPuff
+        Me.CboTipoRecurso._ListBackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.CboTipoRecurso._ListTextColor = System.Drawing.Color.Silver
+        Me.CboTipoRecurso.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.CboTipoRecurso.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.CboTipoRecurso.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.CboTipoRecurso.DataBindings.Add(New System.Windows.Forms.Binding("SelectedItem", Me.TipoderecursoBindingSource, "Nombre", True))
+        Me.CboTipoRecurso.DataSource = Nothing
+        Me.CboTipoRecurso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown
+        Me.CboTipoRecurso.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CboTipoRecurso.ForeColor = System.Drawing.Color.Silver
+        Me.CboTipoRecurso.Location = New System.Drawing.Point(3, 31)
+        Me.CboTipoRecurso.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
+        Me.CboTipoRecurso.MaxLength = 100
+        Me.CboTipoRecurso.MinimumSize = New System.Drawing.Size(188, 41)
+        Me.CboTipoRecurso.Name = "CboTipoRecurso"
+        Me.CboTipoRecurso.Padding = New System.Windows.Forms.Padding(1)
+        Me.CboTipoRecurso.Size = New System.Drawing.Size(384, 41)
+        Me.CboTipoRecurso.TabIndex = 43
+        Me.CboTipoRecurso.Texts = ""
+        '
+        'TxtPerso4
+        '
+        Me.TxtPerso4._BorderColor = System.Drawing.Color.PeachPuff
+        Me.TxtPerso4._BorderFocusColor = System.Drawing.Color.PeachPuff
+        Me.TxtPerso4._BorderSize = 2
+        Me.TxtPerso4._MaxLength = 13
+        Me.TxtPerso4._Multiline = False
+        Me.TxtPerso4._PasswordChar = False
+        Me.TxtPerso4._UnderlinedStyle = True
+        Me.TxtPerso4.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(85, Byte), Integer))
+        Me.TxtPerso4.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtPerso4.ForeColor = System.Drawing.Color.LightGray
+        Me.TxtPerso4.Location = New System.Drawing.Point(5, 33)
+        Me.TxtPerso4.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.TxtPerso4.Name = "TxtPerso4"
+        Me.TxtPerso4.Padding = New System.Windows.Forms.Padding(7)
+        Me.TxtPerso4.Size = New System.Drawing.Size(380, 37)
+        Me.TxtPerso4.TabIndex = 51
+        Me.TxtPerso4.Texts = ""
         '
         'TxtPerso3
         '
@@ -386,7 +1251,7 @@ Partial Class FrmCrearRegistros
         Me.TxtPerso2.DataBindings.Add(New System.Windows.Forms.Binding("Tag", Me.AutorBindingSource, "Nombres", True))
         Me.TxtPerso2.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtPerso2.ForeColor = System.Drawing.Color.LightGray
-        Me.TxtPerso2.Location = New System.Drawing.Point(2, 50)
+        Me.TxtPerso2.Location = New System.Drawing.Point(5, 50)
         Me.TxtPerso2.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
         Me.TxtPerso2.Name = "TxtPerso2"
         Me.TxtPerso2.Padding = New System.Windows.Forms.Padding(7)
@@ -406,62 +1271,13 @@ Partial Class FrmCrearRegistros
         Me.TxtPerso1.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(85, Byte), Integer))
         Me.TxtPerso1.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtPerso1.ForeColor = System.Drawing.Color.LightGray
-        Me.TxtPerso1.Location = New System.Drawing.Point(3, 31)
+        Me.TxtPerso1.Location = New System.Drawing.Point(7, 30)
         Me.TxtPerso1.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
         Me.TxtPerso1.Name = "TxtPerso1"
         Me.TxtPerso1.Padding = New System.Windows.Forms.Padding(7)
-        Me.TxtPerso1.Size = New System.Drawing.Size(385, 37)
+        Me.TxtPerso1.Size = New System.Drawing.Size(378, 37)
         Me.TxtPerso1.TabIndex = 48
         Me.TxtPerso1.Texts = ""
-        '
-        'CboFormato
-        '
-        Me.CboFormato._BorderColor = System.Drawing.Color.PeachPuff
-        Me.CboFormato._BorderSize = 1
-        Me.CboFormato._IconColor = System.Drawing.Color.PeachPuff
-        Me.CboFormato._ListBackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.CboFormato._ListTextColor = System.Drawing.Color.Silver
-        Me.CboFormato.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.CboFormato.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.CboFormato.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.CboFormato.DataBindings.Add(New System.Windows.Forms.Binding("SelectedItem", Me.TipoderecursoBindingSource, "Nombre", True))
-        Me.CboFormato.DataSource = Nothing
-        Me.CboFormato.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.CboFormato.Font = New System.Drawing.Font("Montserrat", 12.0!)
-        Me.CboFormato.ForeColor = System.Drawing.Color.Silver
-        Me.CboFormato.Items.AddRange(New Object() {"Físico", "Digital"})
-        Me.CboFormato.Location = New System.Drawing.Point(3, 31)
-        Me.CboFormato.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
-        Me.CboFormato.MinimumSize = New System.Drawing.Size(188, 41)
-        Me.CboFormato.Name = "CboFormato"
-        Me.CboFormato.Padding = New System.Windows.Forms.Padding(1)
-        Me.CboFormato.Size = New System.Drawing.Size(384, 41)
-        Me.CboFormato.TabIndex = 43
-        Me.CboFormato.Texts = ""
-        '
-        'CboTipoRecurso
-        '
-        Me.CboTipoRecurso._BorderColor = System.Drawing.Color.PeachPuff
-        Me.CboTipoRecurso._BorderSize = 1
-        Me.CboTipoRecurso._IconColor = System.Drawing.Color.PeachPuff
-        Me.CboTipoRecurso._ListBackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.CboTipoRecurso._ListTextColor = System.Drawing.Color.Silver
-        Me.CboTipoRecurso.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.CboTipoRecurso.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.CboTipoRecurso.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.CboTipoRecurso.DataBindings.Add(New System.Windows.Forms.Binding("SelectedItem", Me.TipoderecursoBindingSource, "Nombre", True))
-        Me.CboTipoRecurso.DataSource = Nothing
-        Me.CboTipoRecurso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown
-        Me.CboTipoRecurso.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CboTipoRecurso.ForeColor = System.Drawing.Color.Silver
-        Me.CboTipoRecurso.Location = New System.Drawing.Point(3, 31)
-        Me.CboTipoRecurso.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
-        Me.CboTipoRecurso.MinimumSize = New System.Drawing.Size(188, 41)
-        Me.CboTipoRecurso.Name = "CboTipoRecurso"
-        Me.CboTipoRecurso.Padding = New System.Windows.Forms.Padding(1)
-        Me.CboTipoRecurso.Size = New System.Drawing.Size(384, 41)
-        Me.CboTipoRecurso.TabIndex = 43
-        Me.CboTipoRecurso.Texts = ""
         '
         'BtnVolver
         '
@@ -481,65 +1297,6 @@ Partial Class FrmCrearRegistros
         Me.BtnVolver.TextColor = System.Drawing.Color.White
         Me.BtnVolver.UseVisualStyleBackColor = False
         '
-        'TxtPerso4
-        '
-        Me.TxtPerso4._BorderColor = System.Drawing.Color.PeachPuff
-        Me.TxtPerso4._BorderFocusColor = System.Drawing.Color.PeachPuff
-        Me.TxtPerso4._BorderSize = 2
-        Me.TxtPerso4._MaxLength = 13
-        Me.TxtPerso4._Multiline = False
-        Me.TxtPerso4._PasswordChar = False
-        Me.TxtPerso4._UnderlinedStyle = True
-        Me.TxtPerso4.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(85, Byte), Integer))
-        Me.TxtPerso4.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtPerso4.ForeColor = System.Drawing.Color.LightGray
-        Me.TxtPerso4.Location = New System.Drawing.Point(5, 33)
-        Me.TxtPerso4.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
-        Me.TxtPerso4.Name = "TxtPerso4"
-        Me.TxtPerso4.Padding = New System.Windows.Forms.Padding(7)
-        Me.TxtPerso4.Size = New System.Drawing.Size(385, 37)
-        Me.TxtPerso4.TabIndex = 51
-        Me.TxtPerso4.Texts = ""
-        '
-        'PnlAutor
-        '
-        Me.PnlAutor.Controls.Add(Me.Panel9)
-        Me.PnlAutor.Controls.Add(Me.Label3)
-        Me.PnlAutor.Controls.Add(Me.TxtPerso3)
-        Me.PnlAutor.Controls.Add(Me.Label4)
-        Me.PnlAutor.Controls.Add(Me.TxtPerso2)
-        Me.PnlAutor.Location = New System.Drawing.Point(70, 186)
-        Me.PnlAutor.Name = "PnlAutor"
-        Me.PnlAutor.Size = New System.Drawing.Size(390, 96)
-        Me.PnlAutor.TabIndex = 52
-        '
-        'Panel1
-        '
-        Me.Panel1.Controls.Add(Me.Panel10)
-        Me.Panel1.Controls.Add(Me.TxtPerso4)
-        Me.Panel1.Location = New System.Drawing.Point(500, 95)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(390, 77)
-        Me.Panel1.TabIndex = 53
-        '
-        'Panel2
-        '
-        Me.Panel2.Controls.Add(Me.Panel3)
-        Me.Panel2.Controls.Add(Me.CboTipoRecurso)
-        Me.Panel2.Location = New System.Drawing.Point(500, 186)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(390, 77)
-        Me.Panel2.TabIndex = 54
-        '
-        'Panel4
-        '
-        Me.Panel4.Controls.Add(Me.Panel12)
-        Me.Panel4.Controls.Add(Me.CboFormato)
-        Me.Panel4.Location = New System.Drawing.Point(500, 276)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(390, 77)
-        Me.Panel4.TabIndex = 55
-        '
         'FrmCrearRegistros
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -547,15 +1304,30 @@ Partial Class FrmCrearRegistros
         Me.AutoScroll = True
         Me.AutoScrollMinSize = New System.Drawing.Size(910, 472)
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(944, 472)
-        Me.Controls.Add(Me.Panel4)
-        Me.Controls.Add(Me.Panel2)
-        Me.Controls.Add(Me.Panel1)
+        Me.ClientSize = New System.Drawing.Size(910, 472)
+        Me.Controls.Add(Me.PnlPagFin)
+        Me.Controls.Add(Me.PnlEstadoFin)
+        Me.Controls.Add(Me.PnlEstado)
+        Me.Controls.Add(Me.BtnGuardar)
+        Me.Controls.Add(Me.PnlPaginas)
+        Me.Controls.Add(Me.PnlEdiado)
+        Me.Controls.Add(Me.PnlEdicion)
+        Me.Controls.Add(Me.PnlEdias)
+        Me.Controls.Add(Me.PnlGenecion)
+        Me.Controls.Add(Me.PnlEditorial)
+        Me.Controls.Add(Me.PnlFechal)
+        Me.Controls.Add(Me.PnlForcion)
+        Me.Controls.Add(Me.PnlAutero)
+        Me.Controls.Add(Me.PnlFecha)
+        Me.Controls.Add(Me.PnlGenero)
+        Me.Controls.Add(Me.PnlFormato)
+        Me.Controls.Add(Me.PnlTipoRecurso)
+        Me.Controls.Add(Me.PnlISBN)
         Me.Controls.Add(Me.PnlAutor)
         Me.Controls.Add(Me.PnlTitulo)
-        Me.Controls.Add(Me.Panel11)
-        Me.Controls.Add(Me.Panel5)
-        Me.Controls.Add(Me.PnlProductos)
+        Me.Controls.Add(Me.PnlTipoto)
+        Me.Controls.Add(Me.PnlISso)
+        Me.Controls.Add(Me.PnlTitAutor)
         Me.Controls.Add(Me.BtnVolver)
         Me.Controls.Add(Me.LblTitulo)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -567,24 +1339,49 @@ Partial Class FrmCrearRegistros
         CType(Me.AutorBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BdbibliotecaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TipoderecursoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel9.ResumeLayout(False)
-        Me.Panel9.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel10.ResumeLayout(False)
-        Me.Panel10.PerformLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel3.ResumeLayout(False)
-        Me.Panel3.PerformLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel12.ResumeLayout(False)
-        Me.Panel12.PerformLayout()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PnlAutorHeader.ResumeLayout(False)
+        Me.PnlAutorHeader.PerformLayout()
+        CType(Me.PcbAutorHeader, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PnlISBNHeader.ResumeLayout(False)
+        Me.PnlISBNHeader.PerformLayout()
+        CType(Me.PcbISBNHeader, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PnlTipoHeader.ResumeLayout(False)
+        Me.PnlTipoHeader.PerformLayout()
+        CType(Me.PcbTipoHeader, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PnlFormatoHeader.ResumeLayout(False)
+        Me.PnlFormatoHeader.PerformLayout()
+        CType(Me.PcbFormatoHeader, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PnlTitulo.ResumeLayout(False)
         Me.PnlAutor.ResumeLayout(False)
         Me.PnlAutor.PerformLayout()
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel4.ResumeLayout(False)
+        Me.PnlISBN.ResumeLayout(False)
+        Me.PnlTipoRecurso.ResumeLayout(False)
+        Me.PnlFormato.ResumeLayout(False)
+        Me.PnlGenero.ResumeLayout(False)
+        Me.PnlGeneroHeader.ResumeLayout(False)
+        Me.PnlGeneroHeader.PerformLayout()
+        CType(Me.PcbGeneroHeader, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PnlFecha.ResumeLayout(False)
+        Me.PnlFechaHeader.ResumeLayout(False)
+        Me.PnlFechaHeader.PerformLayout()
+        CType(Me.PcbFechaHeader, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PnlEditorial.ResumeLayout(False)
+        Me.PnlEditorialHeader.ResumeLayout(False)
+        Me.PnlEditorialHeader.PerformLayout()
+        CType(Me.PcbEditorialHeader, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PnlEdicion.ResumeLayout(False)
+        Me.PnlEdicion.PerformLayout()
+        Me.PnlEdicionHeader.ResumeLayout(False)
+        Me.PnlEdicionHeader.PerformLayout()
+        CType(Me.PcbEdicionHeader, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PnlPaginas.ResumeLayout(False)
+        Me.PnlPagHeader.ResumeLayout(False)
+        Me.PnlPagHeader.PerformLayout()
+        CType(Me.PcbPagHeader, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PnlEstado.ResumeLayout(False)
+        Me.PnlEstadoHeader.ResumeLayout(False)
+        Me.PnlEstadoHeader.PerformLayout()
+        CType(Me.PcbEstadoHeader, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -603,28 +1400,92 @@ Partial Class FrmCrearRegistros
     Friend WithEvents PnlTituloHeader As System.Windows.Forms.Panel
     Friend WithEvents lblTituloLibro As System.Windows.Forms.Label
     Friend WithEvents PcbTituloHeader As System.Windows.Forms.PictureBox
-    Friend WithEvents PnlProductos As System.Windows.Forms.Panel
-    Friend WithEvents Panel9 As System.Windows.Forms.Panel
-    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Panel10 As System.Windows.Forms.Panel
-    Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Panel3 As System.Windows.Forms.Panel
-    Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
-    Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents Panel5 As System.Windows.Forms.Panel
-    Friend WithEvents Panel11 As System.Windows.Forms.Panel
-    Friend WithEvents Panel12 As System.Windows.Forms.Panel
-    Friend WithEvents PictureBox4 As System.Windows.Forms.PictureBox
-    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents PnlTitAutor As System.Windows.Forms.Panel
+    Friend WithEvents PnlAutorHeader As System.Windows.Forms.Panel
+    Friend WithEvents PcbAutorHeader As System.Windows.Forms.PictureBox
+    Friend WithEvents lblAutor As System.Windows.Forms.Label
+    Friend WithEvents PnlISBNHeader As System.Windows.Forms.Panel
+    Friend WithEvents PcbISBNHeader As System.Windows.Forms.PictureBox
+    Friend WithEvents lblISBN As System.Windows.Forms.Label
+    Friend WithEvents PnlTipoHeader As System.Windows.Forms.Panel
+    Friend WithEvents PcbTipoHeader As System.Windows.Forms.PictureBox
+    Friend WithEvents lblTipoRecurso As System.Windows.Forms.Label
+    Friend WithEvents PnlISso As System.Windows.Forms.Panel
+    Friend WithEvents PnlTipoto As System.Windows.Forms.Panel
+    Friend WithEvents PnlFormatoHeader As System.Windows.Forms.Panel
+    Friend WithEvents PcbFormatoHeader As System.Windows.Forms.PictureBox
+    Friend WithEvents lblFormato As System.Windows.Forms.Label
     Friend WithEvents PnlTitulo As System.Windows.Forms.Panel
     Friend WithEvents TxtPerso1 As Biblioteca.TxtPerso
     Friend WithEvents TxtPerso2 As Biblioteca.TxtPerso
     Friend WithEvents TxtPerso3 As Biblioteca.TxtPerso
     Friend WithEvents TxtPerso4 As Biblioteca.TxtPerso
     Friend WithEvents PnlAutor As System.Windows.Forms.Panel
-    Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents Panel2 As System.Windows.Forms.Panel
-    Friend WithEvents Panel4 As System.Windows.Forms.Panel
+    Friend WithEvents PnlISBN As System.Windows.Forms.Panel
+    Friend WithEvents PnlTipoRecurso As System.Windows.Forms.Panel
+    Friend WithEvents PnlFormato As System.Windows.Forms.Panel
+    Friend WithEvents PnlGenero As System.Windows.Forms.Panel
+    Friend WithEvents PnlGeneroHeader As System.Windows.Forms.Panel
+    Friend WithEvents PcbGeneroHeader As System.Windows.Forms.PictureBox
+    Friend WithEvents lblGenero As System.Windows.Forms.Label
+    Friend WithEvents ComboPerso1 As Biblioteca.ComboPerso
+    Friend WithEvents PnlFecha As System.Windows.Forms.Panel
+    Friend WithEvents PnlFechaHeader As System.Windows.Forms.Panel
+    Friend WithEvents PcbFechaHeader As System.Windows.Forms.PictureBox
+    Friend WithEvents lblFecha As System.Windows.Forms.Label
+    Friend WithEvents TxtPerso5 As Biblioteca.TxtPerso
+    Friend WithEvents PnlAutero As System.Windows.Forms.Panel
+    Friend WithEvents PnlForcion As System.Windows.Forms.Panel
+    Friend WithEvents PnlFechal As System.Windows.Forms.Panel
+    Friend WithEvents PnlEditorial As System.Windows.Forms.Panel
+    Friend WithEvents PnlEditorialHeader As System.Windows.Forms.Panel
+    Friend WithEvents PcbEditorialHeader As System.Windows.Forms.PictureBox
+    Friend WithEvents lblEditorial As System.Windows.Forms.Label
+    Friend WithEvents ComboPerso3 As Biblioteca.ComboPerso
+    Friend WithEvents PnlGenecion As System.Windows.Forms.Panel
+    Friend WithEvents PnlEdias As System.Windows.Forms.Panel
+    Friend WithEvents PnlEdicion As System.Windows.Forms.Panel
+    Friend WithEvents PnlEdicionHeader As System.Windows.Forms.Panel
+    Friend WithEvents PcbEdicionHeader As System.Windows.Forms.PictureBox
+    Friend WithEvents lblEdicion As System.Windows.Forms.Label
+    Friend WithEvents Label12 As System.Windows.Forms.Label
+    Friend WithEvents TxtPerso6 As Biblioteca.TxtPerso
+    Friend WithEvents Label13 As System.Windows.Forms.Label
+    Friend WithEvents TxtPerso7 As Biblioteca.TxtPerso
+    Friend WithEvents PnlEdiado As System.Windows.Forms.Panel
+    Friend WithEvents PnlPaginas As System.Windows.Forms.Panel
+    Friend WithEvents PnlPagHeader As System.Windows.Forms.Panel
+    Friend WithEvents PcbPagHeader As System.Windows.Forms.PictureBox
+    Friend WithEvents lblPag As System.Windows.Forms.Label
+    Friend WithEvents TxtPerso8 As Biblioteca.TxtPerso
+    Friend WithEvents BtnGuardar As Biblioteca.ButtonRadio
+    Friend WithEvents PnlEstado As System.Windows.Forms.Panel
+    Friend WithEvents PnlEstadoHeader As System.Windows.Forms.Panel
+    Friend WithEvents PcbEstadoHeader As System.Windows.Forms.PictureBox
+    Friend WithEvents lblEstado As System.Windows.Forms.Label
+    Friend WithEvents ComboPerso4 As Biblioteca.ComboPerso
+    Friend WithEvents TmrTitulo As System.Windows.Forms.Timer
+    Friend WithEvents PnlEstadoFin As System.Windows.Forms.Panel
+    Friend WithEvents PnlPagFin As System.Windows.Forms.Panel
+    Friend WithEvents PnlTituloLinea As System.Windows.Forms.Panel
+    Friend WithEvents PnlAutorLinea As System.Windows.Forms.Panel
+    Friend WithEvents PnlISHeader As System.Windows.Forms.Panel
+    Friend WithEvents PnlTipoLinea As System.Windows.Forms.Panel
+    Friend WithEvents PnlFormatoLinea As System.Windows.Forms.Panel
+    Friend WithEvents PnlGeneLinea As System.Windows.Forms.Panel
+    Friend WithEvents PnlFechaLinea As System.Windows.Forms.Panel
+    Friend WithEvents PnlEditLinea As System.Windows.Forms.Panel
+    Friend WithEvents PnlEdicLinea As System.Windows.Forms.Panel
+    Friend WithEvents PnlPagLinea As System.Windows.Forms.Panel
+    Friend WithEvents PnlEstLinea As System.Windows.Forms.Panel
+    Friend WithEvents TmrAutor As System.Windows.Forms.Timer
+    Friend WithEvents TmrGenero As System.Windows.Forms.Timer
+    Friend WithEvents TmrEdicion As System.Windows.Forms.Timer
+    Friend WithEvents TmrEstado As System.Windows.Forms.Timer
+    Friend WithEvents TmrISBN As System.Windows.Forms.Timer
+    Friend WithEvents TmrTipo As System.Windows.Forms.Timer
+    Friend WithEvents TmrFormato As System.Windows.Forms.Timer
+    Friend WithEvents TmrFecha As System.Windows.Forms.Timer
+    Friend WithEvents TmrEditorial As System.Windows.Forms.Timer
+    Friend WithEvents TmrPag As System.Windows.Forms.Timer
 End Class

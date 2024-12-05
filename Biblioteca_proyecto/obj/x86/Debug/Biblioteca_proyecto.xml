@@ -6,7 +6,14 @@ Biblioteca_proyecto
 </name>
 </assembly>
 <members>
-<member name="T:Biblioteca.bdbibliotecaDataSet.autorDataTable">
+<member name="M:Biblioteca.ModuloAcordeon.MoverControlesAlineados(System.Windows.Forms.Panel,System.Windows.Forms.Control,System.Int32)">
+	<summary>
+ Desplaza hacia abajo los controles que están debajo y alineados en el eje X con un panel dado.
+ </summary>
+	<param name="targetPanel">Panel de referencia</param>
+	<param name="parentContainer">Contenedor donde buscar los controles (por ejemplo, Me para el formulario)</param>
+	<param name="offset">Cantidad de desplazamiento en píxeles</param>
+</member><member name="T:Biblioteca.bdbibliotecaDataSet.autorDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>

@@ -14,6 +14,8 @@ Public Class ComboPerso
     Private listTextColor As Color = Color.DimGray
     Private borderColor As Color = Color.MediumSlateBlue
     Private borderSize As Integer = 1
+    Private _maxLength As Integer = 0
+
 
     ' Items
     Private cmbList As ComboBox
@@ -73,6 +75,9 @@ Public Class ComboPerso
         Me.Padding = New Padding(borderSize) ' Border Size
         Me.Font = New Font(Me.Font.Name, 10.0F)
         MyBase.BackColor = borderColor ' Border Color
+
+        _maxLength = 32767
+        cmbList.MaxLength = _maxLength
 
         Me.ResumeLayout()
         AdjustComboBoxDimensions()
@@ -144,6 +149,16 @@ Public Class ComboPerso
     ' Properties
 
     ' Appearance
+    <Category("RJ Code - Appearance")>
+    Public Property MaxLength As Integer
+        Get
+            Return _maxLength
+        End Get
+        Set(value As Integer)
+            _maxLength = value
+            cmbList.MaxLength = value
+        End Set
+    End Property
 
     <Category("RJ Code - Appearance")>
     Public Shadows Property BackColor As Color
