@@ -414,4 +414,10 @@ Public Class FrmCrearCuenta
         BtnCrearCuenta.FlatAppearance.BorderColor = Color.LightGray
         BtnCrearCuenta.BackColor = Color.FromArgb(20, 57, 80)
     End Sub
+
+    Private Sub TxtConfPass_KeyDown(sender As Object, e As System.Windows.Forms.KeyEventArgs) Handles TxtConfPass.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            BtnCrearCuenta_Click(sender, e)
+        End If
+    End Sub
 End Class

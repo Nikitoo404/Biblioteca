@@ -180,7 +180,7 @@ Partial Class FrmCrearCuenta
         Me.TxtUser.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtUser.ForeColor = System.Drawing.Color.Silver
         Me.TxtUser.Location = New System.Drawing.Point(41, 11)
-        Me.TxtUser.MaxLength = 11
+        Me.TxtUser.MaxLength = 100
         Me.TxtUser.Name = "TxtUser"
         Me.TxtUser.Size = New System.Drawing.Size(360, 20)
         Me.TxtUser.TabIndex = 1
@@ -203,7 +203,7 @@ Partial Class FrmCrearCuenta
         Me.TxtPass.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtPass.ForeColor = System.Drawing.Color.Silver
         Me.TxtPass.Location = New System.Drawing.Point(41, 11)
-        Me.TxtPass.MaxLength = 36
+        Me.TxtPass.MaxLength = 100
         Me.TxtPass.Name = "TxtPass"
         Me.TxtPass.Size = New System.Drawing.Size(360, 20)
         Me.TxtPass.TabIndex = 2
@@ -236,7 +236,7 @@ Partial Class FrmCrearCuenta
         Me.TxtConfPass.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtConfPass.ForeColor = System.Drawing.Color.Silver
         Me.TxtConfPass.Location = New System.Drawing.Point(41, 11)
-        Me.TxtConfPass.MaxLength = 36
+        Me.TxtConfPass.MaxLength = 100
         Me.TxtConfPass.Name = "TxtConfPass"
         Me.TxtConfPass.Size = New System.Drawing.Size(360, 20)
         Me.TxtConfPass.TabIndex = 2
@@ -390,11 +390,13 @@ Partial Class FrmCrearCuenta
         Me.CboTipoCorreo._ListTextColor = System.Drawing.Color.Silver
         Me.CboTipoCorreo.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.CboTipoCorreo.DataSource = Nothing
-        Me.CboTipoCorreo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown
+        Me.CboTipoCorreo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CboTipoCorreo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
         Me.CboTipoCorreo.ForeColor = System.Drawing.Color.Silver
         Me.CboTipoCorreo.Items.AddRange(New Object() {"@gmail.com", "@outlook.com", "@hotmail.com", "@live.com", "@yahoo.com"})
         Me.CboTipoCorreo.Location = New System.Drawing.Point(327, 115)
+        Me.CboTipoCorreo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CboTipoCorreo.MaxLength = 32767
         Me.CboTipoCorreo.MinimumSize = New System.Drawing.Size(150, 30)
         Me.CboTipoCorreo.Name = "CboTipoCorreo"
         Me.CboTipoCorreo.Padding = New System.Windows.Forms.Padding(1)

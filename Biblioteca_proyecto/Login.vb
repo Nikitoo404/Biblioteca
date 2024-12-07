@@ -162,9 +162,6 @@ Public Class FrmLogin
                                            MessageBoxButtons.OK,
                                            MessageBoxIcon.Error)
         End If
-
-
-
     End Sub
 
     Private Sub FrmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -226,5 +223,11 @@ Public Class FrmLogin
 
     Private Sub LblCrear_MouseUp(sender As Object, e As System.Windows.Forms.MouseEventArgs) Handles LblCrear.MouseUp
         LblCrear.ForeColor = Color.LightGray
+    End Sub
+
+    Private Sub TxtPass_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles TxtPass.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            BtnLogin_Click(sender, e)
+        End If
     End Sub
 End Class

@@ -65,7 +65,7 @@ Partial Class FrmLogin
         Me.PnlBarra.Location = New System.Drawing.Point(0, 0)
         Me.PnlBarra.Name = "PnlBarra"
         Me.PnlBarra.Size = New System.Drawing.Size(575, 40)
-        Me.PnlBarra.TabIndex = 9
+        Me.PnlBarra.TabIndex = 5
         '
         'LblBienvenida
         '
@@ -75,7 +75,7 @@ Partial Class FrmLogin
         Me.LblBienvenida.Location = New System.Drawing.Point(12, 9)
         Me.LblBienvenida.Name = "LblBienvenida"
         Me.LblBienvenida.Size = New System.Drawing.Size(372, 22)
-        Me.LblBienvenida.TabIndex = 11
+        Me.LblBienvenida.TabIndex = 0
         Me.LblBienvenida.Text = "Biblioteca Municipal ""Maria E. Walsh"" - Acceso"
         '
         'BtnMin
@@ -91,7 +91,7 @@ Partial Class FrmLogin
         Me.BtnMin.Location = New System.Drawing.Point(495, 0)
         Me.BtnMin.Name = "BtnMin"
         Me.BtnMin.Size = New System.Drawing.Size(40, 40)
-        Me.BtnMin.TabIndex = 6
+        Me.BtnMin.TabIndex = 1
         Me.BtnMin.UseVisualStyleBackColor = True
         '
         'BtnCerrar
@@ -108,7 +108,7 @@ Partial Class FrmLogin
         Me.BtnCerrar.Location = New System.Drawing.Point(535, 0)
         Me.BtnCerrar.Name = "BtnCerrar"
         Me.BtnCerrar.Size = New System.Drawing.Size(40, 40)
-        Me.BtnCerrar.TabIndex = 7
+        Me.BtnCerrar.TabIndex = 2
         Me.BtnCerrar.UseVisualStyleBackColor = True
         '
         'TxtUser
@@ -118,9 +118,10 @@ Partial Class FrmLogin
         Me.TxtUser.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtUser.ForeColor = System.Drawing.Color.Silver
         Me.TxtUser.Location = New System.Drawing.Point(41, 11)
+        Me.TxtUser.MaxLength = 100
         Me.TxtUser.Name = "TxtUser"
         Me.TxtUser.Size = New System.Drawing.Size(360, 20)
-        Me.TxtUser.TabIndex = 1
+        Me.TxtUser.TabIndex = 0
         Me.TxtUser.Text = "Usuario o correo electrónico"
         '
         'PnlUser
@@ -131,7 +132,7 @@ Partial Class FrmLogin
         Me.PnlUser.Location = New System.Drawing.Point(23, 64)
         Me.PnlUser.Name = "PnlUser"
         Me.PnlUser.Size = New System.Drawing.Size(408, 42)
-        Me.PnlUser.TabIndex = 26
+        Me.PnlUser.TabIndex = 0
         '
         'PictureBox2
         '
@@ -151,7 +152,7 @@ Partial Class FrmLogin
         Me.PnlPass.Location = New System.Drawing.Point(23, 136)
         Me.PnlPass.Name = "PnlPass"
         Me.PnlPass.Size = New System.Drawing.Size(408, 42)
-        Me.PnlPass.TabIndex = 27
+        Me.PnlPass.TabIndex = 1
         '
         'TxtPass
         '
@@ -160,9 +161,10 @@ Partial Class FrmLogin
         Me.TxtPass.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtPass.ForeColor = System.Drawing.Color.Silver
         Me.TxtPass.Location = New System.Drawing.Point(41, 11)
+        Me.TxtPass.MaxLength = 100
         Me.TxtPass.Name = "TxtPass"
         Me.TxtPass.Size = New System.Drawing.Size(360, 20)
-        Me.TxtPass.TabIndex = 2
+        Me.TxtPass.TabIndex = 1
         Me.TxtPass.Text = "Contraseña"
         '
         'PcbCandados
@@ -184,7 +186,7 @@ Partial Class FrmLogin
         Me.LblOlvid.Location = New System.Drawing.Point(101, 270)
         Me.LblOlvid.Name = "LblOlvid"
         Me.LblOlvid.Size = New System.Drawing.Size(172, 18)
-        Me.LblOlvid.TabIndex = 24
+        Me.LblOlvid.TabIndex = 3
         Me.LblOlvid.Text = "¿Olvidaste tu contraseña?"
         '
         'BtnLogin
@@ -199,7 +201,7 @@ Partial Class FrmLogin
         Me.BtnLogin.Location = New System.Drawing.Point(76, 222)
         Me.BtnLogin.Name = "BtnLogin"
         Me.BtnLogin.Size = New System.Drawing.Size(408, 40)
-        Me.BtnLogin.TabIndex = 23
+        Me.BtnLogin.TabIndex = 2
         Me.BtnLogin.Text = "ACCEDER"
         Me.BtnLogin.UseVisualStyleBackColor = False
         '
@@ -213,7 +215,7 @@ Partial Class FrmLogin
         Me.LblDerechos.Location = New System.Drawing.Point(292, 13)
         Me.LblDerechos.Name = "LblDerechos"
         Me.LblDerechos.Size = New System.Drawing.Size(261, 18)
-        Me.LblDerechos.TabIndex = 12
+        Me.LblDerechos.TabIndex = 10
         Me.LblDerechos.Text = "© 2024 - Todos los derechos reservados."
         '
         'PnlBarraBaja
@@ -224,7 +226,7 @@ Partial Class FrmLogin
         Me.PnlBarraBaja.Location = New System.Drawing.Point(0, 309)
         Me.PnlBarraBaja.Name = "PnlBarraBaja"
         Me.PnlBarraBaja.Size = New System.Drawing.Size(575, 40)
-        Me.PnlBarraBaja.TabIndex = 25
+        Me.PnlBarraBaja.TabIndex = 9
         '
         'LblCrear
         '
@@ -235,7 +237,7 @@ Partial Class FrmLogin
         Me.LblCrear.Location = New System.Drawing.Point(297, 270)
         Me.LblCrear.Name = "LblCrear"
         Me.LblCrear.Size = New System.Drawing.Size(92, 18)
-        Me.LblCrear.TabIndex = 28
+        Me.LblCrear.TabIndex = 4
         Me.LblCrear.Text = "Crear cuenta"
         '
         'Label2
@@ -247,7 +249,7 @@ Partial Class FrmLogin
         Me.Label2.Location = New System.Drawing.Point(279, 270)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(12, 18)
-        Me.Label2.TabIndex = 29
+        Me.Label2.TabIndex = 2
         Me.Label2.Text = "|"
         '
         'BdbibliotecaDataSet

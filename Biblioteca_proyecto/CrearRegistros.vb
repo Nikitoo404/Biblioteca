@@ -39,6 +39,13 @@ Public Class FrmCrearRegistros
         Me.TipoderecursoTableAdapter.Fill(Me.BdbibliotecaDataSet.tipoderecurso)
         'TODO: esta línea de código carga datos en la tabla 'BdbibliotecaDataSet.autor' Puede moverla o quitarla según sea necesario.
         Me.AutorTableAdapter.Fill(Me.BdbibliotecaDataSet.autor)
+        'TODO: esta línea de código carga datos en la tabla 'BdbibliotecaDataSet.autor' Puede moverla o quitarla según sea necesario.
+        Me.RecursosTableAdapter.Fill(Me.BdbibliotecaDataSet.recursos)
+        'TODO: esta línea de código carga datos en la tabla 'BdbibliotecaDataSet.autor' Puede moverla o quitarla según sea necesario.
+        Me.FormatoTableAdapter.Fill(Me.BdbibliotecaDataSet.formato)
+        'TODO: esta línea de código carga datos en la tabla 'BdbibliotecaDataSet.autor' Puede moverla o quitarla según sea necesario.
+        Me.EstadoTableAdapter.Fill(Me.BdbibliotecaDataSet.estado)
+
         DtpFecha.MaxDate = Date.Now
         ' Guardar las posiciones originales de los paneles al cargar el formulario
         Dim paneles As Control() = {PnlTitulo, PnlTitAutor, PnlAutor, PnlAutero, PnlGenero, PnlGenecion,
@@ -49,6 +56,7 @@ Public Class FrmCrearRegistros
         For Each panel As Control In paneles
             posicionesOriginales(panel) = panel.Location
         Next
+        BtnFecha.Checked = True
     End Sub
 
     Private Sub PnlTituloHeader_Click(sender As System.Object, e As System.EventArgs) Handles PnlTituloHeader.Click, lblTituloLibro.Click, PcbTituloHeader.Click, PnlTituloLinea.Click
@@ -101,7 +109,7 @@ Public Class FrmCrearRegistros
     End Sub
 
     Private Sub PnlFechaHeader_Click(sender As System.Object, e As System.EventArgs) Handles PnlFechaHeader.Click, PnlFechaLinea.Click, PcbFechaHeader.Click, lblFecha.Click
-        ModuloAcordeon.StartPanelAccordion(PnlFecha, Me, 22, 78, PcbFechaHeader)
+        ModuloAcordeon.StartPanelAccordion(PnlFecha, Me, 22, 110, PcbFechaHeader)
     End Sub
 
     Private Sub PnlEditorialHeader_Click(sender As System.Object, e As System.EventArgs) Handles PnlEditorialHeader.Click, PnlEditLinea.Click, PcbEditorialHeader.Click, lblEditorial.Click
@@ -139,90 +147,160 @@ Public Class FrmCrearRegistros
         Dim panelesObjetivo As String() = {"PnlTitulo", "PnlAutor", "PnlGenero", "PnlEdicion", "PnlEstado", "PnlISBN", "PnlTipoRecurso", "PnlFormato", "PnlFecha", "PnlEditorial", "PnlPaginas"}
 
         If Len(Trim(TxtTitulo.Texts)) = 0 Then
+            TxtTitulo.BackColor = Color.FromArgb(95, 151, 186)
             MostrarMensajeYResaltar(TxtTitulo)
         Else
             TxtTitulo.BackColor = Color.FromArgb(25, 62, 85)
             If Len(Trim(TxtNombre.Texts)) = 0 Then
+                TxtNombre.BackColor = Color.FromArgb(95, 151, 186)
                 MostrarMensajeYResaltar(TxtNombre)
             Else
                 TxtNombre.BackColor = Color.FromArgb(25, 62, 85)
                 If Len(Trim(TxtApellido.Texts)) = 0 Then
+                    TxtApellido.BackColor = Color.FromArgb(95, 151, 186)
                     MostrarMensajeYResaltar(TxtApellido)
                 Else
                     TxtApellido.BackColor = Color.FromArgb(25, 62, 85)
-                    If Len(Trim(CboGenero.Texts)) = 0 Then
-                        Dim result = CuadroDeMensaje.Show("Complete todos los espacios",
-                                         "Casilleros vacíos.",
-                                         MessageBoxButtons.OK,
-                                         MessageBoxIcon.Information)
-                        CboGenero._BorderColor = Color.FromArgb(95, 151, 186)
-                        CboGenero.Focus()
-                        Exit Sub
+                    If Len(Trim(CboEstado.Texts)) = 0 Then
+                        CboEstado._BorderColor = Color.FromArgb(95, 151, 186)
+                        MostrarMensajeYResaltar(CboEstado)
                     Else
-                        CboGenero._BorderColor = Color.PeachPuff
-                        If Len(Trim(TxtNumero.Texts)) = 0 Then
-                            MostrarMensajeYResaltar(TxtNumero)
+                        CboEstado._BorderColor = Color.PeachPuff
+                        If Len(Trim(CboTipoRecurso.Texts)) = 0 Then
+                            CboTipoRecurso._BorderColor = Color.FromArgb(95, 151, 186)
+                            MostrarMensajeYResaltar(CboTipoRecurso)
                         Else
-                            TxtNumero.BackColor = Color.FromArgb(25, 62, 85)
-                            If Len(Trim(TxtAno.Texts)) = 0 Then
-                                MostrarMensajeYResaltar(TxtAno)
+                            CboTipoRecurso._BorderColor = Color.PeachPuff
+                            If Len(Trim(CboFormato.Texts)) = 0 Then
+                                CboFormato._BorderColor = Color.FromArgb(95, 151, 186)
+                                MostrarMensajeYResaltar(CboFormato)
                             Else
-                                TxtAno.BackColor = Color.FromArgb(25, 62, 85)
-                                If Len(Trim(CboEstado.Texts)) = 0 Then
-                                    Dim result = CuadroDeMensaje.Show("Complete todos los espacios",
-                                         "Casilleros vacíos.",
-                                         MessageBoxButtons.OK,
-                                         MessageBoxIcon.Information)
-                                    CboEstado._BorderColor = Color.FromArgb(95, 151, 186)
-                                    CboEstado.Focus()
-                                    Exit Sub
-                                Else
-                                    CboEstado._BorderColor = Color.PeachPuff
-                                    If Len(Trim(TxtISBN.Texts)) = 0 Then
-                                        MostrarMensajeYResaltar(TxtISBN)
-                                    Else
-                                        TxtISBN.BackColor = Color.FromArgb(25, 62, 85)
-                                        If Len(Trim(CboTipoRecurso.Texts)) = 0 Then
-                                            Dim result = CuadroDeMensaje.Show("Complete todos los espacios",
-                                         "Casilleros vacíos.",
-                                         MessageBoxButtons.OK,
-                                         MessageBoxIcon.Information)
-                                            CboTipoRecurso._BorderColor = Color.FromArgb(95, 151, 186)
-                                            CboTipoRecurso.Focus()
-                                            Exit Sub
-                                        Else
-                                            CboTipoRecurso._BorderColor = Color.PeachPuff
-                                            If Len(Trim(CboFormato.Texts)) = 0 Then
-                                                Dim result = CuadroDeMensaje.Show("Complete todos los espacios",
-                                         "Casilleros vacíos.",
-                                         MessageBoxButtons.OK,
-                                         MessageBoxIcon.Information)
-                                                CboFormato._BorderColor = Color.FromArgb(95, 151, 186)
-                                                CboFormato.Focus()
-                                                Exit Sub
-                                            Else
-                                                CboFormato._BorderColor = Color.PeachPuff
-                                                If Len(Trim(CboEditorial.Texts)) = 0 Then
-                                                    Dim result = CuadroDeMensaje.Show("Complete todos los espacios",
-                                         "Casilleros vacíos.",
-                                         MessageBoxButtons.OK,
-                                         MessageBoxIcon.Information)
-                                                    CboEditorial._BorderColor = Color.FromArgb(95, 151, 186)
-                                                    CboEditorial.Focus()
-                                                    Exit Sub
-                                                Else
-                                                    CboEditorial._BorderColor = Color.PeachPuff
-                                                    If Len(Trim(TxtPerso8.Texts)) = 0 Then
-                                                        MostrarMensajeYResaltar(TxtPerso8)
-                                                    Else
-                                                        TxtPerso8.BackColor = Color.FromArgb(25, 62, 85)
-                                                        MsgBox("completo")
-
-                                                    End If
-                                                End If
-                                            End If
-                                        End If
+                                If Len(Trim(TxtISBN.Texts)) > 0 Then
+                                    RecursosBindingSource.Filter = "ISBN = '" & TxtISBN.Texts & "'"
+                                    If RecursosBindingSource.Count > 0 Then
+                                        Dim result = CuadroDeMensaje.Show("El número ISBN ingresado ya existe y no puede ser duplicado.",
+                        "Crear registros.",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information)
+                                        CboFormato._BorderColor = Color.FromArgb(95, 151, 186)
+                                        Exit Sub
                                     End If
+                                Else
+
+                                    'hacer comprobaciones de tipos de datos para edicion año, número y número de páginas
+
+                                    CboFormato._BorderColor = Color.PeachPuff
+                                    MsgBox("completo")
+                                    'empezar con comprobaciones de inconsistencia de base de datos antes de la alta
+                                    Dim AutorID As Integer
+                                    AutorBindingSource.Filter = "Nombres = '" & TxtNombre.Texts & "' AND Apellidos = '" & TxtApellido.Texts & "'"
+                                    If AutorBindingSource.Count > 0 Then
+                                        'si es 0, significa que ya existe un autor con el mismo nombre y apellido y, por lo tanto
+                                        'no se creará otro, a pesar de que sea otra persona con el mismo nombre y apellido. Luego,
+                                        'para la evolución del sistema, se le agregarán datos precisos diferenciales (FechaNAC, LugarNAC, etc.)
+
+                                        ' Obtener el primer registro que coincide con el filtro
+                                        Dim selectedRow As DataRowView = DirectCast(AutorBindingSource.Current, DataRowView)
+                                        ' Obtener el valor de la columna "ID" del registro seleccionado
+                                        AutorID = CInt(selectedRow("ID"))
+                                    Else
+                                        'sino, hacer un alta en la tabla de autor y guardar su ID
+                                        AutorTableAdapter.Insert(TxtNombre.Texts, TxtApellido.Texts)
+                                        Me.AutorTableAdapter.Fill(Me.BdbibliotecaDataSet.autor)
+                                        ' Obtener el ID del último registro insertado
+                                        AutorID = BdbibliotecaDataSet.autor.Rows(BdbibliotecaDataSet.autor.Rows.Count - 1)("ID")
+                                    End If
+                                    AutorBindingSource.RemoveFilter()
+
+                                    Dim GeneroID As Integer
+                                    GeneroBindingSource.Filter = "Nombre = '" & CboGenero.Texts & "'"
+                                    If GeneroBindingSource.Count > 0 Then
+                                        ' Obtener el primer registro que coincide con el filtro
+                                        Dim selectedRow As DataRowView = DirectCast(GeneroBindingSource.Current, DataRowView)
+                                        ' Obtener el valor de la columna "ID" del registro seleccionado
+                                        GeneroID = CInt(selectedRow("ID"))
+                                    Else
+                                        GeneroTableAdapter.Insert(CboGenero.Texts)
+                                        Me.GeneroTableAdapter.Fill(Me.BdbibliotecaDataSet.genero)
+                                        ' Obtener el ID del último registro insertado
+                                        GeneroID = BdbibliotecaDataSet.genero.Rows(BdbibliotecaDataSet.genero.Rows.Count - 1)("ID")
+                                    End If
+                                    GeneroBindingSource.RemoveFilter()
+
+                                    Dim EstadoID As Integer
+                                    EstadoBindingSource.Filter = "Tipo = '" & CboEstado.SelectedItem & "'"
+                                    If EstadoBindingSource.Count > 0 Then
+                                        ' Obtener el primer registro que coincide con el filtro
+                                        Dim selectedRow As DataRowView = DirectCast(EstadoBindingSource.Current, DataRowView)
+                                        ' Obtener el valor de la columna "ID" del registro seleccionado
+                                        EstadoID = CInt(selectedRow("ID"))
+                                    Else
+                                        EstadoTableAdapter.Insert(CboEstado.SelectedItem)
+                                        Me.EstadoTableAdapter.Fill(Me.BdbibliotecaDataSet.estado)
+                                        ' Obtener el ID del último registro insertado
+                                        EstadoID = BdbibliotecaDataSet.estado.Rows(BdbibliotecaDataSet.estado.Rows.Count - 1)("ID")
+                                    End If
+                                    EstadoBindingSource.RemoveFilter()
+
+                                    Dim TipoID As Integer
+                                    TipoderecursoBindingSource.Filter = "Nombre = '" & CboTipoRecurso.Texts & "'"
+                                    If TipoderecursoBindingSource.Count > 0 Then
+                                        ' Obtener el primer registro que coincide con el filtro
+                                        Dim selectedRow As DataRowView = DirectCast(TipoderecursoBindingSource.Current, DataRowView)
+                                        ' Obtener el valor de la columna "ID" del registro seleccionado
+                                        TipoID = CInt(selectedRow("ID"))
+                                    Else
+                                        TipoderecursoTableAdapter.Insert(CboTipoRecurso.Texts)
+                                        Me.TipoderecursoTableAdapter.Fill(Me.BdbibliotecaDataSet.tipoderecurso)
+                                        ' Obtener el ID del último registro insertado
+                                        TipoID = BdbibliotecaDataSet.tipoderecurso.Rows(BdbibliotecaDataSet.tipoderecurso.Rows.Count - 1)("ID")
+                                    End If
+                                    TipoderecursoBindingSource.RemoveFilter()
+
+                                    Dim FormatoID As Integer
+                                    FormatoBindingSource.Filter = "Nombre = '" & CboFormato.Texts & "'"
+                                    If FormatoBindingSource.Count > 0 Then
+                                        ' Obtener el primer registro que coincide con el filtro
+                                        Dim selectedRow As DataRowView = DirectCast(FormatoBindingSource.Current, DataRowView)
+                                        ' Obtener el valor de la columna "ID" del registro seleccionado
+                                        FormatoID = CInt(selectedRow("ID"))
+                                    Else
+                                        FormatoTableAdapter.Insert(CboFormato.Texts)
+                                        Me.FormatoTableAdapter.Fill(Me.BdbibliotecaDataSet.formato)
+                                        ' Obtener el ID del último registro insertado
+                                        FormatoID = BdbibliotecaDataSet.tipoderecurso.Rows(BdbibliotecaDataSet.tipoderecurso.Rows.Count - 1)("ID")
+                                    End If
+                                    FormatoBindingSource.RemoveFilter()
+                                    Dim EditorialID As Integer
+                                    EditorialBindingSource.Filter = "Nombre = '" & CboEditorial.Texts & "'"
+                                    If EditorialBindingSource.Count > 0 Then
+                                        ' Obtener el primer registro que coincide con el filtro
+                                        Dim selectedRow As DataRowView = DirectCast(EditorialBindingSource.Current, DataRowView)
+                                        ' Obtener el valor de la columna "ID" del registro seleccionado
+                                        EditorialID = CInt(selectedRow("ID"))
+                                    Else
+                                        EditorialTableAdapter.Insert(CboFormato.Texts)
+                                        Me.EditorialTableAdapter.Fill(Me.BdbibliotecaDataSet.editorial)
+                                        ' Obtener el ID del último registro insertado
+                                        EditorialID = BdbibliotecaDataSet.editorial.Rows(BdbibliotecaDataSet.editorial.Rows.Count - 1)("ID")
+                                    End If
+                                    EditorialBindingSource.RemoveFilter()
+
+                                    If BtnFecha.Checked = True Then
+                                        Dim fecha As Date = DateTime.ParseExact(DtpFecha.Text, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture)
+                                        Dim fechaConvertida As String = fecha.ToString("yyyy/MM/dd")
+                                        'insert con fecha
+                                        RecursosTableAdapter.Insert(TxtTitulo.Texts, AutorID, TxtISBN.Texts, TipoID, FormatoID, GeneroID, fechaConvertida, EditorialID, TxtNumero.Texts, TxtAno.Texts, TxtPag.Texts, EstadoID)
+                                        Me.RecursosTableAdapter.Fill(Me.BdbibliotecaDataSet.recursos)
+                                    Else
+                                        'insert sin fecha
+                                        RecursosTableAdapter.Insert(TxtTitulo.Texts, AutorID, TxtISBN.Texts, TipoID, FormatoID, GeneroID, Nothing, EditorialID, TxtNumero.Texts, TxtAno.Texts, TxtPag.Texts, EstadoID)
+                                        Me.RecursosTableAdapter.Fill(Me.BdbibliotecaDataSet.recursos)
+                                    End If
+                                    Dim result = CuadroDeMensaje.Show("Registro guardado",
+                                          "Crear registros.",
+                                          MessageBoxButtons.OK,
+                                          MessageBoxIcon.Information)
                                 End If
                             End If
                         End If
@@ -238,8 +316,16 @@ Public Class FrmCrearRegistros
                                           "Casilleros vacíos.",
                                           MessageBoxButtons.OK,
                                           MessageBoxIcon.Information)
-        ctrl.BackColor = Color.FromArgb(95, 151, 186)
         ctrl.Focus()
     End Sub
 
+    Private Sub BtnFecha_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles BtnFecha.CheckedChanged
+        If BtnFecha.Checked = True Then
+            BtnFecha.ForeColor = Color.White
+            DtpFecha.Enabled = True
+        Else
+            BtnFecha.ForeColor = Color.Black
+            DtpFecha.Enabled = False
+        End If
+    End Sub
 End Class
