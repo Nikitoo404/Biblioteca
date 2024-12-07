@@ -2861,7 +2861,7 @@ Partial Public Class bdbibliotecaDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddrecursosRow(ByVal Titulo As String, ByVal parentautorRowByTIENE As autorRow, ByVal ISBN As String, ByVal parenttipoderecursoRowByTIPO As tipoderecursoRow, ByVal parentformatoRowByFORMATO As formatoRow, ByVal parentgeneroRowByGENERO As generoRow, ByVal Fecha_publicacion As Date, ByVal parenteditorialRowByEDITORIAL As editorialRow, ByVal EdicionNro As Integer, ByVal EdicionAño As Integer, ByVal PaginasNro As UInteger, ByVal parentestadoRowByESTADO As estadoRow) As recursosRow
+        Public Overloads Function AddrecursosRow(ByVal Titulo As String, ByVal parentautorRowByTIENE As autorRow, ByVal ISBN As String, ByVal parenttipoderecursoRowByTIPO As tipoderecursoRow, ByVal parentformatoRowByFORMATO As formatoRow, ByVal parentgeneroRowByGENERO As generoRow, ByVal Fecha_publicacion As Integer, ByVal parenteditorialRowByEDITORIAL As editorialRow, ByVal EdicionNro As Integer, ByVal EdicionAño As Integer, ByVal PaginasNro As UInteger, ByVal parentestadoRowByESTADO As estadoRow) As recursosRow
             Dim rowrecursosRow As recursosRow = CType(Me.NewRow,recursosRow)
             Dim columnValuesArray() As Object = New Object() {Nothing, Titulo, Nothing, ISBN, Nothing, Nothing, Nothing, Fecha_publicacion, Nothing, EdicionNro, EdicionAño, PaginasNro, Nothing}
             If (Not (parentautorRowByTIENE) Is Nothing) Then
@@ -2942,7 +2942,7 @@ Partial Public Class bdbibliotecaDataSet
             MyBase.Columns.Add(Me.columnFormato)
             Me.columnGenero_ID = New Global.System.Data.DataColumn("Genero_ID", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnGenero_ID)
-            Me.columnFecha_publicacion = New Global.System.Data.DataColumn("Fecha_publicacion", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnFecha_publicacion = New Global.System.Data.DataColumn("Fecha_publicacion", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnFecha_publicacion)
             Me.columnEditorial_ID = New Global.System.Data.DataColumn("Editorial_ID", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnEditorial_ID)
@@ -4205,10 +4205,10 @@ Partial Public Class bdbibliotecaDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property Fecha_publicacion() As Date
+        Public Property Fecha_publicacion() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tablerecursos.Fecha_publicacionColumn),Date)
+                    Return CType(Me(Me.tablerecursos.Fecha_publicacionColumn),Integer)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("El valor de la columna 'Fecha_publicacion' de la tabla 'recursos' es DBNull.", e)
                 End Try

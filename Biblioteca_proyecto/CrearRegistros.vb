@@ -31,6 +31,8 @@ Public Class FrmCrearRegistros
     End Sub
 
     Private Sub FrmCrearRegistros_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+        'TODO: esta línea de código carga datos en la tabla 'BdbibliotecaDataSet.formato' Puede moverla o quitarla según sea necesario.
+        Me.FormatoTableAdapter.Fill(Me.BdbibliotecaDataSet.formato)
         'TODO: esta línea de código carga datos en la tabla 'BdbibliotecaDataSet.editorial' Puede moverla o quitarla según sea necesario.
         Me.EditorialTableAdapter.Fill(Me.BdbibliotecaDataSet.editorial)
         'TODO: esta línea de código carga datos en la tabla 'BdbibliotecaDataSet.genero' Puede moverla o quitarla según sea necesario.
@@ -46,7 +48,6 @@ Public Class FrmCrearRegistros
         'TODO: esta línea de código carga datos en la tabla 'BdbibliotecaDataSet.autor' Puede moverla o quitarla según sea necesario.
         Me.EstadoTableAdapter.Fill(Me.BdbibliotecaDataSet.estado)
 
-        DtpFecha.MaxDate = Date.Now
         ' Guardar las posiciones originales de los paneles al cargar el formulario
         Dim paneles As Control() = {PnlTitulo, PnlTitAutor, PnlAutor, PnlAutero, PnlGenero, PnlGenecion,
                                      PnlEdicion, PnlEdiado, PnlEstado, PnlISBN, PnlISso, PnlTipoRecurso,
@@ -57,6 +58,7 @@ Public Class FrmCrearRegistros
             posicionesOriginales(panel) = panel.Location
         Next
         BtnFecha.Checked = True
+        DtpFecha.MaxDate = Date.Now
     End Sub
 
     Private Sub PnlTituloHeader_Click(sender As System.Object, e As System.EventArgs) Handles PnlTituloHeader.Click, lblTituloLibro.Click, PcbTituloHeader.Click, PnlTituloLinea.Click
@@ -287,11 +289,19 @@ Public Class FrmCrearRegistros
                                     EditorialBindingSource.RemoveFilter()
 
                                     If BtnFecha.Checked = True Then
-                                        Dim fecha As Date = DateTime.ParseExact(DtpFecha.Text, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture)
+                                        Dim fecha As Date = DtpFecha.Value
                                         Dim fechaConvertida As String = fecha.ToString("yyyy/MM/dd")
-                                        'insert con fecha
-                                        RecursosTableAdapter.Insert(TxtTitulo.Texts, AutorID, TxtISBN.Texts, TipoID, FormatoID, GeneroID, fechaConvertida, EditorialID, TxtNumero.Texts, TxtAno.Texts, TxtPag.Texts, EstadoID)
-                                        Me.RecursosTableAdapter.Fill(Me.BdbibliotecaDataSet.recursos)
+                                        If Len(Trim(TxtAno.Texts)) Then
+                                            Dim año As Date = TxtAno.Texts
+                                            'insert con fecha
+                                            RecursosTableAdapter.Insert(TxtTitulo.Texts, AutorID, TxtISBN.Texts, TipoID, FormatoID, GeneroID, fechaConvertida, EditorialID, TxtNumero.Texts, año, TxtPag.Texts, EstadoID)
+                                            Me.RecursosTableAdapter.Fill(Me.BdbibliotecaDataSet.recursos)
+                                        Else
+                                            'insert con fecha pero sin año
+                                            RecursosTableAdapter.Insert(TxtTitulo.Texts, AutorID, TxtISBN.Texts, TipoID, FormatoID, GeneroID, fechaConvertida, EditorialID, TxtNumero.Texts, Nothing, TxtPag.Texts, EstadoID)
+                                            Me.RecursosTableAdapter.Fill(Me.BdbibliotecaDataSet.recursos)
+                                        End If
+                                        
                                     Else
                                         'insert sin fecha
                                         RecursosTableAdapter.Insert(TxtTitulo.Texts, AutorID, TxtISBN.Texts, TipoID, FormatoID, GeneroID, Nothing, EditorialID, TxtNumero.Texts, TxtAno.Texts, TxtPag.Texts, EstadoID)

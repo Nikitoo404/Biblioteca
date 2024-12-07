@@ -86,9 +86,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>bdbibliotecaDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="bdbibliotecaDataSet.vb">
-      <DependentUpon>bdbibliotecaDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="ButtonRadio.vb">
       <SubType>Component</SubType>
     </Compile>
@@ -231,21 +228,6 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="obj\x86\Debug\Biblioteca.FrmBase.resources" />
-    <EmbeddedResource Include="obj\x86\Debug\Biblioteca.FrmCrearCuenta.resources" />
-    <EmbeddedResource Include="obj\x86\Debug\Biblioteca.FrmCrearRegistros.resources" />
-    <EmbeddedResource Include="obj\x86\Debug\Biblioteca.FrmEditarRegistros.resources" />
-    <EmbeddedResource Include="obj\x86\Debug\Biblioteca.FrmInicio.resources" />
-    <EmbeddedResource Include="obj\x86\Debug\Biblioteca.FrmLogin.resources" />
-    <EmbeddedResource Include="obj\x86\Debug\Biblioteca.FrmMensaje.resources" />
-    <EmbeddedResource Include="obj\x86\Debug\Biblioteca.FrmPortada.resources" />
-    <EmbeddedResource Include="obj\x86\Debug\Biblioteca.FrmRecuperacion.resources" />
-    <EmbeddedResource Include="obj\x86\Debug\Biblioteca.FrmRegistros.resources" />
-    <EmbeddedResource Include="obj\x86\Debug\Biblioteca.FrmRegPres.resources" />
-    <EmbeddedResource Include="obj\x86\Debug\Biblioteca.FrmVerPres.resources" />
-    <EmbeddedResource Include="obj\x86\Debug\Biblioteca.FrmVerRegistros.resources" />
-    <EmbeddedResource Include="obj\x86\Debug\Biblioteca.Resources.resources" />
-    <EmbeddedResource Include="obj\x86\Debug\Biblioteca.TxtPerso.resources" />
     <EmbeddedResource Include="Portada.resx">
       <DependentUpon>Portada.vb</DependentUpon>
     </EmbeddedResource>
@@ -281,9 +263,6 @@
     <None Include="bdbibliotecaDataSet.xss">
       <DependentUpon>bdbibliotecaDataSet.xsd</DependentUpon>
     </None>
-    <None Include="bin\Debug\Biblioteca.vshost.exe.manifest" />
-    <None Include="bin\Debug\Biblioteca_proyecto.exe.config" />
-    <None Include="bin\Debug\Biblioteca_proyecto.vshost.exe.config" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -295,9 +274,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="obj\x86\Debug\Biblioteca_proyecto.vbproj.GenerateResource.Cache" />
-    <None Include="obj\x86\Debug\DesignTimeResolveAssemblyReferences.cache" />
-    <None Include="obj\x86\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <None Include="Resources\error.png" />
   </ItemGroup>
   <ItemGroup>
@@ -411,23 +387,7 @@
   <ItemGroup>
     <None Include="Resources\flechaArriba.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="bin\Debug\Biblioteca.vshost.exe" />
-    <Content Include="bin\Debug\Biblioteca_proyecto.exe" />
-    <Content Include="bin\Debug\Biblioteca_proyecto.pdb" />
-    <Content Include="bin\Debug\Biblioteca_proyecto.vshost.exe" />
-    <Content Include="bin\Debug\Biblioteca_proyecto.xml" />
-    <Content Include="obj\x86\Debug\Biblioteca_proyecto.exe" />
-    <Content Include="obj\x86\Debug\Biblioteca_proyecto.pdb" />
-    <Content Include="obj\x86\Debug\Biblioteca_proyecto.vbproj.FileListAbsolute.txt" />
-    <Content Include="obj\x86\Debug\Biblioteca_proyecto.xml" />
-    <Content Include="obj\x86\Debug\TempPE\bdbibliotecaDataSet.Designer.vb.dll" />
-    <Content Include="obj\x86\Debug\TempPE\My Project.Resources.Designer.vb.dll" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="bin\Release\" />
-    <Folder Include="obj\x86\Release\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
